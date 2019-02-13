@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generate('/fr.supelec.plong9.fsm/model/fsm.ecore')]
+
+
+[template public generateElement(fsm : FSM)]
+public class [fsm.name.concat('FSM').toUpperFirst()/] {
+
+}
+
+[/template]
