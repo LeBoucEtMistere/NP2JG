@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://www.example.org/fsm" name="myFSM" initialState="//@ownedStates.0" currentState="//@ownedStates.0">
-  <ownedStates name="State1" incomingTransitions="//@ownedStates.2/@outgoingTransitions.0 //@ownedStates.1/@outgoingTransitions.1">
+  <ownedStates name="State1" incomingTransitions="//@ownedStates.2/@outgoingTransitions.0 //@ownedStates.1/@outgoingTransitions.1 //@ownedStates.3/@outgoingTransitions.0">
     <outgoingTransitions name="t1" target="//@ownedStates.1"/>
   </ownedStates>
   <ownedStates name="State2" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0">
@@ -9,5 +9,8 @@
   </ownedStates>
   <ownedStates name="State3" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0">
     <outgoingTransitions name="t4" target="//@ownedStates.0"/>
+  </ownedStates>
+  <ownedStates name="dzabfazf">
+    <outgoingTransitions target="//@ownedStates.0"/>
   </ownedStates>
 </fsm:FSM>
