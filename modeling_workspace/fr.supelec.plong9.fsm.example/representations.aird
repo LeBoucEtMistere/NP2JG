@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:fsm="http://www.example.org/fsm" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_Kg9qsC-qEemgStxWdtkZPw" selectedViews="_LagP4C-sEemgStxWdtkZPw" version="13.0.0.201804031646">
+    <semanticResources>example.fsm</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_LagP4C-sEemgStxWdtkZPw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_NfIaEC-sEemgStxWdtkZPw" name="new FSMDiagram" repPath="#_Nd-jgC-sEemgStxWdtkZPw">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']"/>
+        <target xmi:type="fsm:FSM" href="example.fsm#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_NfC6gC-sEemgStxWdtkZPw" name="new FSMDiagram" uid="_Nd-jgC-sEemgStxWdtkZPw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_NfEvsC-sEemgStxWdtkZPw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_NfEvsS-sEemgStxWdtkZPw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_Nfp-gC-sEemgStxWdtkZPw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Nfp-gS-sEemgStxWdtkZPw" type="Sirius" element="_NfC6gC-sEemgStxWdtkZPw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Q0nIIC-sEemgStxWdtkZPw" type="2001" element="_Qz59gC-sEemgStxWdtkZPw">
+          <children xmi:type="notation:Node" xmi:id="_Q0qygC-sEemgStxWdtkZPw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Q0rZkC-sEemgStxWdtkZPw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Q0t10C-sEemgStxWdtkZPw" type="3004" element="_Q0DugC-sEemgStxWdtkZPw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Q0t10S-sEemgStxWdtkZPw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q0t10i-sEemgStxWdtkZPw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Q0nIIS-sEemgStxWdtkZPw" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q0nIIi-sEemgStxWdtkZPw" x="220" y="92" width="77" height="57"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_BIYDUC-tEemgStxWdtkZPw" type="2001" element="_BHvxMC-tEemgStxWdtkZPw">
+          <children xmi:type="notation:Node" xmi:id="_BIYqYC-tEemgStxWdtkZPw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_BIYqYS-tEemgStxWdtkZPw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_BIZRcC-tEemgStxWdtkZPw" type="3004" element="_BHvxMS-tEemgStxWdtkZPw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_BIZRcS-tEemgStxWdtkZPw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BIZRci-tEemgStxWdtkZPw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_BIYDUS-tEemgStxWdtkZPw" fontName=".AppleSystemUIFont" fontHeight="8" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BIYDUi-tEemgStxWdtkZPw" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_8tStMC-uEemeXo1TORuzVA" type="2001" element="_8sk7gC-uEemeXo1TORuzVA">
+          <children xmi:type="notation:Node" xmi:id="_8tT7UC-uEemeXo1TORuzVA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_8tT7US-uEemeXo1TORuzVA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8tVJcC-uEemeXo1TORuzVA" type="3004" element="_8sk7gS-uEemeXo1TORuzVA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_8tVJcS-uEemeXo1TORuzVA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tVJci-uEemeXo1TORuzVA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_8tStMS-uEemeXo1TORuzVA" fontName=".AppleSystemUIFont" fontHeight="8" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tStMi-uEemeXo1TORuzVA" x="8" y="172" width="30" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Nfp-gi-sEemgStxWdtkZPw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_0ZiHQC-uEemeXo1TORuzVA" type="4001" element="_0ZVS8C-uEemeXo1TORuzVA" source="_Q0nIIC-sEemgStxWdtkZPw" target="_BIYDUC-tEemgStxWdtkZPw">
+          <children xmi:type="notation:Node" xmi:id="_0ZiHRC-uEemeXo1TORuzVA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZiHRS-uEemeXo1TORuzVA" x="6" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0ZiHRi-uEemeXo1TORuzVA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZiHRy-uEemeXo1TORuzVA" x="-3" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0ZiuUC-uEemeXo1TORuzVA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZiuUS-uEemeXo1TORuzVA" x="-5" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_0ZiHQS-uEemeXo1TORuzVA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_0ZiHQi-uEemeXo1TORuzVA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0ZiHQy-uEemeXo1TORuzVA" points="[-38, -17, 205, 88]$[-228, -99, 15, 6]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ZiuUi-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0ZiuUy-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_0ZiuVC-uEemeXo1TORuzVA" type="4001" element="_0ZWhEC-uEemeXo1TORuzVA" source="_Q0nIIC-sEemgStxWdtkZPw" target="_BIYDUC-tEemgStxWdtkZPw">
+          <children xmi:type="notation:Node" xmi:id="_0ZjVYC-uEemeXo1TORuzVA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZjVYS-uEemeXo1TORuzVA" x="64" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0ZjVYi-uEemeXo1TORuzVA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZjVYy-uEemeXo1TORuzVA" x="2" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_0ZjVZC-uEemeXo1TORuzVA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZjVZS-uEemeXo1TORuzVA" x="17" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_0ZiuVS-uEemeXo1TORuzVA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_0ZiuVi-uEemeXo1TORuzVA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0ZiuVy-uEemeXo1TORuzVA" points="[-38, -13, 205, 92]$[-192, -63, 51, 42]$[-232, -93, 11, 12]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Zj8cC-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Zj8cS-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_8tVwgC-uEemeXo1TORuzVA" type="4001" element="_8smwsC-uEemeXo1TORuzVA" source="_BIYDUC-tEemgStxWdtkZPw" target="_8tStMC-uEemeXo1TORuzVA">
+          <children xmi:type="notation:Node" xmi:id="_8tVwhC-uEemeXo1TORuzVA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tVwhS-uEemeXo1TORuzVA" x="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8tWXkC-uEemeXo1TORuzVA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tWXkS-uEemeXo1TORuzVA" x="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8tWXki-uEemeXo1TORuzVA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tWXky-uEemeXo1TORuzVA" x="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_8tVwgS-uEemeXo1TORuzVA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_8tVwgi-uEemeXo1TORuzVA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8tVwgy-uEemeXo1TORuzVA" points="[0, 15, -8, -157]$[7, 157, -1, -15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8tWXlC-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8tWXlS-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_8tWXli-uEemeXo1TORuzVA" type="4001" element="_8snXwC-uEemeXo1TORuzVA" source="_8tStMC-uEemeXo1TORuzVA" target="_Q0nIIC-sEemgStxWdtkZPw">
+          <children xmi:type="notation:Node" xmi:id="_8tW-oC-uEemeXo1TORuzVA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tW-oS-uEemeXo1TORuzVA" x="-13" y="29"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8tW-oi-uEemeXo1TORuzVA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tW-oy-uEemeXo1TORuzVA" x="-25" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8tW-pC-uEemeXo1TORuzVA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8tW-pS-uEemeXo1TORuzVA" x="-36" y="-2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_8tWXly-uEemeXo1TORuzVA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_8tWXmC-uEemeXo1TORuzVA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8tWXmS-uEemeXo1TORuzVA" points="[15, -5, -220, 62]$[197, -57, -38, 10]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8tW-pi-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8tW-py-uEemeXo1TORuzVA" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Qz59gC-sEemgStxWdtkZPw" name="State1" outgoingEdges="_0ZVS8C-uEemeXo1TORuzVA _0ZWhEC-uEemeXo1TORuzVA" incomingEdges="_8snXwC-uEemeXo1TORuzVA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fsm:State" href="example.fsm#//@ownedStates.0"/>
+      <semanticElements xmi:type="fsm:State" href="example.fsm#//@ownedStates.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Q0DugC-sEemgStxWdtkZPw" showIcon="false" labelPosition="node" shape="ring" color="255,245,181">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BHvxMC-tEemgStxWdtkZPw" name="State2" outgoingEdges="_8smwsC-uEemeXo1TORuzVA" incomingEdges="_0ZVS8C-uEemeXo1TORuzVA _0ZWhEC-uEemeXo1TORuzVA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fsm:State" href="example.fsm#//@ownedStates.1"/>
+      <semanticElements xmi:type="fsm:State" href="example.fsm#//@ownedStates.1"/>
+      <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BHvxMS-tEemgStxWdtkZPw" showIcon="false" labelPosition="node" shape="ring" color="255,245,181">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8sk7gC-uEemeXo1TORuzVA" name="State3" outgoingEdges="_8snXwC-uEemeXo1TORuzVA" incomingEdges="_8smwsC-uEemeXo1TORuzVA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fsm:State" href="example.fsm#//@ownedStates.2"/>
+      <semanticElements xmi:type="fsm:State" href="example.fsm#//@ownedStates.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_8sk7gS-uEemeXo1TORuzVA" showIcon="false" labelPosition="node" shape="ring" color="255,245,181">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0ZVS8C-uEemeXo1TORuzVA" name="t1" sourceNode="_Qz59gC-sEemgStxWdtkZPw" targetNode="_BHvxMC-tEemgStxWdtkZPw">
+      <target xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
+      <semanticElements xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0ZV6AC-uEemeXo1TORuzVA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0ZV6AS-uEemeXo1TORuzVA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_0ZWhEC-uEemeXo1TORuzVA" name="t2" sourceNode="_Qz59gC-sEemgStxWdtkZPw" targetNode="_BHvxMC-tEemgStxWdtkZPw">
+      <target xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.0/@outgoingTransitions.1"/>
+      <semanticElements xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.0/@outgoingTransitions.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_0ZWhES-uEemeXo1TORuzVA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_0ZWhEi-uEemeXo1TORuzVA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8smwsC-uEemeXo1TORuzVA" name="t3" sourceNode="_BHvxMC-tEemgStxWdtkZPw" targetNode="_8sk7gC-uEemeXo1TORuzVA">
+      <target xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.1/@outgoingTransitions.0"/>
+      <semanticElements xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.1/@outgoingTransitions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8smwsS-uEemeXo1TORuzVA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_8smwsi-uEemeXo1TORuzVA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8snXwC-uEemeXo1TORuzVA" name="t4" sourceNode="_8sk7gC-uEemeXo1TORuzVA" targetNode="_Qz59gC-sEemgStxWdtkZPw">
+      <target xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.2/@outgoingTransitions.0"/>
+      <semanticElements xmi:type="fsm:Transition" href="example.fsm#//@ownedStates.2/@outgoingTransitions.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8sn-0C-uEemeXo1TORuzVA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_8sn-0S-uEemeXo1TORuzVA" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_NfEvsy-sEemgStxWdtkZPw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer"/>
+    <target xmi:type="fsm:FSM" href="example.fsm#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
