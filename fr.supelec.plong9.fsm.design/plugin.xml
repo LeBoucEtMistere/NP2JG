@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="fr.supelec.plong9.fsm.design.Activator"
+               id="fr.supelec.plong9.fsm.design"
+	       name="fsm">
+    </component>
+  </extension>
+</plugin>
