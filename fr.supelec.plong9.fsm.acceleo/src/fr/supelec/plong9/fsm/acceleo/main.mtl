@@ -3,9 +3,12 @@
 
 
 [template public generateElement(fsm : FSM)]
-[comment @main /]
-public class [fsm.name.concat('FSM').toUpperFirst()/] {
 
-}
+[comment @main /]
+[file (fsm.name, false, 'UTF-8')]
+	public class [fsm.name.concat('FSM').toUpperFirst()/] {
+
+	}
+[/file]
 
 [/template]

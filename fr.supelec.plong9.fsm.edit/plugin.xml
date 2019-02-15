@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated fsm -->
       <factory
-            uri="http://www.example.org/fsm"
+            uri="/fr.supelec.plong9.fsm/model/fsm.ecore"
             class="fr.supelec.plong9.fsm.provider.FsmItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
