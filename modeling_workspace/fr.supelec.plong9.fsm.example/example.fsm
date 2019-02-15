@@ -10,4 +10,7 @@
   <ownedStates name="State3" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0">
     <outgoingTransitions name="t4" target="//@ownedStates.0"/>
   </ownedStates>
+  <ownedStates name="dzabfazf">
+    <outgoingTransitions target="//@ownedStates.0"/>
+  </ownedStates>
 </fsm:FSM>
