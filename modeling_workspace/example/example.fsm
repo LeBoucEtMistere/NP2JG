@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="/fr.supelec.plong9.fsm/model/fsm.ecore">
+  <ownedStates name="s1" incomingTransitions="//@ownedStates.2/@outgoingTransitions.0">
+    <outgoingTransitions name="t1" target="//@ownedStates.1"/>
+  </ownedStates>
+  <ownedStates name="s2" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0">
+    <outgoingTransitions name="t2" target="//@ownedStates.2"/>
+  </ownedStates>
+  <ownedStates name="s3" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0">
+    <outgoingTransitions name="t3" target="//@ownedStates.0"/>
+  </ownedStates>
+</fsm:FSM>
