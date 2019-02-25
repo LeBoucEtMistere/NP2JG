@@ -8,9 +8,19 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-10
-Export-Package: fr.supelec.plong9.fsm,
- fr.supelec.plong9.fsm.impl,
- fr.supelec.plong9.fsm.util
+Export-Package: fr.supelec.plong9.fsm;uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util",
+ fr.supelec.plong9.fsm.impl;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.emf.ecore.impl,
+   org.eclipse.emf.common.util,
+   fr.supelec.plong9.fsm,
+   org.eclipse.emf.common.notify",
+ fr.supelec.plong9.fsm.util;
+  uses:="org.eclipse.emf.ecore,
+   fr.supelec.plong9.fsm,
+   org.eclipse.emf.common.notify,
+   org.eclipse.emf.common.notify.impl,
+   org.eclipse.emf.ecore.util"
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

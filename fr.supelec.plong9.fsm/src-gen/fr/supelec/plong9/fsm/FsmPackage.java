@@ -38,7 +38,7 @@ public interface FsmPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "/fr.supelec.plong9.fsm/model/fsm.ecore";
+	String eNS_URI = "fr.supelec.plong9.fsm";
 
 	/**
 	 * The package namespace name.
