@@ -20,5 +20,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-10
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: fr.supelec.plong9.fsm.acceleo
-Import-Package: fr.supelec.plong9.fsm
+Automatic-Module-Name: fr.supelec.plong9.fsm.acceleo
 
