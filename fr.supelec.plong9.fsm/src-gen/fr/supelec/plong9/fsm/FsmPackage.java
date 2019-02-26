@@ -231,13 +231,31 @@ public interface FsmPackage extends EPackage {
 	int TRANSITION__TARGET = 2;
 
 	/**
+	 * The feature id for the '<em><b>Event</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__EVENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__ACTION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = 3;
+	int TRANSITION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -411,6 +429,28 @@ public interface FsmPackage extends EPackage {
 	EReference getTransition_Target();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Event</em>'.
+	 * @see fr.supelec.plong9.fsm.Transition#getEvent()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_Event();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Transition#getAction <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Action</em>'.
+	 * @see fr.supelec.plong9.fsm.Transition#getAction()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_Action();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -558,6 +598,22 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__EVENT = eINSTANCE.getTransition_Event();
+
+		/**
+		 * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__ACTION = eINSTANCE.getTransition_Action();
 
 	}
 

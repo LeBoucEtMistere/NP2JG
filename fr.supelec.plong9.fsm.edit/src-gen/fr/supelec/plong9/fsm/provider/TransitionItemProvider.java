@@ -56,6 +56,8 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 			addNamePropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addEventPropertyDescriptor(object);
+			addActionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -107,6 +109,38 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
+	 * This adds a property descriptor for the Event feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEventPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transition_event_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_event_feature",
+								"_UI_Transition_type"),
+						FsmPackage.Literals.TRANSITION__EVENT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Action feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addActionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transition_action_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_action_feature",
+								"_UI_Transition_type"),
+						FsmPackage.Literals.TRANSITION__ACTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Transition.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -153,6 +187,8 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 
 		switch (notification.getFeatureID(Transition.class)) {
 		case FsmPackage.TRANSITION__NAME:
+		case FsmPackage.TRANSITION__EVENT:
+		case FsmPackage.TRANSITION__ACTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

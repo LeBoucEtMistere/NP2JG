@@ -8,7 +8,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-10
-Export-Package: fr.supelec.plong9.fsm;uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util",
+Export-Package: fr.supelec.plong9.fsm;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.emf.common.util",
  fr.supelec.plong9.fsm.impl;
   uses:="org.eclipse.emf.ecore,
    org.eclipse.emf.ecore.impl,

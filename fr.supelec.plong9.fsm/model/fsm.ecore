@@ -26,5 +26,8 @@
         eType="#//State" eOpposite="#//State/outgoingTransitions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//State" eOpposite="#//State/incomingTransitions"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

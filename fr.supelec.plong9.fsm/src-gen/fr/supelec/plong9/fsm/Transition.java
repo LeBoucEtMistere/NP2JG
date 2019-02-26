@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getName <em>Name</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getSource <em>Source</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getTarget <em>Target</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.Transition#getAction <em>Action</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getTransition()
@@ -104,5 +106,57 @@ public interface Transition extends EObject {
 	 * @generated
 	 */
 	void setTarget(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Event</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Event</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Event</em>' attribute.
+	 * @see #setEvent(String)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Event()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getEvent();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Event</em>' attribute.
+	 * @see #getEvent()
+	 * @generated
+	 */
+	void setEvent(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Action</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Action</em>' attribute.
+	 * @see #setAction(String)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Action()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getAction();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getAction <em>Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Action</em>' attribute.
+	 * @see #getAction()
+	 * @generated
+	 */
+	void setAction(String value);
 
 } // Transition

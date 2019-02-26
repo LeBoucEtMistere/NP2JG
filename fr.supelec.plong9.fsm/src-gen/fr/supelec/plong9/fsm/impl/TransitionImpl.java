@@ -28,6 +28,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getEvent <em>Event</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getAction <em>Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,6 +64,46 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @ordered
 	 */
 	protected State target;
+
+	/**
+	 * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String EVENT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String event = EVENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected String action = ACTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -219,6 +261,48 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getEvent() {
+		return event;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEvent(String newEvent) {
+		String oldEvent = event;
+		event = newEvent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__EVENT, oldEvent, event));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAction() {
+		return action;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAction(String newAction) {
+		String oldAction = action;
+		action = newAction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__ACTION, oldAction, action));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -281,6 +365,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			if (resolve)
 				return getTarget();
 			return basicGetTarget();
+		case FsmPackage.TRANSITION__EVENT:
+			return getEvent();
+		case FsmPackage.TRANSITION__ACTION:
+			return getAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -301,6 +389,12 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			return;
 		case FsmPackage.TRANSITION__TARGET:
 			setTarget((State) newValue);
+			return;
+		case FsmPackage.TRANSITION__EVENT:
+			setEvent((String) newValue);
+			return;
+		case FsmPackage.TRANSITION__ACTION:
+			setAction((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -323,6 +417,12 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		case FsmPackage.TRANSITION__TARGET:
 			setTarget((State) null);
 			return;
+		case FsmPackage.TRANSITION__EVENT:
+			setEvent(EVENT_EDEFAULT);
+			return;
+		case FsmPackage.TRANSITION__ACTION:
+			setAction(ACTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -341,6 +441,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			return getSource() != null;
 		case FsmPackage.TRANSITION__TARGET:
 			return target != null;
+		case FsmPackage.TRANSITION__EVENT:
+			return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
+		case FsmPackage.TRANSITION__ACTION:
+			return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -358,6 +462,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", event: ");
+		result.append(event);
+		result.append(", action: ");
+		result.append(action);
 		result.append(')');
 		return result.toString();
 	}

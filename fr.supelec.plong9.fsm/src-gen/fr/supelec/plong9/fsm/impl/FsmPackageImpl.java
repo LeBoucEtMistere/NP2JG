@@ -246,6 +246,24 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTransition_Event() {
+		return (EAttribute) transitionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransition_Action() {
+		return (EAttribute) transitionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FsmFactory getFsmFactory() {
 		return (FsmFactory) getEFactoryInstance();
 	}
@@ -287,6 +305,8 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEAttribute(transitionEClass, TRANSITION__NAME);
 		createEReference(transitionEClass, TRANSITION__SOURCE);
 		createEReference(transitionEClass, TRANSITION__TARGET);
+		createEAttribute(transitionEClass, TRANSITION__EVENT);
+		createEAttribute(transitionEClass, TRANSITION__ACTION);
 	}
 
 	/**
@@ -360,6 +380,10 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getTransition_Target(), this.getState(), this.getState_IncomingTransitions(), "target", null, 1,
 				1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransition_Event(), ecorePackage.getEString(), "event", null, 1, 1, Transition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransition_Action(), ecorePackage.getEString(), "action", null, 1, 1, Transition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
