@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generate('fr.supelec.plong9.fsm')]
+
+[template public generateElement(aFSM : FSM)]
+[comment @main /]
+[file (aFSM.name.concat('.java'), false)]
+   
+ [/file]
+
+[/template]
