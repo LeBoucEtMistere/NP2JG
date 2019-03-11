@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module main('fr.supelec.plong9.fsm')]
+[module main('http://fr.supelec.plong9.fsm')]
 
 
 [template public generateElement(fsm : FSM)]

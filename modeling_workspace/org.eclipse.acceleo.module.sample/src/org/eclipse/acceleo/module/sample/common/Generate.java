@@ -340,6 +340,9 @@ public class Generate extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
+        if (!isInWorkspace(fr.supelec.plong9.fsm.FsmPackage.class)) {
+            resourceSet.getPackageRegistry().put(fr.supelec.plong9.fsm.FsmPackage.eINSTANCE.getNsURI(), fr.supelec.plong9.fsm.FsmPackage.eINSTANCE);
+        }
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"

@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated fsm -->
       <package
-            uri="fr.supelec.plong9.fsm"
+            uri="http://fr.supelec.plong9.fsm"
             class="fr.supelec.plong9.fsm.FsmPackage"
             genModel="model/fsm.genmodel"/>
    </extension>
