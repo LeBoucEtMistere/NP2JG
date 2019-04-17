@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="mySimpleFSM" initialState="//@ownedStates.0" currentState="//@ownedStates.0" finalState="//@ownedStates.3">
+<?xml version="1.0" encoding="ASCII"?>
+<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="myFsm" initialState="//@ownedStates.0" currentState="//@ownedStates.0" finalState="//@ownedStates.3">
   <ownedStates name="s1">
     <outgoingTransitions name="t1" target="//@ownedStates.1"/>
   </ownedStates>

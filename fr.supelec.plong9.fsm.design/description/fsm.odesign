@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="fsm" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="fsm" version="12.0.0.2017041100">
   <ownedViewpoints name="FSMViewpoint" modelFileExtension="fsm">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FSMDiagram" domainClass="fsm::FSM" enablePopupBars="true">
       <metamodel href="../../fr.supelec.plong9.fsm/model/fsm.ecore#/"/>
@@ -15,7 +15,7 @@
         <edgeMappings name="TransitionEdge" sourceMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="fsm::Transition" useDomainElement="true">
           <style sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'?'.concat(self.event).concat(' / !').concat(self.action)">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'event / '+ self.actions + '[' + self.guard + ']'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -46,7 +46,27 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+        <toolSections name="Set">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="SetInitialState" label="Set Initial State">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:">
+                <subModelOperations xsi:type="tool_1:SetValue"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="TransitionsTable" label="Transitions Table" domainClass="fsm::FSM">
+      <metamodel href="../../fr.supelec.plong9.fsm/model/fsm.ecore#/"/>
+      <ownedLineMappings name="TransitionLine" label="Transition Line" domainClass="fsm::Transition" headerLabelExpression="feature:name"/>
+      <ownedColumnMappings name="SourceColumn" headerLabelExpression="Source" featureName="source" labelExpression="aql:self.source.name"/>
+      <ownedColumnMappings name="TargetColumn" headerLabelExpression="Target" featureName="target" labelExpression="aql:self.target.name"/>
+      <ownedColumnMappings name="EventColumn" headerLabelExpression="Event" featureName="event" labelExpression="aql:self.event.name"/>
+      <ownedColumnMappings name="ActionColumn" headerLabelExpression="Action" featureName="action" labelExpression="aql:self.action.name"/>
+      <ownedColumnMappings name="GuardColumn" headerLabelExpression="Guard" featureName="guard" labelExpression="aql:self.guard.name"/>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.supelec.plong9.fsm.design.Services"/>
   </ownedViewpoints>
