@@ -2,8 +2,11 @@
  */
 package fr.supelec.plong9.fsm.impl;
 
+import fr.supelec.plong9.fsm.Action;
+import fr.supelec.plong9.fsm.Event;
 import fr.supelec.plong9.fsm.FsmFactory;
 import fr.supelec.plong9.fsm.FsmPackage;
+import fr.supelec.plong9.fsm.Guard;
 import fr.supelec.plong9.fsm.State;
 import fr.supelec.plong9.fsm.Transition;
 
@@ -41,6 +44,27 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * @generated
 	 */
 	private EClass transitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass actionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass guardEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -165,6 +189,15 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFSM_OwnedEvents() {
+		return (EReference) fsmEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -237,7 +270,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTransition_Target() {
+	public EReference getTransition_Actions() {
 		return (EReference) transitionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -246,8 +279,8 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTransition_Event() {
-		return (EAttribute) transitionEClass.getEStructuralFeatures().get(3);
+	public EReference getTransition_Guard() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -255,8 +288,71 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTransition_Action() {
-		return (EAttribute) transitionEClass.getEStructuralFeatures().get(4);
+	public EReference getTransition_Target() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEvent() {
+		return eventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEvent_Name() {
+		return (EAttribute) eventEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAction() {
+		return actionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Name() {
+		return (EAttribute) actionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGuard() {
+		return guardEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGuard_Name() {
+		return (EAttribute) guardEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTransition_Event() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -294,6 +390,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEReference(fsmEClass, FSM__INITIAL_STATE);
 		createEReference(fsmEClass, FSM__CURRENT_STATE);
 		createEReference(fsmEClass, FSM__FINAL_STATE);
+		createEReference(fsmEClass, FSM__OWNED_EVENTS);
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__NAME);
@@ -304,9 +401,19 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		transitionEClass = createEClass(TRANSITION);
 		createEAttribute(transitionEClass, TRANSITION__NAME);
 		createEReference(transitionEClass, TRANSITION__SOURCE);
+		createEReference(transitionEClass, TRANSITION__ACTIONS);
+		createEReference(transitionEClass, TRANSITION__GUARD);
+		createEReference(transitionEClass, TRANSITION__EVENT);
 		createEReference(transitionEClass, TRANSITION__TARGET);
-		createEAttribute(transitionEClass, TRANSITION__EVENT);
-		createEAttribute(transitionEClass, TRANSITION__ACTION);
+
+		eventEClass = createEClass(EVENT);
+		createEAttribute(eventEClass, EVENT__NAME);
+
+		actionEClass = createEClass(ACTION);
+		createEAttribute(actionEClass, ACTION__NAME);
+
+		guardEClass = createEClass(GUARD);
+		createEAttribute(guardEClass, GUARD__NAME);
 	}
 
 	/**
@@ -356,6 +463,9 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getFSM_FinalState(), this.getState(), null, "finalState", null, 0, 1,
 				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFSM_OwnedEvents(), this.getEvent(), null, "ownedEvents", null, 0, -1,
+				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT,
@@ -377,13 +487,30 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getTransition_Source(), this.getState(), this.getState_OutgoingTransitions(), "source", null, 1,
 				1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Actions(), this.getAction(), null, "actions", null, 0, -1, Transition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Guard(), this.getGuard(), null, "guard", null, 0, 1, Transition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_Event(), this.getEvent(), null, "event", null, 1, 1, Transition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_Target(), this.getState(), this.getState_IncomingTransitions(), "target", null, 1,
 				1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransition_Event(), ecorePackage.getEString(), "event", null, 1, 1, Transition.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransition_Action(), ecorePackage.getEString(), "action", null, 1, 1, Transition.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEvent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Event.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(actionEClass, Action.class, "Action", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(guardEClass, Guard.class, "Guard", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGuard_Name(), ecorePackage.getEString(), "name", null, 0, 1, Guard.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -2,6 +2,7 @@
  */
 package fr.supelec.plong9.fsm.impl;
 
+import fr.supelec.plong9.fsm.Event;
 import fr.supelec.plong9.fsm.FSM;
 import fr.supelec.plong9.fsm.FsmPackage;
 import fr.supelec.plong9.fsm.State;
@@ -19,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getInitialState <em>Initial State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getCurrentState <em>Current State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getFinalState <em>Final State</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedEvents <em>Owned Events</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +102,16 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * @ordered
 	 */
 	protected State finalState;
+
+	/**
+	 * The cached value of the '{@link #getOwnedEvents() <em>Owned Events</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnedEvents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Event> ownedEvents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -278,6 +291,18 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Event> getOwnedEvents() {
+		if (ownedEvents == null) {
+			ownedEvents = new EObjectContainmentEList<Event>(Event.class, this, FsmPackage.FSM__OWNED_EVENTS);
+		}
+		return ownedEvents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -298,6 +323,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		switch (featureID) {
 		case FsmPackage.FSM__OWNED_STATES:
 			return ((InternalEList<?>) getOwnedStates()).basicRemove(otherEnd, msgs);
+		case FsmPackage.FSM__OWNED_EVENTS:
+			return ((InternalEList<?>) getOwnedEvents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -326,6 +353,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			if (resolve)
 				return getFinalState();
 			return basicGetFinalState();
+		case FsmPackage.FSM__OWNED_EVENTS:
+			return getOwnedEvents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -355,6 +384,10 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__FINAL_STATE:
 			setFinalState((State) newValue);
 			return;
+		case FsmPackage.FSM__OWNED_EVENTS:
+			getOwnedEvents().clear();
+			getOwnedEvents().addAll((Collection<? extends Event>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -382,6 +415,9 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__FINAL_STATE:
 			setFinalState((State) null);
 			return;
+		case FsmPackage.FSM__OWNED_EVENTS:
+			getOwnedEvents().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -404,6 +440,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return currentState != null;
 		case FsmPackage.FSM__FINAL_STATE:
 			return finalState != null;
+		case FsmPackage.FSM__OWNED_EVENTS:
+			return ownedEvents != null && !ownedEvents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

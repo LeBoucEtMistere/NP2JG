@@ -15,7 +15,7 @@
         <edgeMappings name="TransitionEdge" sourceMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="fsm::Transition" useDomainElement="true">
           <style sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:'event / '+ self.actions + '[' + self.guard + ']'">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.event.name+' / '+ self.actions + '[' + self.guard + ']'">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -58,6 +58,23 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers name="EventLayer" label="Event Layer" activeByDefault="true">
+        <containerMappings name="eventContainer" label="Event Container" domainClass="fsm::Event" childrenPresentation="List">
+          <subNodeMappings name="eventNode" label="Node" domainClass="fsm::Event">
+            <style xsi:type="style:BundledImageDescription" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="event">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="TransitionsTable" label="Transitions Table" domainClass="fsm::FSM">
       <metamodel href="../../fr.supelec.plong9.fsm/model/fsm.ecore#/"/>

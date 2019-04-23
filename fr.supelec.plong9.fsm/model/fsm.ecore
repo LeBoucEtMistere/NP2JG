@@ -10,8 +10,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="currentState" lowerBound="1"
         eType="#//State"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="finalState" eType="#//State"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eventsQueue" upperBound="-1"
-        eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedEvents" upperBound="-1"
+        eType="#//Event" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

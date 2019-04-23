@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getInitialState <em>Initial State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getCurrentState <em>Current State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getFinalState <em>Final State</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedEvents <em>Owned Events</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getFSM()
@@ -148,5 +149,21 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	void setFinalState(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned Events</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.supelec.plong9.fsm.Event}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned Events</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned Events</em>' containment reference list.
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_OwnedEvents()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Event> getOwnedEvents();
 
 } // FSM

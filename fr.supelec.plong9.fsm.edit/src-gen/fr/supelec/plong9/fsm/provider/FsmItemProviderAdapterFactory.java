@@ -142,6 +142,29 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link fr.supelec.plong9.fsm.Event} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EventItemProvider eventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.supelec.plong9.fsm.Event}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEventAdapter() {
+		if (eventItemProvider == null) {
+			eventItemProvider = new EventItemProvider(this);
+		}
+
+		return eventItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +269,8 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory
 			stateItemProvider.dispose();
 		if (transitionItemProvider != null)
 			transitionItemProvider.dispose();
+		if (eventItemProvider != null)
+			eventItemProvider.dispose();
 	}
 
 }

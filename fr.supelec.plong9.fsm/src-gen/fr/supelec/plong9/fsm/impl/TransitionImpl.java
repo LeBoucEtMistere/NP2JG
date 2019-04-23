@@ -2,19 +2,25 @@
  */
 package fr.supelec.plong9.fsm.impl;
 
+import fr.supelec.plong9.fsm.Action;
+import fr.supelec.plong9.fsm.Event;
 import fr.supelec.plong9.fsm.FsmPackage;
+import fr.supelec.plong9.fsm.Guard;
 import fr.supelec.plong9.fsm.State;
 import fr.supelec.plong9.fsm.Transition;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -27,9 +33,10 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <ul>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getGuard <em>Guard</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getEvent <em>Event</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getAction <em>Action</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +63,36 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	protected String name = NAME_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getActions() <em>Actions</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Action> actions;
+
+	/**
+	 * The cached value of the '{@link #getGuard() <em>Guard</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGuard()
+	 * @generated
+	 * @ordered
+	 */
+	protected Guard guard;
+
+	/**
+	 * The cached value of the '{@link #getEvent() <em>Event</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEvent()
+	 * @generated
+	 * @ordered
+	 */
+	protected Event event;
+
+	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,46 +101,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @ordered
 	 */
 	protected State target;
-
-	/**
-	 * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEvent()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EVENT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEvent()
-	 * @generated
-	 * @ordered
-	 */
-	protected String event = EVENT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ACTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAction()
-	 * @generated
-	 * @ordered
-	 */
-	protected String action = ACTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,6 +191,57 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Action> getActions() {
+		if (actions == null) {
+			actions = new EObjectResolvingEList<Action>(Action.class, this, FsmPackage.TRANSITION__ACTIONS);
+		}
+		return actions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Guard getGuard() {
+		if (guard != null && guard.eIsProxy()) {
+			InternalEObject oldGuard = (InternalEObject) guard;
+			guard = (Guard) eResolveProxy(oldGuard);
+			if (guard != oldGuard) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.TRANSITION__GUARD, oldGuard,
+							guard));
+			}
+		}
+		return guard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Guard basicGetGuard() {
+		return guard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGuard(Guard newGuard) {
+		Guard oldGuard = guard;
+		guard = newGuard;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__GUARD, oldGuard, guard));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public State getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -261,7 +309,16 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getEvent() {
+	public Event getEvent() {
+		if (event != null && event.eIsProxy()) {
+			InternalEObject oldEvent = (InternalEObject) event;
+			event = (Event) eResolveProxy(oldEvent);
+			if (event != oldEvent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.TRANSITION__EVENT, oldEvent,
+							event));
+			}
+		}
 		return event;
 	}
 
@@ -270,32 +327,20 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEvent(String newEvent) {
-		String oldEvent = event;
+	public Event basicGetEvent() {
+		return event;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEvent(Event newEvent) {
+		Event oldEvent = event;
 		event = newEvent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__EVENT, oldEvent, event));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getAction() {
-		return action;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAction(String newAction) {
-		String oldAction = action;
-		action = newAction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__ACTION, oldAction, action));
 	}
 
 	/**
@@ -361,14 +406,20 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			return getName();
 		case FsmPackage.TRANSITION__SOURCE:
 			return getSource();
+		case FsmPackage.TRANSITION__ACTIONS:
+			return getActions();
+		case FsmPackage.TRANSITION__GUARD:
+			if (resolve)
+				return getGuard();
+			return basicGetGuard();
+		case FsmPackage.TRANSITION__EVENT:
+			if (resolve)
+				return getEvent();
+			return basicGetEvent();
 		case FsmPackage.TRANSITION__TARGET:
 			if (resolve)
 				return getTarget();
 			return basicGetTarget();
-		case FsmPackage.TRANSITION__EVENT:
-			return getEvent();
-		case FsmPackage.TRANSITION__ACTION:
-			return getAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -378,6 +429,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -387,14 +439,18 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		case FsmPackage.TRANSITION__SOURCE:
 			setSource((State) newValue);
 			return;
-		case FsmPackage.TRANSITION__TARGET:
-			setTarget((State) newValue);
+		case FsmPackage.TRANSITION__ACTIONS:
+			getActions().clear();
+			getActions().addAll((Collection<? extends Action>) newValue);
+			return;
+		case FsmPackage.TRANSITION__GUARD:
+			setGuard((Guard) newValue);
 			return;
 		case FsmPackage.TRANSITION__EVENT:
-			setEvent((String) newValue);
+			setEvent((Event) newValue);
 			return;
-		case FsmPackage.TRANSITION__ACTION:
-			setAction((String) newValue);
+		case FsmPackage.TRANSITION__TARGET:
+			setTarget((State) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -414,14 +470,17 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		case FsmPackage.TRANSITION__SOURCE:
 			setSource((State) null);
 			return;
-		case FsmPackage.TRANSITION__TARGET:
-			setTarget((State) null);
+		case FsmPackage.TRANSITION__ACTIONS:
+			getActions().clear();
+			return;
+		case FsmPackage.TRANSITION__GUARD:
+			setGuard((Guard) null);
 			return;
 		case FsmPackage.TRANSITION__EVENT:
-			setEvent(EVENT_EDEFAULT);
+			setEvent((Event) null);
 			return;
-		case FsmPackage.TRANSITION__ACTION:
-			setAction(ACTION_EDEFAULT);
+		case FsmPackage.TRANSITION__TARGET:
+			setTarget((State) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -439,12 +498,14 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case FsmPackage.TRANSITION__SOURCE:
 			return getSource() != null;
+		case FsmPackage.TRANSITION__ACTIONS:
+			return actions != null && !actions.isEmpty();
+		case FsmPackage.TRANSITION__GUARD:
+			return guard != null;
+		case FsmPackage.TRANSITION__EVENT:
+			return event != null;
 		case FsmPackage.TRANSITION__TARGET:
 			return target != null;
-		case FsmPackage.TRANSITION__EVENT:
-			return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
-		case FsmPackage.TRANSITION__ACTION:
-			return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -462,10 +523,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", event: ");
-		result.append(event);
-		result.append(", action: ");
-		result.append(action);
 		result.append(')');
 		return result.toString();
 	}

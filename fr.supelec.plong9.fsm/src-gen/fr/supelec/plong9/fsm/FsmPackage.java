@@ -112,13 +112,22 @@ public interface FsmPackage extends EPackage {
 	int FSM__FINAL_STATE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Owned Events</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__OWNED_EVENTS = 5;
+
+	/**
 	 * The number of structural features of the '<em>FSM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_FEATURE_COUNT = 5;
+	int FSM_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>FSM</em>' class.
@@ -222,31 +231,40 @@ public interface FsmPackage extends EPackage {
 	int TRANSITION__SOURCE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Actions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__ACTIONS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Guard</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__GUARD = 3;
+
+	/**
+	 * The feature id for the '<em><b>Event</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__EVENT = 4;
+
+	/**
 	 * The feature id for the '<em><b>Target</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__TARGET = 2;
-
-	/**
-	 * The feature id for the '<em><b>Event</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__EVENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSITION__ACTION = 4;
+	int TRANSITION__TARGET = 5;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -255,7 +273,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = 5;
+	int TRANSITION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -265,6 +283,117 @@ public interface FsmPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.supelec.plong9.fsm.impl.EventImpl <em>Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.supelec.plong9.fsm.impl.EventImpl
+	 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getEvent()
+	 * @generated
+	 */
+	int EVENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.supelec.plong9.fsm.impl.ActionImpl <em>Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.supelec.plong9.fsm.impl.ActionImpl
+	 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getAction()
+	 * @generated
+	 */
+	int ACTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.supelec.plong9.fsm.impl.GuardImpl <em>Guard</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.supelec.plong9.fsm.impl.GuardImpl
+	 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getGuard()
+	 * @generated
+	 */
+	int GUARD = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUARD__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Guard</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUARD_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Guard</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUARD_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.FSM <em>FSM</em>}'.
@@ -330,6 +459,17 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFSM_FinalState();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.FSM#getOwnedEvents <em>Owned Events</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Events</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#getOwnedEvents()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EReference getFSM_OwnedEvents();
 
 	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.State <em>State</em>}'.
@@ -418,6 +558,28 @@ public interface FsmPackage extends EPackage {
 	EReference getTransition_Source();
 
 	/**
+	 * Returns the meta object for the reference list '{@link fr.supelec.plong9.fsm.Transition#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Actions</em>'.
+	 * @see fr.supelec.plong9.fsm.Transition#getActions()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Actions();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getGuard <em>Guard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Guard</em>'.
+	 * @see fr.supelec.plong9.fsm.Transition#getGuard()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Guard();
+
+	/**
 	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -429,26 +591,78 @@ public interface FsmPackage extends EPackage {
 	EReference getTransition_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}'.
+	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Event <em>Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Event</em>'.
+	 * @return the meta object for class '<em>Event</em>'.
+	 * @see fr.supelec.plong9.fsm.Event
+	 * @generated
+	 */
+	EClass getEvent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Event#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fr.supelec.plong9.fsm.Event#getName()
+	 * @see #getEvent()
+	 * @generated
+	 */
+	EAttribute getEvent_Name();
+
+	/**
+	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Action <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Action</em>'.
+	 * @see fr.supelec.plong9.fsm.Action
+	 * @generated
+	 */
+	EClass getAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Action#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fr.supelec.plong9.fsm.Action#getName()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Name();
+
+	/**
+	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Guard <em>Guard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Guard</em>'.
+	 * @see fr.supelec.plong9.fsm.Guard
+	 * @generated
+	 */
+	EClass getGuard();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Guard#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fr.supelec.plong9.fsm.Guard#getName()
+	 * @see #getGuard()
+	 * @generated
+	 */
+	EAttribute getGuard_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Event</em>'.
 	 * @see fr.supelec.plong9.fsm.Transition#getEvent()
 	 * @see #getTransition()
 	 * @generated
 	 */
-	EAttribute getTransition_Event();
-
-	/**
-	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Transition#getAction <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Action</em>'.
-	 * @see fr.supelec.plong9.fsm.Transition#getAction()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EAttribute getTransition_Action();
+	EReference getTransition_Event();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -524,6 +738,14 @@ public interface FsmPackage extends EPackage {
 		EReference FSM__FINAL_STATE = eINSTANCE.getFSM_FinalState();
 
 		/**
+		 * The meta object literal for the '<em><b>Owned Events</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSM__OWNED_EVENTS = eINSTANCE.getFSM_OwnedEvents();
+
+		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StateImpl <em>State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -592,6 +814,22 @@ public interface FsmPackage extends EPackage {
 		EReference TRANSITION__SOURCE = eINSTANCE.getTransition_Source();
 
 		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__ACTIONS = eINSTANCE.getTransition_Actions();
+
+		/**
+		 * The meta object literal for the '<em><b>Guard</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__GUARD = eINSTANCE.getTransition_Guard();
+
+		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -600,20 +838,66 @@ public interface FsmPackage extends EPackage {
 		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
 
 		/**
-		 * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
+		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.EventImpl <em>Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see fr.supelec.plong9.fsm.impl.EventImpl
+		 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getEvent()
 		 * @generated
 		 */
-		EAttribute TRANSITION__EVENT = eINSTANCE.getTransition_Event();
+		EClass EVENT = eINSTANCE.getEvent();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRANSITION__ACTION = eINSTANCE.getTransition_Action();
+		EAttribute EVENT__NAME = eINSTANCE.getEvent_Name();
+
+		/**
+		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.ActionImpl <em>Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.supelec.plong9.fsm.impl.ActionImpl
+		 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getAction()
+		 * @generated
+		 */
+		EClass ACTION = eINSTANCE.getAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
+
+		/**
+		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.GuardImpl <em>Guard</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.supelec.plong9.fsm.impl.GuardImpl
+		 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getGuard()
+		 * @generated
+		 */
+		EClass GUARD = eINSTANCE.getGuard();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GUARD__NAME = eINSTANCE.getGuard_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__EVENT = eINSTANCE.getTransition_Event();
 
 	}
 

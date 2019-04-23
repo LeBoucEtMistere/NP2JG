@@ -2,6 +2,7 @@
  */
 package fr.supelec.plong9.fsm;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,9 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getName <em>Name</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getSource <em>Source</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.Transition#getTarget <em>Target</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.Transition#getActions <em>Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.Transition#getGuard <em>Guard</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.Transition#getAction <em>Action</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.Transition#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getTransition()
@@ -80,6 +82,48 @@ public interface Transition extends EObject {
 	void setSource(State value);
 
 	/**
+	 * Returns the value of the '<em><b>Actions</b></em>' reference list.
+	 * The list contents are of type {@link fr.supelec.plong9.fsm.Action}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actions</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Actions</em>' reference list.
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Actions()
+	 * @model
+	 * @generated
+	 */
+	EList<Action> getActions();
+
+	/**
+	 * Returns the value of the '<em><b>Guard</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guard</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Guard</em>' reference.
+	 * @see #setGuard(Guard)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Guard()
+	 * @model
+	 * @generated
+	 */
+	Guard getGuard();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getGuard <em>Guard</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Guard</em>' reference.
+	 * @see #getGuard()
+	 * @generated
+	 */
+	void setGuard(Guard value);
+
+	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link fr.supelec.plong9.fsm.State#getIncomingTransitions <em>Incoming Transitions</em>}'.
 	 * <!-- begin-user-doc -->
@@ -108,55 +152,29 @@ public interface Transition extends EObject {
 	void setTarget(State value);
 
 	/**
-	 * Returns the value of the '<em><b>Event</b></em>' attribute.
+	 * Returns the value of the '<em><b>Event</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Event</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Event</em>' attribute.
-	 * @see #setEvent(String)
+	 * @return the value of the '<em>Event</em>' reference.
+	 * @see #setEvent(Event)
 	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Event()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getEvent();
+	Event getEvent();
 
 	/**
-	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}' attribute.
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Event</em>' attribute.
+	 * @param value the new value of the '<em>Event</em>' reference.
 	 * @see #getEvent()
 	 * @generated
 	 */
-	void setEvent(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Action</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Action</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action</em>' attribute.
-	 * @see #setAction(String)
-	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Action()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getAction();
-
-	/**
-	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getAction <em>Action</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Action</em>' attribute.
-	 * @see #getAction()
-	 * @generated
-	 */
-	void setAction(String value);
+	void setEvent(Event value);
 
 } // Transition
