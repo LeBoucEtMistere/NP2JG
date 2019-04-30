@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="ASCII"?>
 <fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="myFsm" initialState="//@ownedStates.0" currentState="//@ownedStates.0" finalState="//@ownedStates.3">
   <ownedStates name="s1">
-    <outgoingTransitions name="t1" event="//@ownedEvents.0" target="//@ownedStates.1"/>
+    <outgoingTransitions name="t1" actions="//@ownedActions.2 //@ownedActions.4" guard="//@ownedGuards.2" event="//@ownedEvents.0" target="//@ownedStates.1"/>
   </ownedStates>
   <ownedStates name="s2" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0 //@ownedStates.2/@outgoingTransitions.0">
-    <outgoingTransitions name="t2" target="//@ownedStates.2"/>
+    <outgoingTransitions name="t2" actions="//@ownedActions.0" guard="//@ownedGuards.1" event="//@ownedEvents.2" target="//@ownedStates.2"/>
   </ownedStates>
   <ownedStates name="s3" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0">
-    <outgoingTransitions name="t3" target="//@ownedStates.1"/>
-    <outgoingTransitions name="t4" target="//@ownedStates.3"/>
+    <outgoingTransitions name="t3" actions="//@ownedActions.5 //@ownedActions.1" guard="//@ownedGuards.3" event="//@ownedEvents.1" target="//@ownedStates.1"/>
+    <outgoingTransitions name="t4" actions="//@ownedActions.3" guard="//@ownedGuards.0" event="//@ownedEvents.3" target="//@ownedStates.3"/>
   </ownedStates>
   <ownedStates name="s4" incomingTransitions="//@ownedStates.2/@outgoingTransitions.1"/>
   <ownedEvents name="E1"/>
+  <ownedEvents name="E2"/>
+  <ownedEvents name="E3"/>
+  <ownedEvents name="E4"/>
+  <ownedActions name="A1"/>
+  <ownedActions name="A2"/>
+  <ownedActions name="A3"/>
+  <ownedActions name="A4"/>
+  <ownedActions name="A5"/>
+  <ownedActions name="A6"/>
+  <ownedGuards name="G1"/>
+  <ownedGuards name="G2"/>
+  <ownedGuards name="G3"/>
+  <ownedGuards name="G4"/>
 </fsm:FSM>

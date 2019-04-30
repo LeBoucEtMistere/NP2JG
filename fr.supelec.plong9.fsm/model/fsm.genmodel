@@ -40,10 +40,10 @@
     <genClasses ecoreClass="fsm.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Event/name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="fsm.ecore#//Action">
+    <genClasses ecoreClass="fsm.ecore#//Action">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Action/name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="fsm.ecore#//Guard">
+    <genClasses ecoreClass="fsm.ecore#//Guard">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Guard/name"/>
     </genClasses>
   </genPackages>

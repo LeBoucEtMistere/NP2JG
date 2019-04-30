@@ -74,6 +74,17 @@ public class ActionItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
+	 * This returns Action.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Action"));
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
