@@ -125,21 +125,6 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This adds a property descriptor for the Target feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTargetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Transition_target_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Transition_target_feature",
-								"_UI_Transition_type"),
-						FsmPackage.Literals.TRANSITION__TARGET, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Event feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,6 +137,21 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_event_feature",
 								"_UI_Transition_type"),
 						FsmPackage.Literals.TRANSITION__EVENT, true, false, false, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Target feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transition_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_target_feature",
+								"_UI_Transition_type"),
+						FsmPackage.Literals.TRANSITION__TARGET, true, false, true, null, null, null));
 	}
 
 	/**

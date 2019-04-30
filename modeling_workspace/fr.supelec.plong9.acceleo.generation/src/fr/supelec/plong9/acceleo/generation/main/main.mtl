@@ -2,11 +2,14 @@
 [module main('http://fr.supelec.plong9.fsm')]
 
 [import fr::supelec::plong9::acceleo::generation::file::generatePOM /]
+[import fr::supelec::plong9::acceleo::generation::file::generateMain /]
 
 [template public generateMain(aFSM : FSM)]
 [comment @main/]
 
+
 [aFSM.generatePOM()/]
+[aFSM.generateMain()/]
 
 [if (aFSM.isServer)]
 	

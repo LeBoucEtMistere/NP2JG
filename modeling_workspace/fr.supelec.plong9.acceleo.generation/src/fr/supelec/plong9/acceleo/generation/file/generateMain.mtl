@@ -24,32 +24,7 @@ public class main {
 		FSMServer fsm = new FSMServer("[aFSM.name/]", (dis, f) -> new NetworkMessageParser(dis, f), 50300, "serverpw");
 		fsm.LOGGER.setLevel(Level.INFO);
 
-		[for (state : State | aFSM.ownedStates)]
-			State [state.name/] = new State("[state.name/]");
-			[for (action : Action | state.onEnteredActions)]
-			[state.name/].onEnteredAction(new [action.name/]());
-			[/for]
-			[for (action : Action | state.onExitedActions)]
-			[state.name/].onExitedAction(new [action.name/]());
-			[/for]
-
-		[/for]
-		
-		[for (state : State | aFSM.ownedStates)]
-		[for (transition : Transition | state.outgoingTransitions)]
-		Transition [transition.name/] = new Transition("[transition.name/]");
-		[transition.name/].setSource([transition.source.name/]);
-		[transition.name/].setTarget([transition.target.name/]);
-		[transition.name/].registerEvent("[transition.event.name/]");
-		[for (action : Action | transition.actions)]
-			[transition.name/].registerAction(new [action.name/]());
-		[/for]
-		[/for]
-		[/for]
-		
-		[for (state : State | aFSM.ownedStates)]
-		fsm.addState([state.name/])
-		[/for]		
+			
 		
 		fsm.setInitialState([aFSM.initialState.name/]);
 		fsm.setFinalState([aFSM.finalState.name/]);
