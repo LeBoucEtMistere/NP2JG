@@ -74,6 +74,17 @@ public class GuardItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
+	 * This returns Guard.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Guard"));
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
