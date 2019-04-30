@@ -130,13 +130,31 @@ public interface FsmPackage extends EPackage {
 	int FSM__IS_SERVER = 6;
 
 	/**
+	 * The feature id for the '<em><b>Owned Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__OWNED_ACTIONS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Owned Guards</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__OWNED_GUARDS = 8;
+
+	/**
 	 * The number of structural features of the '<em>FSM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_FEATURE_COUNT = 7;
+	int FSM_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>FSM</em>' class.
@@ -194,13 +212,31 @@ public interface FsmPackage extends EPackage {
 	int STATE__INCOMING_TRANSITIONS = 3;
 
 	/**
+	 * The feature id for the '<em><b>On Entered Actions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__ON_ENTERED_ACTIONS = 4;
+
+	/**
+	 * The feature id for the '<em><b>On Exited Actions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__ON_EXITED_ACTIONS = 5;
+
+	/**
 	 * The number of structural features of the '<em>State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 4;
+	int STATE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -492,6 +528,28 @@ public interface FsmPackage extends EPackage {
 	EAttribute getFSM_IsServer();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.FSM#getOwnedActions <em>Owned Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Actions</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#getOwnedActions()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EReference getFSM_OwnedActions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.FSM#getOwnedGuards <em>Owned Guards</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Guards</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#getOwnedGuards()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EReference getFSM_OwnedGuards();
+
+	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.State <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,6 +602,28 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getState_IncomingTransitions();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>On Entered Actions</em>'.
+	 * @see fr.supelec.plong9.fsm.State#getOnEnteredActions()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_OnEnteredActions();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>On Exited Actions</em>'.
+	 * @see fr.supelec.plong9.fsm.State#getOnExitedActions()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_OnExitedActions();
 
 	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Transition <em>Transition</em>}'.
@@ -774,6 +854,22 @@ public interface FsmPackage extends EPackage {
 		EAttribute FSM__IS_SERVER = eINSTANCE.getFSM_IsServer();
 
 		/**
+		 * The meta object literal for the '<em><b>Owned Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSM__OWNED_ACTIONS = eINSTANCE.getFSM_OwnedActions();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned Guards</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSM__OWNED_GUARDS = eINSTANCE.getFSM_OwnedGuards();
+
+		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StateImpl <em>State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -814,6 +910,22 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STATE__INCOMING_TRANSITIONS = eINSTANCE.getState_IncomingTransitions();
+
+		/**
+		 * The meta object literal for the '<em><b>On Entered Actions</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__ON_ENTERED_ACTIONS = eINSTANCE.getState_OnEnteredActions();
+
+		/**
+		 * The meta object literal for the '<em><b>On Exited Actions</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__ON_EXITED_ACTIONS = eINSTANCE.getState_OnExitedActions();
 
 		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.TransitionImpl <em>Transition</em>}' class.

@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.State#getOwningFSM <em>Owning FSM</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.State#getOutgoingTransitions <em>Outgoing Transitions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.State#getIncomingTransitions <em>Incoming Transitions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getState()
@@ -115,5 +117,57 @@ public interface State extends EObject {
 	 * @generated
 	 */
 	EList<Transition> getIncomingTransitions();
+
+	/**
+	 * Returns the value of the '<em><b>On Entered Actions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>On Entered Actions</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>On Entered Actions</em>' reference.
+	 * @see #setOnEnteredActions(Action)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getState_OnEnteredActions()
+	 * @model
+	 * @generated
+	 */
+	Action getOnEnteredActions();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Entered Actions</em>' reference.
+	 * @see #getOnEnteredActions()
+	 * @generated
+	 */
+	void setOnEnteredActions(Action value);
+
+	/**
+	 * Returns the value of the '<em><b>On Exited Actions</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>On Exited Actions</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>On Exited Actions</em>' reference.
+	 * @see #setOnExitedActions(Action)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getState_OnExitedActions()
+	 * @model
+	 * @generated
+	 */
+	Action getOnExitedActions();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Exited Actions</em>' reference.
+	 * @see #getOnExitedActions()
+	 * @generated
+	 */
+	void setOnExitedActions(Action value);
 
 } // State

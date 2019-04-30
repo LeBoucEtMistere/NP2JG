@@ -1,0 +1,80 @@
+[comment encoding = UTF-8 /]
+[module generateMain('http://fr.supelec.plong9.fsm')]
+
+
+[template public generateElement(aFSM : FSM)]
+
+[file ('main.java', false, 'UTF-8')]
+
+package [aFSM.name/];
+
+import java.util.logging.Level;
+import javafx.util.Pair;
+
+import fsm.FSMServer;
+import fsm.State;
+import fsm.Transition;
+import fsm.DisconnectClientAction;
+import fsm.InverseGuard;
+
+public class main {
+	
+	public static void main(String[] args) {
+		
+		FSMServer fsm = new FSMServer("[aFSM.name/]", (dis, f) -> new NetworkMessageParser(dis, f), 50300, "serverpw");
+		fsm.LOGGER.setLevel(Level.INFO);
+
+		[for (state : State | aFSM.ownedStates)]
+			State [state.name/] = new State("[state.name/]");
+			[for (action : Action | state.name)]
+				
+			[/for]
+		[/for]
+		
+		State s0 = new State("attenteConnexion");
+		s0.onEnteredAction(new TimeoutAction());
+		
+		State s1 = new State("attente");
+		State s2 = new State("end");
+		
+		Transition t1 = new Transition("reception");
+		t1.setSource(s1);
+		t1.setTarget(s0);
+		t1.registerEvent("ping");
+		t1.registerAction(new PongAction());
+		t1.registerAction(new DisconnectClientAction());
+		t1.registerGuard(new PongGuard());
+		
+		Transition t2 = new Transition("reception");
+		t2.setSource(s1);
+		t2.setTarget(s0);
+		t2.registerEvent("ping");
+		t2.registerAction(new PongAction2());
+		t2.registerAction(new DisconnectClientAction());
+		t2.registerGuard(new InverseGuard(new PongGuard()));
+		
+		Transition t0 = new Transition("connexionRecue");
+		t0.setSource(s0);
+		t0.setTarget(s1);
+		t0.registerEvent("newConnection");
+		
+		Transition t3 = new Transition("timeout");
+		t3.setSource(s0);
+		t3.setTarget(s2);
+		t3.registerEvent("timeoutConnection");
+				
+		fsm.addState(s0);
+		fsm.addState(s1);
+		fsm.addState(s2);
+		
+		fsm.setInitialState(s0);
+		fsm.setFinalState(s2);
+		
+		fsm.start();
+		
+	}
+}
+
+
+[/file]
+[/template]

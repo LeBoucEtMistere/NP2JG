@@ -151,6 +151,8 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_STATES);
 			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_EVENTS);
+			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_ACTIONS);
+			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_GUARDS);
 		}
 		return childrenFeatures;
 	}
@@ -220,6 +222,8 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 			return;
 		case FsmPackage.FSM__OWNED_STATES:
 		case FsmPackage.FSM__OWNED_EVENTS:
+		case FsmPackage.FSM__OWNED_ACTIONS:
+		case FsmPackage.FSM__OWNED_GUARDS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}

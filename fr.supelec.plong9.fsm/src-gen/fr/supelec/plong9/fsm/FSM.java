@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getFinalState <em>Final State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedEvents <em>Owned Events</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#isIsServer <em>Is Server</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedActions <em>Owned Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedGuards <em>Owned Guards</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getFSM()
@@ -192,5 +194,37 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	void setIsServer(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned Actions</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.supelec.plong9.fsm.Action}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned Actions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned Actions</em>' containment reference list.
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_OwnedActions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Action> getOwnedActions();
+
+	/**
+	 * Returns the value of the '<em><b>Owned Guards</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.supelec.plong9.fsm.Guard}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned Guards</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned Guards</em>' containment reference list.
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_OwnedGuards()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Guard> getOwnedGuards();
 
 } // FSM

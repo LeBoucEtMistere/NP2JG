@@ -59,6 +59,8 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 			addNamePropertyDescriptor(object);
 			addOwningFSMPropertyDescriptor(object);
 			addIncomingTransitionsPropertyDescriptor(object);
+			addOnEnteredActionsPropertyDescriptor(object);
+			addOnExitedActionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +108,36 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 						getString("_UI_PropertyDescriptor_description", "_UI_State_incomingTransitions_feature",
 								"_UI_State_type"),
 						FsmPackage.Literals.STATE__INCOMING_TRANSITIONS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the On Entered Actions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOnEnteredActionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_State_onEnteredActions_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_State_onEnteredActions_feature",
+								"_UI_State_type"),
+						FsmPackage.Literals.STATE__ON_ENTERED_ACTIONS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the On Exited Actions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOnExitedActionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_State_onExitedActions_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_State_onExitedActions_feature",
+								"_UI_State_type"),
+						FsmPackage.Literals.STATE__ON_EXITED_ACTIONS, true, false, true, null, null, null));
 	}
 
 	/**

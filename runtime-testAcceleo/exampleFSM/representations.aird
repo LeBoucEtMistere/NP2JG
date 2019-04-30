@@ -1,4 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_WE19oEJuEemHkMeiqVUGjQ" version="13.0.0.201804031646">
-  <semanticResources>My.fsm</semanticResources>
-</viewpoint:DAnalysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:fsm="http://fr.supelec.plong9.fsm" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_WE19oEJuEemHkMeiqVUGjQ" selectedViews="_ASsPQGtHEemRg8tGIuAyNw" version="13.0.0.201804031646">
+    <semanticResources>My.fsm</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_ASsPQGtHEemRg8tGIuAyNw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_BVFgYGtHEemRg8tGIuAyNw" name="new FSMDiagram" repPath="#_BTiBMGtHEemRg8tGIuAyNw">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']"/>
+        <target xmi:type="fsm:FSM" href="My.fsm#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_BVAn4GtHEemRg8tGIuAyNw" name="new FSMDiagram" uid="_BTiBMGtHEemRg8tGIuAyNw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_BVBO8GtHEemRg8tGIuAyNw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_BVBO8WtHEemRg8tGIuAyNw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_BVqvMGtHEemRg8tGIuAyNw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_BVrWQGtHEemRg8tGIuAyNw" type="Sirius" element="_BVAn4GtHEemRg8tGIuAyNw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_BWE-4GtHEemRg8tGIuAyNw" type="2001" element="_BVBO82tHEemRg8tGIuAyNw">
+          <children xmi:type="notation:Node" xmi:id="_BWTBUGtHEemRg8tGIuAyNw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_BWTBUWtHEemRg8tGIuAyNw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_BWnxcGtHEemRg8tGIuAyNw" type="3004" element="_BVBO9GtHEemRg8tGIuAyNw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_BWnxcWtHEemRg8tGIuAyNw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWnxcmtHEemRg8tGIuAyNw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_BWE-4WtHEemRg8tGIuAyNw" fontName=".AppleSystemUIFont" fontHeight="12" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BWE-4mtHEemRg8tGIuAyNw" width="30" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_BVrWQWtHEemRg8tGIuAyNw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BVBO82tHEemRg8tGIuAyNw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="fsm:State" href="My.fsm#//@ownedStates.0"/>
+      <semanticElements xmi:type="fsm:State" href="My.fsm#//@ownedStates.0"/>
+      <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_BVBO9GtHEemRg8tGIuAyNw" labelSize="12" showIcon="false" labelPosition="node" shape="ring" color="255,245,181">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_BVBO9WtHEemRg8tGIuAyNw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EventLayer']"/>
+    <target xmi:type="fsm:FSM" href="My.fsm#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

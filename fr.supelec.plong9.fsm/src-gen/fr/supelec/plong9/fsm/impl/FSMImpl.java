@@ -2,9 +2,11 @@
  */
 package fr.supelec.plong9.fsm.impl;
 
+import fr.supelec.plong9.fsm.Action;
 import fr.supelec.plong9.fsm.Event;
 import fr.supelec.plong9.fsm.FSM;
 import fr.supelec.plong9.fsm.FsmPackage;
+import fr.supelec.plong9.fsm.Guard;
 import fr.supelec.plong9.fsm.State;
 
 import java.util.Collection;
@@ -39,6 +41,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getFinalState <em>Final State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedEvents <em>Owned Events</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#isIsServer <em>Is Server</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedActions <em>Owned Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedGuards <em>Owned Guards</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,6 +137,26 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * @ordered
 	 */
 	protected boolean isServer = IS_SERVER_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getOwnedActions() <em>Owned Actions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnedActions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Action> ownedActions;
+
+	/**
+	 * The cached value of the '{@link #getOwnedGuards() <em>Owned Guards</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnedGuards()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Guard> ownedGuards;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,6 +369,30 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Action> getOwnedActions() {
+		if (ownedActions == null) {
+			ownedActions = new EObjectContainmentEList<Action>(Action.class, this, FsmPackage.FSM__OWNED_ACTIONS);
+		}
+		return ownedActions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Guard> getOwnedGuards() {
+		if (ownedGuards == null) {
+			ownedGuards = new EObjectContainmentEList<Guard>(Guard.class, this, FsmPackage.FSM__OWNED_GUARDS);
+		}
+		return ownedGuards;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -367,6 +415,10 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return ((InternalEList<?>) getOwnedStates()).basicRemove(otherEnd, msgs);
 		case FsmPackage.FSM__OWNED_EVENTS:
 			return ((InternalEList<?>) getOwnedEvents()).basicRemove(otherEnd, msgs);
+		case FsmPackage.FSM__OWNED_ACTIONS:
+			return ((InternalEList<?>) getOwnedActions()).basicRemove(otherEnd, msgs);
+		case FsmPackage.FSM__OWNED_GUARDS:
+			return ((InternalEList<?>) getOwnedGuards()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -399,6 +451,10 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return getOwnedEvents();
 		case FsmPackage.FSM__IS_SERVER:
 			return isIsServer();
+		case FsmPackage.FSM__OWNED_ACTIONS:
+			return getOwnedActions();
+		case FsmPackage.FSM__OWNED_GUARDS:
+			return getOwnedGuards();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -435,6 +491,14 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__IS_SERVER:
 			setIsServer((Boolean) newValue);
 			return;
+		case FsmPackage.FSM__OWNED_ACTIONS:
+			getOwnedActions().clear();
+			getOwnedActions().addAll((Collection<? extends Action>) newValue);
+			return;
+		case FsmPackage.FSM__OWNED_GUARDS:
+			getOwnedGuards().clear();
+			getOwnedGuards().addAll((Collection<? extends Guard>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -468,6 +532,12 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__IS_SERVER:
 			setIsServer(IS_SERVER_EDEFAULT);
 			return;
+		case FsmPackage.FSM__OWNED_ACTIONS:
+			getOwnedActions().clear();
+			return;
+		case FsmPackage.FSM__OWNED_GUARDS:
+			getOwnedGuards().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -494,6 +564,10 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return ownedEvents != null && !ownedEvents.isEmpty();
 		case FsmPackage.FSM__IS_SERVER:
 			return isServer != IS_SERVER_EDEFAULT;
+		case FsmPackage.FSM__OWNED_ACTIONS:
+			return ownedActions != null && !ownedActions.isEmpty();
+		case FsmPackage.FSM__OWNED_GUARDS:
+			return ownedGuards != null && !ownedGuards.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

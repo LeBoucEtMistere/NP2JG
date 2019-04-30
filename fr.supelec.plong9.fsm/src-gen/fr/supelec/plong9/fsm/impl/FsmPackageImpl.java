@@ -207,6 +207,24 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFSM_OwnedActions() {
+		return (EReference) fsmEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFSM_OwnedGuards() {
+		return (EReference) fsmEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -245,6 +263,24 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 */
 	public EReference getState_IncomingTransitions() {
 		return (EReference) stateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getState_OnEnteredActions() {
+		return (EReference) stateEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getState_OnExitedActions() {
+		return (EReference) stateEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -401,12 +437,16 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEReference(fsmEClass, FSM__FINAL_STATE);
 		createEReference(fsmEClass, FSM__OWNED_EVENTS);
 		createEAttribute(fsmEClass, FSM__IS_SERVER);
+		createEReference(fsmEClass, FSM__OWNED_ACTIONS);
+		createEReference(fsmEClass, FSM__OWNED_GUARDS);
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__NAME);
 		createEReference(stateEClass, STATE__OWNING_FSM);
 		createEReference(stateEClass, STATE__OUTGOING_TRANSITIONS);
 		createEReference(stateEClass, STATE__INCOMING_TRANSITIONS);
+		createEReference(stateEClass, STATE__ON_ENTERED_ACTIONS);
+		createEReference(stateEClass, STATE__ON_EXITED_ACTIONS);
 
 		transitionEClass = createEClass(TRANSITION);
 		createEAttribute(transitionEClass, TRANSITION__NAME);
@@ -479,6 +519,12 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEAttribute(getFSM_IsServer(), ecorePackage.getEBoolean(), "isServer", null, 0, 1,
 				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFSM_OwnedActions(), this.getAction(), null, "ownedActions", null, 0, -1,
+				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFSM_OwnedGuards(), this.getGuard(), null, "ownedGuards", null, 0, -1,
+				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT,
@@ -492,6 +538,12 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getState_IncomingTransitions(), this.getTransition(), this.getTransition_Target(),
 				"incomingTransitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_OnEnteredActions(), this.getAction(), null, "onEnteredActions", null, 0, 1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_OnExitedActions(), this.getAction(), null, "onExitedActions", null, 0, 1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
