@@ -60,6 +60,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 			addInitialStatePropertyDescriptor(object);
 			addCurrentStatePropertyDescriptor(object);
 			addFinalStatePropertyDescriptor(object);
+			addIsServerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -119,6 +120,21 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 						getResourceLocator(), getString("_UI_FSM_finalState_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_FSM_finalState_feature", "_UI_FSM_type"),
 						FsmPackage.Literals.FSM__FINAL_STATE, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Server feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsServerPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FSM_isServer_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FSM_isServer_feature", "_UI_FSM_type"),
+						FsmPackage.Literals.FSM__IS_SERVER, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -199,6 +215,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 
 		switch (notification.getFeatureID(FSM.class)) {
 		case FsmPackage.FSM__NAME:
+		case FsmPackage.FSM__IS_SERVER:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case FsmPackage.FSM__OWNED_STATES:
