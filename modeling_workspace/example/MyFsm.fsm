@@ -11,6 +11,5 @@
     <outgoingTransitions name="t4" target="//@ownedStates.3"/>
   </ownedStates>
   <ownedStates name="s4" incomingTransitions="//@ownedStates.2/@outgoingTransitions.1"/>
-  <ownedEvents name="e"/>
-  <ownedEvents name="e2" origin="1"/>
+  <ownedEvents name="E1"/>
 </fsm:FSM>
