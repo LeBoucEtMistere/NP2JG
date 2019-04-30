@@ -165,6 +165,52 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link fr.supelec.plong9.fsm.Action} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ActionItemProvider actionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.supelec.plong9.fsm.Action}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createActionAdapter() {
+		if (actionItemProvider == null) {
+			actionItemProvider = new ActionItemProvider(this);
+		}
+
+		return actionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fr.supelec.plong9.fsm.Guard} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GuardItemProvider guardItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.supelec.plong9.fsm.Guard}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGuardAdapter() {
+		if (guardItemProvider == null) {
+			guardItemProvider = new GuardItemProvider(this);
+		}
+
+		return guardItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -271,6 +317,10 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory
 			transitionItemProvider.dispose();
 		if (eventItemProvider != null)
 			eventItemProvider.dispose();
+		if (actionItemProvider != null)
+			actionItemProvider.dispose();
+		if (guardItemProvider != null)
+			guardItemProvider.dispose();
 	}
 
 }

@@ -63,6 +63,10 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 			return createTransition();
 		case FsmPackage.EVENT:
 			return createEvent();
+		case FsmPackage.ACTION:
+			return createAction();
+		case FsmPackage.GUARD:
+			return createGuard();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -106,6 +110,26 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 	public Event createEvent() {
 		EventImpl event = new EventImpl();
 		return event;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Action createAction() {
+		ActionImpl action = new ActionImpl();
+		return action;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Guard createGuard() {
+		GuardImpl guard = new GuardImpl();
+		return guard;
 	}
 
 	/**

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class ActionImpl extends MinimalEObjectImpl.Container implements Action {
+public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

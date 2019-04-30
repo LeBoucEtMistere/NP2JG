@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getAction()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Action extends EObject {

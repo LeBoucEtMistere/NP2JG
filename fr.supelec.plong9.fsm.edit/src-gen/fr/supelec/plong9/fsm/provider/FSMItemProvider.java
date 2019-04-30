@@ -246,6 +246,12 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 
 		newChildDescriptors
 				.add(createChildParameter(FsmPackage.Literals.FSM__OWNED_EVENTS, FsmFactory.eINSTANCE.createEvent()));
+
+		newChildDescriptors
+				.add(createChildParameter(FsmPackage.Literals.FSM__OWNED_ACTIONS, FsmFactory.eINSTANCE.createAction()));
+
+		newChildDescriptors
+				.add(createChildParameter(FsmPackage.Literals.FSM__OWNED_GUARDS, FsmFactory.eINSTANCE.createGuard()));
 	}
 
 	/**

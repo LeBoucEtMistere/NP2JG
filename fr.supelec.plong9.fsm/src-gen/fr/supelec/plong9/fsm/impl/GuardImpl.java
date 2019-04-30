@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class GuardImpl extends MinimalEObjectImpl.Container implements Guard {
+public class GuardImpl extends MinimalEObjectImpl.Container implements Guard {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
