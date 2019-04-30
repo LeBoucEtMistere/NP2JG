@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getCurrentState <em>Current State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getFinalState <em>Final State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedEvents <em>Owned Events</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#isIsServer <em>Is Server</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getFSM()
@@ -165,5 +166,31 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	EList<Event> getOwnedEvents();
+
+	/**
+	 * Returns the value of the '<em><b>Is Server</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Server</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Server</em>' attribute.
+	 * @see #setIsServer(boolean)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_IsServer()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsServer();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.FSM#isIsServer <em>Is Server</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Server</em>' attribute.
+	 * @see #isIsServer()
+	 * @generated
+	 */
+	void setIsServer(boolean value);
 
 } // FSM

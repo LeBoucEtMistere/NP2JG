@@ -121,13 +121,22 @@ public interface FsmPackage extends EPackage {
 	int FSM__OWNED_EVENTS = 5;
 
 	/**
+	 * The feature id for the '<em><b>Is Server</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__IS_SERVER = 6;
+
+	/**
 	 * The number of structural features of the '<em>FSM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_FEATURE_COUNT = 6;
+	int FSM_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>FSM</em>' class.
@@ -472,6 +481,17 @@ public interface FsmPackage extends EPackage {
 	EReference getFSM_OwnedEvents();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.FSM#isIsServer <em>Is Server</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Server</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#isIsServer()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EAttribute getFSM_IsServer();
+
+	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.State <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -744,6 +764,14 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FSM__OWNED_EVENTS = eINSTANCE.getFSM_OwnedEvents();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Server</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FSM__IS_SERVER = eINSTANCE.getFSM_IsServer();
 
 		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StateImpl <em>State</em>}' class.

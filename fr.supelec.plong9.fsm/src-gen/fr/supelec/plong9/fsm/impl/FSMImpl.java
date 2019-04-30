@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getCurrentState <em>Current State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getFinalState <em>Final State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedEvents <em>Owned Events</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#isIsServer <em>Is Server</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,6 +113,26 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * @ordered
 	 */
 	protected EList<Event> ownedEvents;
+
+	/**
+	 * The default value of the '{@link #isIsServer() <em>Is Server</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsServer()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_SERVER_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsServer() <em>Is Server</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsServer()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isServer = IS_SERVER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,6 +324,27 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsServer() {
+		return isServer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsServer(boolean newIsServer) {
+		boolean oldIsServer = isServer;
+		isServer = newIsServer;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.FSM__IS_SERVER, oldIsServer, isServer));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -355,6 +397,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return basicGetFinalState();
 		case FsmPackage.FSM__OWNED_EVENTS:
 			return getOwnedEvents();
+		case FsmPackage.FSM__IS_SERVER:
+			return isIsServer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -388,6 +432,9 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			getOwnedEvents().clear();
 			getOwnedEvents().addAll((Collection<? extends Event>) newValue);
 			return;
+		case FsmPackage.FSM__IS_SERVER:
+			setIsServer((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -418,6 +465,9 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__OWNED_EVENTS:
 			getOwnedEvents().clear();
 			return;
+		case FsmPackage.FSM__IS_SERVER:
+			setIsServer(IS_SERVER_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -442,6 +492,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return finalState != null;
 		case FsmPackage.FSM__OWNED_EVENTS:
 			return ownedEvents != null && !ownedEvents.isEmpty();
+		case FsmPackage.FSM__IS_SERVER:
+			return isServer != IS_SERVER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -459,6 +511,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", isServer: ");
+		result.append(isServer);
 		result.append(')');
 		return result.toString();
 	}

@@ -198,6 +198,15 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFSM_IsServer() {
+		return (EAttribute) fsmEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -391,6 +400,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEReference(fsmEClass, FSM__CURRENT_STATE);
 		createEReference(fsmEClass, FSM__FINAL_STATE);
 		createEReference(fsmEClass, FSM__OWNED_EVENTS);
+		createEAttribute(fsmEClass, FSM__IS_SERVER);
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__NAME);
@@ -466,6 +476,9 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getFSM_OwnedEvents(), this.getEvent(), null, "ownedEvents", null, 0, -1,
 				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFSM_IsServer(), ecorePackage.getEBoolean(), "isServer", null, 0, 1,
+				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT,
