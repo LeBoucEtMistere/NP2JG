@@ -5,6 +5,7 @@ package fr.supelec.plong9.fsm.impl;
 import fr.supelec.plong9.fsm.*;
 
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;

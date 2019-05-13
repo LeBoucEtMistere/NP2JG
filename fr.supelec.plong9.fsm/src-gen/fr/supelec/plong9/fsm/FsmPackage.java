@@ -239,7 +239,7 @@ public interface FsmPackage extends EPackage {
 	int STATE__INCOMING_TRANSITIONS = 3;
 
 	/**
-	 * The feature id for the '<em><b>On Entered Actions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>On Entered Actions</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -248,7 +248,7 @@ public interface FsmPackage extends EPackage {
 	int STATE__ON_ENTERED_ACTIONS = 4;
 
 	/**
-	 * The feature id for the '<em><b>On Exited Actions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>On Exited Actions</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -774,10 +774,10 @@ public interface FsmPackage extends EPackage {
 	EReference getState_IncomingTransitions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}'.
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>On Entered Actions</em>'.
+	 * @return the meta object for the reference '<em>On Entered Actions</em>'.
 	 * @see fr.supelec.plong9.fsm.State#getOnEnteredActions()
 	 * @see #getState()
 	 * @generated
@@ -785,10 +785,10 @@ public interface FsmPackage extends EPackage {
 	EReference getState_OnEnteredActions();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}'.
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>On Exited Actions</em>'.
+	 * @return the meta object for the reference '<em>On Exited Actions</em>'.
 	 * @see fr.supelec.plong9.fsm.State#getOnExitedActions()
 	 * @see #getState()
 	 * @generated
@@ -859,6 +859,17 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTransition_Guard();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Event</em>'.
+	 * @see fr.supelec.plong9.fsm.Transition#getEvent()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_Event();
 
 	/**
 	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getTarget <em>Target</em>}'.
@@ -1010,17 +1021,6 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getStringToStringMap_Value();
-
-	/**
-	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Event</em>'.
-	 * @see fr.supelec.plong9.fsm.Transition#getEvent()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_Event();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1194,7 +1194,7 @@ public interface FsmPackage extends EPackage {
 		EReference STATE__INCOMING_TRANSITIONS = eINSTANCE.getState_IncomingTransitions();
 
 		/**
-		 * The meta object literal for the '<em><b>On Entered Actions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>On Entered Actions</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1202,7 +1202,7 @@ public interface FsmPackage extends EPackage {
 		EReference STATE__ON_ENTERED_ACTIONS = eINSTANCE.getState_OnEnteredActions();
 
 		/**
-		 * The meta object literal for the '<em><b>On Exited Actions</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>On Exited Actions</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1258,6 +1258,14 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSITION__GUARD = eINSTANCE.getTransition_Guard();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__EVENT = eINSTANCE.getTransition_Event();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -1380,14 +1388,6 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute STRING_TO_STRING_MAP__VALUE = eINSTANCE.getStringToStringMap_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Event</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__EVENT = eINSTANCE.getTransition_Event();
 
 	}
 

@@ -3,6 +3,7 @@
 package fr.supelec.plong9.fsm;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -124,6 +125,32 @@ public interface Transition extends EObject {
 	void setGuard(Guard value);
 
 	/**
+	 * Returns the value of the '<em><b>Event</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Event</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Event</em>' reference.
+	 * @see #setEvent(Event)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Event()
+	 * @model required="true"
+	 * @generated
+	 */
+	Event getEvent();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Event</em>' reference.
+	 * @see #getEvent()
+	 * @generated
+	 */
+	void setEvent(Event value);
+
+	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link fr.supelec.plong9.fsm.State#getIncomingTransitions <em>Incoming Transitions</em>}'.
 	 * <!-- begin-user-doc -->
@@ -150,31 +177,5 @@ public interface Transition extends EObject {
 	 * @generated
 	 */
 	void setTarget(State value);
-
-	/**
-	 * Returns the value of the '<em><b>Event</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Event</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Event</em>' reference.
-	 * @see #setEvent(Event)
-	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_Event()
-	 * @model required="true"
-	 * @generated
-	 */
-	Event getEvent();
-
-	/**
-	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Event</em>' reference.
-	 * @see #getEvent()
-	 * @generated
-	 */
-	void setEvent(Event value);
 
 } // Transition
