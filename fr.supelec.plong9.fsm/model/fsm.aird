@@ -41,17 +41,6 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
-        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_D6TnAHWLEemrGdf5UgZWiQ" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-        </computedStyleDescriptions>
-        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_D6jeoHWLEemrGdf5UgZWiQ" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
-          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
-        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_jGwGMC8REemUD62u2ND_rQ" source="GMF_DIAGRAMS">
@@ -131,10 +120,6 @@
             <children xmi:type="notation:Node" xmi:id="_C5dH4EQQEemrwoRpiiTFJA" type="3010" element="_C5N3UEQQEemrwoRpiiTFJA">
               <styles xmi:type="notation:FontStyle" xmi:id="_C5dH4UQQEemrwoRpiiTFJA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_C5dH4kQQEemrwoRpiiTFJA"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_D66D8HWLEemrGdf5UgZWiQ" type="3010" element="_D6SY4HWLEemrGdf5UgZWiQ">
-              <styles xmi:type="notation:FontStyle" xmi:id="_D66D8XWLEemrGdf5UgZWiQ" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_D66D8nWLEemrGdf5UgZWiQ"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_TV0UAkQNEemrwoRpiiTFJA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_TV0UA0QNEemrwoRpiiTFJA"/>
@@ -472,13 +457,15 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_TVj1UEQNEemrwoRpiiTFJA" name="Guard" tooltipText="&#xA;ERROR : The default value literal 'new EMap&lt;new EString(), new EString()>()' must be a valid literal of the attribute's type&#xA;ERROR : The attribute 'Guard.Dictionary' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EMap' classifier should have 2 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_Ll87sl-gEemRWcGjpF2T8A _Hm05UGtJEemJMoCNZztO6w" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_TVj1UEQNEemrwoRpiiTFJA" name="Guard" tooltipText="" incomingEdges="_Ll87sl-gEemRWcGjpF2T8A _Hm05UGtJEemJMoCNZztO6w" width="12" height="10">
       <target xmi:type="ecore:EClass" href="fsm.ecore#//Guard"/>
       <semanticElements xmi:type="ecore:EClass" href="fsm.ecore#//Guard"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_D6kFsHWLEemrGdf5UgZWiQ" labelColor="239,41,41" description="_D6jeoHWLEemrGdf5UgZWiQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_6Tf4QHWfEemHx_Qya0bWOA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_C5N3UEQQEemrwoRpiiTFJA" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="fsm.ecore#//Guard/name"/>
@@ -486,12 +473,6 @@
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_D0ksUEQQEemrwoRpiiTFJA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_D6SY4HWLEemrGdf5UgZWiQ" name="Dictionary : EMap = new EMap&lt;new EString(), new EString()>()" tooltipText="&#xA;ERROR : The default value literal 'new EMap&lt;new EString(), new EString()>()' must be a valid literal of the attribute's type&#xA;ERROR : The attribute 'Guard.Dictionary' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EMap' classifier should have 2 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="fsm.ecore#//Guard/Dictionary"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="fsm.ecore#//Guard/Dictionary"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_D6UOEHWLEemrGdf5UgZWiQ" labelColor="239,41,41" labelAlignment="LEFT" description="_D6TnAHWLEemrGdf5UgZWiQ" borderColor="239,41,41"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>

@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generateGuard('http://fr.supelec.plong9.fsm')]
+
+
+[template public generateGuard(aFSM : FSM)]
+
+[file (aFSM.name, false, 'UTF-8')]
+
+[/file]
+[/template]

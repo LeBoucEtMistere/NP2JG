@@ -1,0 +1,52 @@
+[comment encoding = UTF-8 /]
+[module generateAction('http://fr.supelec.plong9.fsm')]
+
+
+[template public generateAction(aFSM : FSM)]
+
+[for (action : Action | aFSM.ownedActions)]
+[if not (action.name = 'DisconnectClientAction')]
+[file (aFSM.name + '/' + action.name.toUpper() + '.java', false, 'UTF-8')]
+
+package [aFSM.name/]
+
+import java.io.IOException;
+
+import org.openmuc.jasn1.ber.ReverseByteArrayOutputStream;
+
+import fsm.Action;
+import fsm.Event;
+import fsm.FSM;
+[if (aFSM.isServer)]
+import fsm.FSMServer;
+[else]
+import fsm.FSMClient;
+[/if]
+
+
+public class [action.name.toUpper()/] extends Action {
+
+	@Override
+	public void execute(FSM fsm, Event e) {
+
+		[if (aFSM.isServer)]
+		var dos = ((FSMServer)fsm).getNetworkServer().getOutputStreamByClient(e.origin);
+		[else]
+		var dos = ((FSMClient)fsm).getNetworkClient().getOutputStream();
+		[/if]
+
+		// [protected ('for ' + action.name + ' contents')]
+
+ 		// TODO : Action contents
+
+ 		// [/protected]
+		
+	}
+
+}
+[/file]
+[/if]
+[/for]
+
+
+[/template]
