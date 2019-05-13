@@ -29,7 +29,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/owningFSM"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//State/outgoingTransitions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/incomingTransitions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/onEnteredActions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//State/onEnteredActions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/onExitedActions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fsm.ecore#//State/expectedMessage"/>
     </genClasses>
