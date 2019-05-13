@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="myFsm" initialState="//@ownedStates.0" currentState="//@ownedStates.0" finalState="//@ownedStates.3">
-<<<<<<< HEAD
   <ownedStates name="s1" expectedMessage="//@ownedMessages.0">
-    <outgoingTransitions name="t1" actions="//@ownedActions.2 //@ownedActions.4" guard="//@ownedGuards.2" event="//@ownedEvents.0" target="//@ownedStates.1"/>
-=======
-  <ownedStates name="s1">
-    <outgoingTransitions name="t1" actions="//@ownedActions.2" guard="//@ownedGuards.2" event="//@ownedEvents.0" target="//@ownedStates.1"/>
+    <outgoingTransitions name="t1" actions="//@ownedActions.2 //@ownedActions.3" guard="//@ownedGuards.2" event="//@ownedEvents.0" target="//@ownedStates.1"/>
     <onEnteredActions name="A5"/>
     <onEnteredActions name="A7"/>
->>>>>>> 374413b4f3c72624ca7dff57109f4d08062575e1
   </ownedStates>
   <ownedStates name="s2" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0 //@ownedStates.2/@outgoingTransitions.0">
     <outgoingTransitions name="t2" actions="//@ownedActions.0" guard="//@ownedGuards.1" event="//@ownedEvents.1" target="//@ownedStates.2"/>

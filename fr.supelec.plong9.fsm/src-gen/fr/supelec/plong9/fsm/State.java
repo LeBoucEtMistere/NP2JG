@@ -120,36 +120,56 @@ public interface State extends EObject {
 	EList<Transition> getIncomingTransitions();
 
 	/**
-	 * Returns the value of the '<em><b>On Entered Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.supelec.plong9.fsm.Action}.
+	 * Returns the value of the '<em><b>On Entered Actions</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>On Entered Actions</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>On Entered Actions</em>' containment reference list.
+	 * @return the value of the '<em>On Entered Actions</em>' reference.
+	 * @see #setOnEnteredActions(Action)
 	 * @see fr.supelec.plong9.fsm.FsmPackage#getState_OnEnteredActions()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Action> getOnEnteredActions();
+	Action getOnEnteredActions();
 
 	/**
-	 * Returns the value of the '<em><b>On Exited Actions</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.supelec.plong9.fsm.Action}.
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Entered Actions</em>' reference.
+	 * @see #getOnEnteredActions()
+	 * @generated
+	 */
+	void setOnEnteredActions(Action value);
+
+	/**
+	 * Returns the value of the '<em><b>On Exited Actions</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>On Exited Actions</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>On Exited Actions</em>' containment reference list.
+	 * @return the value of the '<em>On Exited Actions</em>' reference.
+	 * @see #setOnExitedActions(Action)
 	 * @see fr.supelec.plong9.fsm.FsmPackage#getState_OnExitedActions()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Action> getOnExitedActions();
+	Action getOnExitedActions();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Exited Actions</em>' reference.
+	 * @see #getOnExitedActions()
+	 * @generated
+	 */
+	void setOnExitedActions(Action value);
 
 	/**
 	 * Returns the value of the '<em><b>Expected Message</b></em>' reference.

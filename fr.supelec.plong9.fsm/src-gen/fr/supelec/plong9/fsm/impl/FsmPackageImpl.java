@@ -12,6 +12,7 @@ import fr.supelec.plong9.fsm.State;
 import fr.supelec.plong9.fsm.Transition;
 
 import java.util.Map;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -385,6 +386,15 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTransition_Event() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getTransition_Target() {
 		return (EReference) transitionEClass.getEStructuralFeatures().get(5);
 	}
@@ -504,15 +514,6 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 */
 	public EAttribute getStringToStringMap_Value() {
 		return (EAttribute) stringToStringMapEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTransition_Event() {
-		return (EReference) transitionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -675,11 +676,11 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getState_IncomingTransitions(), this.getTransition(), this.getTransition_Target(),
 				"incomingTransitions", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_OnEnteredActions(), this.getAction(), null, "onEnteredActions", null, 0, -1,
-				State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_OnExitedActions(), this.getAction(), null, "onExitedActions", null, 0, -1, State.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		initEReference(getState_OnEnteredActions(), this.getAction(), null, "onEnteredActions", null, 0, 1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_OnExitedActions(), this.getAction(), null, "onExitedActions", null, 0, 1, State.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getState_ExpectedMessage(), this.getMessage(), null, "expectedMessage", null, 0, 1, State.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
