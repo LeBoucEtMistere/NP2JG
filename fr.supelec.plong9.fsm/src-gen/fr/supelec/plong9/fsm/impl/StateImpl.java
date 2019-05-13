@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -88,24 +89,24 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	protected EList<Transition> incomingTransitions;
 
 	/**
-	 * The cached value of the '{@link #getOnEnteredActions() <em>On Entered Actions</em>}' reference.
+	 * The cached value of the '{@link #getOnEnteredActions() <em>On Entered Actions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOnEnteredActions()
 	 * @generated
 	 * @ordered
 	 */
-	protected Action onEnteredActions;
+	protected EList<Action> onEnteredActions;
 
 	/**
-	 * The cached value of the '{@link #getOnExitedActions() <em>On Exited Actions</em>}' reference.
+	 * The cached value of the '{@link #getOnExitedActions() <em>On Exited Actions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOnExitedActions()
 	 * @generated
 	 * @ordered
 	 */
-	protected Action onExitedActions;
+	protected EList<Action> onExitedActions;
 
 	/**
 	 * The cached value of the '{@link #getExpectedMessage() <em>Expected Message</em>}' reference.
@@ -233,15 +234,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Action getOnEnteredActions() {
-		if (onEnteredActions != null && onEnteredActions.eIsProxy()) {
-			InternalEObject oldOnEnteredActions = (InternalEObject) onEnteredActions;
-			onEnteredActions = (Action) eResolveProxy(oldOnEnteredActions);
-			if (onEnteredActions != oldOnEnteredActions) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.STATE__ON_ENTERED_ACTIONS,
-							oldOnEnteredActions, onEnteredActions));
-			}
+	public EList<Action> getOnEnteredActions() {
+		if (onEnteredActions == null) {
+			onEnteredActions = new EObjectResolvingEList<Action>(Action.class, this,
+					FsmPackage.STATE__ON_ENTERED_ACTIONS);
 		}
 		return onEnteredActions;
 	}
@@ -251,61 +247,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Action basicGetOnEnteredActions() {
-		return onEnteredActions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOnEnteredActions(Action newOnEnteredActions) {
-		Action oldOnEnteredActions = onEnteredActions;
-		onEnteredActions = newOnEnteredActions;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.STATE__ON_ENTERED_ACTIONS,
-					oldOnEnteredActions, onEnteredActions));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Action getOnExitedActions() {
-		if (onExitedActions != null && onExitedActions.eIsProxy()) {
-			InternalEObject oldOnExitedActions = (InternalEObject) onExitedActions;
-			onExitedActions = (Action) eResolveProxy(oldOnExitedActions);
-			if (onExitedActions != oldOnExitedActions) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.STATE__ON_EXITED_ACTIONS,
-							oldOnExitedActions, onExitedActions));
-			}
+	public EList<Action> getOnExitedActions() {
+		if (onExitedActions == null) {
+			onExitedActions = new EObjectResolvingEList<Action>(Action.class, this,
+					FsmPackage.STATE__ON_EXITED_ACTIONS);
 		}
 		return onExitedActions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Action basicGetOnExitedActions() {
-		return onExitedActions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOnExitedActions(Action newOnExitedActions) {
-		Action oldOnExitedActions = onExitedActions;
-		onExitedActions = newOnExitedActions;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.STATE__ON_EXITED_ACTIONS,
-					oldOnExitedActions, onExitedActions));
 	}
 
 	/**
@@ -420,13 +367,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		case FsmPackage.STATE__INCOMING_TRANSITIONS:
 			return getIncomingTransitions();
 		case FsmPackage.STATE__ON_ENTERED_ACTIONS:
-			if (resolve)
-				return getOnEnteredActions();
-			return basicGetOnEnteredActions();
+			return getOnEnteredActions();
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
-			if (resolve)
-				return getOnExitedActions();
-			return basicGetOnExitedActions();
+			return getOnExitedActions();
 		case FsmPackage.STATE__EXPECTED_MESSAGE:
 			if (resolve)
 				return getExpectedMessage();
@@ -459,10 +402,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			getIncomingTransitions().addAll((Collection<? extends Transition>) newValue);
 			return;
 		case FsmPackage.STATE__ON_ENTERED_ACTIONS:
-			setOnEnteredActions((Action) newValue);
+			getOnEnteredActions().clear();
+			getOnEnteredActions().addAll((Collection<? extends Action>) newValue);
 			return;
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
-			setOnExitedActions((Action) newValue);
+			getOnExitedActions().clear();
+			getOnExitedActions().addAll((Collection<? extends Action>) newValue);
 			return;
 		case FsmPackage.STATE__EXPECTED_MESSAGE:
 			setExpectedMessage((Message) newValue);
@@ -492,10 +437,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			getIncomingTransitions().clear();
 			return;
 		case FsmPackage.STATE__ON_ENTERED_ACTIONS:
-			setOnEnteredActions((Action) null);
+			getOnEnteredActions().clear();
 			return;
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
-			setOnExitedActions((Action) null);
+			getOnExitedActions().clear();
 			return;
 		case FsmPackage.STATE__EXPECTED_MESSAGE:
 			setExpectedMessage((Message) null);
@@ -521,9 +466,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		case FsmPackage.STATE__INCOMING_TRANSITIONS:
 			return incomingTransitions != null && !incomingTransitions.isEmpty();
 		case FsmPackage.STATE__ON_ENTERED_ACTIONS:
-			return onEnteredActions != null;
+			return onEnteredActions != null && !onEnteredActions.isEmpty();
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
-			return onExitedActions != null;
+			return onExitedActions != null && !onExitedActions.isEmpty();
 		case FsmPackage.STATE__EXPECTED_MESSAGE:
 			return expectedMessage != null;
 		}

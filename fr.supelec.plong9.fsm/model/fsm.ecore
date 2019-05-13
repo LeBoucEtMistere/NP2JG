@@ -32,8 +32,10 @@
         eType="#//Transition" containment="true" eOpposite="#//Transition/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingTransitions" upperBound="-1"
         eType="#//Transition" eOpposite="#//Transition/target"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="onEnteredActions" eType="#//Action"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="onExitedActions" eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onEnteredActions" upperBound="-1"
+        eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onExitedActions" upperBound="-1"
+        eType="#//Action"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expectedMessage" eType="#//Message"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
