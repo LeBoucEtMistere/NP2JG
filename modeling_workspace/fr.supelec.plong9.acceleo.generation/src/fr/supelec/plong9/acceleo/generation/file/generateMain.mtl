@@ -2,32 +2,84 @@
 [module generateMain('http://fr.supelec.plong9.fsm')]
 
 
-[template public generateElement(aFSM : FSM)]
+[template public generateMain(aFSM : FSM)]
 
-[file ('main.java', false, 'UTF-8')]
+[file (aFSM.name + '/main.java', false, 'UTF-8')]
 
 package [aFSM.name/];
 
 import java.util.logging.Level;
-import javafx.util.Pair;
 
+[if (aFSM.isServer)]
 import fsm.FSMServer;
+
+[else]
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+import fsm.FSMClient;
+[/if]
 import fsm.State;
 import fsm.Transition;
+
+[for (a : Action | aFSM.ownedActions)]
+[if (a.name = 'DisconnectClientAction')]
 import fsm.DisconnectClientAction;
-import fsm.InverseGuard;
+[else]
+import [aFSM.name/].[a.name.toUpper()/];
+[/if]
+[/for]
 
 public class main {
 	
 	public static void main(String['['/][']'/] args) {
-		
+
+		[if (aFSM.isServer)]
 		FSMServer fsm = new FSMServer("[aFSM.name/]", (dis, f) -> new NetworkMessageParser(dis, f), 50300, "serverpw");
+		[else]
+		InetAddress host = null;
+		try {
+			// TODO : Insert the address to the host here :
+			host = InetAddress.getLocalHost();
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+		var fsm = new FSMClient("[aFSM.name/]", (dis, f) -> new MyClientNetworkMessageParser(dis, f), host, 50300, "clientpw");
+		[/if]
 		fsm.LOGGER.setLevel(Level.INFO);
 
-			
+		[for (s : State | aFSM.ownedStates)]
+		State state_[s.name.toLower()/] = new State("[s.name/]");
+		[for (a : Action | s.onEnteredActions)]
+		state_[s.name.toLower()/].onEnteredAction(new [a.name.toUpper()/]());
+		[/for]
+		[for (a : Action | s.onExitedActions)]
+		state_[s.name.toLower()/].onExitedAction(new [a.name.toUpper()/]());
+		[/for]
+		[/for]
+
+		[for (s : State | aFSM.ownedStates)]
+		[for (t : Transition | s.outgoingTransitions)]
+		Transition trans_[t.name.toLower()/] = new Transition("[t.name/]");
+		trans_[t.name.toLower()/].setSource([t.source.name/]);
+		trans_[t.name.toLower()/].setTarget([t.target.name/]);
+		trans_[t.name.toLower()/].registerEvent("[t.event.name/]");
+		[for (a : Action | t.actions)]
+		trans_[t.name.toLower()/].registerAction(new [a.name.toUpper()/]());
+		[/for]
+		[if (not t.guard.oclIsUndefined())]
+		trans_[t.name.toLower()/].registerGuard(new [t.guard.name.toUpper()/]());
+		[/if]
 		
-		fsm.setInitialState([aFSM.initialState.name/]);
-		fsm.setFinalState([aFSM.finalState.name/]);
+		[/for]
+		[/for]
+
+		[for (s : State | aFSM.ownedStates)]
+		fsm.addState(state_[s.name.toLower()/]);
+		[/for]
+		
+		fsm.setInitialState(state_[aFSM.initialState.name.toLower()/]);
+		fsm.setFinalState(state_[aFSM.finalState.name.toLower()/]);
 		
 		fsm.start();
 		

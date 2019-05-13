@@ -35,7 +35,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>serverPingPong.main</mainClass>
+					<mainClass>PongServer.main</mainClass>
 					<systemProperties>
 						<systemProperty>
 							<key>javax.net.debug</key>
