@@ -4,11 +4,14 @@
 [import fr::supelec::plong9::acceleo::generation::file::generateMain /]
 [import fr::supelec::plong9::acceleo::generation::file::generatePOM /]
 [import fr::supelec::plong9::acceleo::generation::file::generateAction /]
+[import fr::supelec::plong9::acceleo::generation::file::generateASN1 /]
 
 [template public Main(aFSM : FSM)]
 [comment @main/]
 
-
+[for (msg : Message | aFSM.ownedMessages)]
+	[msg.generateASN1()/]
+[/for]
 [aFSM.generatePOM()/]
 [aFSM.generateMain()/]
 [aFSM.generateAction()/]

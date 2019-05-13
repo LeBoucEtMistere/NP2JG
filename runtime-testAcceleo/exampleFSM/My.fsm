@@ -17,4 +17,9 @@
   <ownedActions name="DisconnectClientAction"/>
   <ownedActions name="PongAction2"/>
   <ownedGuards name="PongGuard"/>
+  <ownedMessages event="//@ownedEvents.0" name="MessagePing">
+    <data key="MessageType" value="ENUMDEF:ping,pong"/>
+    <data key="id" value="INTEGER"/>
+    <data key="type" value="MessageType"/>
+  </ownedMessages>
 </fsm:FSM>
