@@ -4,15 +4,15 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="FSMDiagram" domainClass="fsm::FSM" enablePopupBars="true">
       <metamodel href="../../fr.supelec.plong9.fsm/model/fsm.ecore#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="StateNode" semanticCandidatesExpression="feature:ownedStates" domainClass="fsm::State">
-          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW" shape="ring">
+        <nodeMappings name="StateNode" semanticCandidatesExpression="feature:ownedStates" synchronizationLock="true" domainClass="fsm::State">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>italic</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="TransitionEdge" sourceMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="fsm::Transition" useDomainElement="true">
+        <edgeMappings name="TransitionEdge" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="fsm::Transition" useDomainElement="true">
           <style sizeComputationExpression="2" endsCentering="Both">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.event.name+' / '+ self.actions.name + ' [' + self.guard.name + ']'">
@@ -20,8 +20,46 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <containerMappings name="StateContainer" label="State Container" semanticCandidatesExpression="feature:ownedStates" synchronizationLock="true" domainClass="fsm::State" childrenPresentation="VerticalStack">
+          <subContainerMappings name="OnEntererdActionsContainer" label="On Entered Actions Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::Action" childrenPresentation="List">
+            <subNodeMappings name="OnEnteredActionNode" label="On Entered Action Node" semanticCandidatesExpression="feature::onEnteredActions" synchronizationLock="true" domainClass="fsm::Action">
+              <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="On Entered Actions">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="OnExitedActionsContainer" label="On Exited Actions Container" semanticCandidatesExpression="var:self" domainClass="fsm::State" childrenPresentation="List">
+            <subNodeMappings name="OnExitedActionNode" label="On Exited Action Node" synchronizationLock="true">
+              <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="On Exited Actions">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" roundedCorner="true">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
         <toolSections name="New">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="stateCreator" label="New State" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="stateCreator" label="New State" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\State.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -30,7 +68,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="transitionCreator" label="New Transition" edgeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="transitionCreator" label="New Transition" edgeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Transition.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -45,22 +83,38 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-        </toolSections>
-        <toolSections name="Set">
-          <ownedTools xsi:type="tool_1:ToolDescription" name="SetInitialState" label="Set Initial State">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewEvent" label="New Event" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Event.gif">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:">
-                <subModelOperations xsi:type="tool_1:SetValue"/>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Event" referenceName="ownedEvents"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewAction" label="New Action" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Action.gif">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Action" referenceName="ownedActions"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewGuard" label="New Guard" forceRefresh="true" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Guard.gif">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Guard" referenceName="ownedGuards"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
       <additionalLayers name="EAGLayer" label="Event/Action/Guard Layer" activeByDefault="true">
-        <containerMappings name="EAGContainer" label="Event/Action/Guard Container" semanticCandidatesExpression="var:self" domainClass="fsm::FSM" childrenPresentation="HorizontalStack">
-          <subContainerMappings name="EventContainer" label="Event Container" semanticCandidatesExpression="var:self" domainClass="fsm::FSM" childrenPresentation="List">
+        <containerMappings name="EAGContainer" label="Event/Action/Guard Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="EventContainer" label="Event Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="List">
             <subNodeMappings name="eventNode" label="Event Node" domainClass="fsm::Event">
               <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -75,7 +129,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="ActionContainer" label="Action Container" semanticCandidatesExpression="var:self" domainClass="fsm::FSM" childrenPresentation="List">
+          <subContainerMappings name="ActionContainer" label="Action Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="List">
             <subNodeMappings name="ActionNode" label="ActionNode" domainClass="fsm::Action">
               <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -90,7 +144,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="GuardContainer" label="Guard Container" semanticCandidatesExpression="var:self" domainClass="fsm::FSM" childrenPresentation="List">
+          <subContainerMappings name="GuardContainer" label="Guard Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="List">
             <subNodeMappings name="GuardNode" label="Guard Node" domainClass="fsm::Guard">
               <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -105,7 +159,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:self.name">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql:self.name" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -120,7 +174,7 @@
       <ownedColumnMappings name="SourceColumn" headerLabelExpression="Source" featureName="source" labelExpression="aql:self.source.name"/>
       <ownedColumnMappings name="TargetColumn" headerLabelExpression="Target" featureName="target" labelExpression="aql:self.target.name"/>
       <ownedColumnMappings name="EventColumn" headerLabelExpression="Event" featureName="event" labelExpression="aql:self.event.name"/>
-      <ownedColumnMappings name="ActionColumn" headerLabelExpression="Action" featureName="action" labelExpression="aql:self.action.name"/>
+      <ownedColumnMappings name="ActionColumn" headerLabelExpression="Action" featureName="action" labelExpression="aql:self.actions.name"/>
       <ownedColumnMappings name="GuardColumn" headerLabelExpression="Guard" featureName="guard" labelExpression="aql:self.guard.name"/>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.supelec.plong9.fsm.design.Services"/>

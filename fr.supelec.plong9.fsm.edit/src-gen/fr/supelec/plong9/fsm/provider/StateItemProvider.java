@@ -59,7 +59,6 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 			addNamePropertyDescriptor(object);
 			addOwningFSMPropertyDescriptor(object);
 			addIncomingTransitionsPropertyDescriptor(object);
-			addOnEnteredActionsPropertyDescriptor(object);
 			addOnExitedActionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -111,21 +110,6 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the On Entered Actions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOnEnteredActionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_State_onEnteredActions_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_State_onEnteredActions_feature",
-								"_UI_State_type"),
-						FsmPackage.Literals.STATE__ON_ENTERED_ACTIONS, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the On Exited Actions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -153,6 +137,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FsmPackage.Literals.STATE__OUTGOING_TRANSITIONS);
+			childrenFeatures.add(FsmPackage.Literals.STATE__ON_ENTERED_ACTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -220,6 +205,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case FsmPackage.STATE__OUTGOING_TRANSITIONS:
+		case FsmPackage.STATE__ON_ENTERED_ACTIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -239,6 +225,9 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 
 		newChildDescriptors.add(createChildParameter(FsmPackage.Literals.STATE__OUTGOING_TRANSITIONS,
 				FsmFactory.eINSTANCE.createTransition()));
+
+		newChildDescriptors.add(createChildParameter(FsmPackage.Literals.STATE__ON_ENTERED_ACTIONS,
+				FsmFactory.eINSTANCE.createAction()));
 	}
 
 	/**

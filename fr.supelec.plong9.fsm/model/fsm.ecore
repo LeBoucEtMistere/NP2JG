@@ -26,8 +26,10 @@
         eType="#//Transition" containment="true" eOpposite="#//Transition/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incomingTransitions" upperBound="-1"
         eType="#//Transition" eOpposite="#//Transition/target"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="onEnteredActions" eType="#//Action"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="onExitedActions" eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onEnteredActions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="onExitedActions" upperBound="-1"
+        eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -48,5 +50,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Guard">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Dictionary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EMap"
+        defaultValueLiteral="new EMap&lt;new EString(), new EString()>()"/>
   </eClassifiers>
 </ecore:EPackage>

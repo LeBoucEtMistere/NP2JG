@@ -212,7 +212,7 @@ public interface FsmPackage extends EPackage {
 	int STATE__INCOMING_TRANSITIONS = 3;
 
 	/**
-	 * The feature id for the '<em><b>On Entered Actions</b></em>' reference.
+	 * The feature id for the '<em><b>On Entered Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -221,7 +221,7 @@ public interface FsmPackage extends EPackage {
 	int STATE__ON_ENTERED_ACTIONS = 4;
 
 	/**
-	 * The feature id for the '<em><b>On Exited Actions</b></em>' reference.
+	 * The feature id for the '<em><b>On Exited Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -604,10 +604,10 @@ public interface FsmPackage extends EPackage {
 	EReference getState_IncomingTransitions();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>On Entered Actions</em>'.
+	 * @return the meta object for the containment reference list '<em>On Entered Actions</em>'.
 	 * @see fr.supelec.plong9.fsm.State#getOnEnteredActions()
 	 * @see #getState()
 	 * @generated
@@ -615,10 +615,10 @@ public interface FsmPackage extends EPackage {
 	EReference getState_OnEnteredActions();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>On Exited Actions</em>'.
+	 * @return the meta object for the containment reference list '<em>On Exited Actions</em>'.
 	 * @see fr.supelec.plong9.fsm.State#getOnExitedActions()
 	 * @see #getState()
 	 * @generated
@@ -912,7 +912,7 @@ public interface FsmPackage extends EPackage {
 		EReference STATE__INCOMING_TRANSITIONS = eINSTANCE.getState_IncomingTransitions();
 
 		/**
-		 * The meta object literal for the '<em><b>On Entered Actions</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>On Entered Actions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -920,7 +920,7 @@ public interface FsmPackage extends EPackage {
 		EReference STATE__ON_ENTERED_ACTIONS = eINSTANCE.getState_OnEnteredActions();
 
 		/**
-		 * The meta object literal for the '<em><b>On Exited Actions</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>On Exited Actions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
