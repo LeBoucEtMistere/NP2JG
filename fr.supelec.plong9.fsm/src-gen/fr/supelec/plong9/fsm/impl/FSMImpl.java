@@ -43,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#isIsServer <em>Is Server</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedActions <em>Owned Actions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedGuards <em>Owned Guards</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getGroupId <em>Group Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -157,6 +158,26 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * @ordered
 	 */
 	protected EList<Guard> ownedGuards;
+
+	/**
+	 * The default value of the '{@link #getGroupId() <em>Group Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGroupId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GROUP_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGroupId() <em>Group Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGroupId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String groupId = GROUP_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -393,6 +414,27 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getGroupId() {
+		return groupId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGroupId(String newGroupId) {
+		String oldGroupId = groupId;
+		groupId = newGroupId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.FSM__GROUP_ID, oldGroupId, groupId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -455,6 +497,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return getOwnedActions();
 		case FsmPackage.FSM__OWNED_GUARDS:
 			return getOwnedGuards();
+		case FsmPackage.FSM__GROUP_ID:
+			return getGroupId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -499,6 +543,9 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			getOwnedGuards().clear();
 			getOwnedGuards().addAll((Collection<? extends Guard>) newValue);
 			return;
+		case FsmPackage.FSM__GROUP_ID:
+			setGroupId((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -538,6 +585,9 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__OWNED_GUARDS:
 			getOwnedGuards().clear();
 			return;
+		case FsmPackage.FSM__GROUP_ID:
+			setGroupId(GROUP_ID_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -568,6 +618,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return ownedActions != null && !ownedActions.isEmpty();
 		case FsmPackage.FSM__OWNED_GUARDS:
 			return ownedGuards != null && !ownedGuards.isEmpty();
+		case FsmPackage.FSM__GROUP_ID:
+			return GROUP_ID_EDEFAULT == null ? groupId != null : !GROUP_ID_EDEFAULT.equals(groupId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -587,6 +639,8 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		result.append(name);
 		result.append(", isServer: ");
 		result.append(isServer);
+		result.append(", groupId: ");
+		result.append(groupId);
 		result.append(')');
 		return result.toString();
 	}

@@ -223,7 +223,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nz6D2mtUEemciZI6tGKMcw" name="FSM's EAG" childrenPresentation="HorizontalStack">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_nz6D2mtUEemciZI6tGKMcw" name="PongServer" childrenPresentation="HorizontalStack">
       <target xmi:type="fsm:FSM" href="My.fsm#/"/>
       <semanticElements xmi:type="fsm:FSM" href="My.fsm#/"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_nz6D22tUEemciZI6tGKMcw" borderSize="1" borderSizeComputationExpression="1">
@@ -319,7 +319,7 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D8mtUEemciZI6tGKMcw" name="newConnection / []" sourceNode="_nz6D1GtUEemciZI6tGKMcw" targetNode="_nz6D1mtUEemciZI6tGKMcw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D8mtUEemciZI6tGKMcw" name="newConnection /  []" sourceNode="_nz6D1GtUEemciZI6tGKMcw" targetNode="_nz6D1mtUEemciZI6tGKMcw">
       <target xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_nz6D82tUEemciZI6tGKMcw" size="2" centered="Both">
@@ -328,7 +328,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D9WtUEemciZI6tGKMcw" name="timeoutConnection / fr.supelec.plong9.fsm.impl.ActionImpl@7e065baa (name: TimeoutAction)[]" sourceNode="_nz6D1GtUEemciZI6tGKMcw" targetNode="_nz6D2GtUEemciZI6tGKMcw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D9WtUEemciZI6tGKMcw" name="timeoutConnection / TimeoutAction []" sourceNode="_nz6D1GtUEemciZI6tGKMcw" targetNode="_nz6D2GtUEemciZI6tGKMcw">
       <target xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.0/@outgoingTransitions.1"/>
       <semanticElements xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.0/@outgoingTransitions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_nz6D9mtUEemciZI6tGKMcw" size="2" centered="Both">
@@ -337,7 +337,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D-GtUEemciZI6tGKMcw" name="ping / fr.supelec.plong9.fsm.impl.ActionImpl@60ece96 (name: PongAction)fr.supelec.plong9.fsm.impl.ActionImpl@32ffa583 (name: DisconnectClientAction)[PongGuard]" sourceNode="_nz6D1mtUEemciZI6tGKMcw" targetNode="_nz6D1GtUEemciZI6tGKMcw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D-GtUEemciZI6tGKMcw" name="ping / PongActionDisconnectClientAction [PongGuard]" sourceNode="_nz6D1mtUEemciZI6tGKMcw" targetNode="_nz6D1GtUEemciZI6tGKMcw">
       <target xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.1/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.1/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_nz6D-WtUEemciZI6tGKMcw" size="2" centered="Both">
@@ -346,7 +346,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D-2tUEemciZI6tGKMcw" name="ping / fr.supelec.plong9.fsm.impl.ActionImpl@38a254e5 (name: PongAction2)fr.supelec.plong9.fsm.impl.ActionImpl@32ffa583 (name: DisconnectClientAction)[]" sourceNode="_nz6D1mtUEemciZI6tGKMcw" targetNode="_nz6D1GtUEemciZI6tGKMcw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_nz6D-2tUEemciZI6tGKMcw" name="ping / PongAction2DisconnectClientAction []" sourceNode="_nz6D1mtUEemciZI6tGKMcw" targetNode="_nz6D1GtUEemciZI6tGKMcw">
       <target xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.1/@outgoingTransitions.1"/>
       <semanticElements xmi:type="fsm:Transition" href="My.fsm#//@ownedStates.1/@outgoingTransitions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_nz6D_GtUEemciZI6tGKMcw" size="2" centered="Both">

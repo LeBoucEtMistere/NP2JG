@@ -148,13 +148,22 @@ public interface FsmPackage extends EPackage {
 	int FSM__OWNED_GUARDS = 8;
 
 	/**
+	 * The feature id for the '<em><b>Group Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__GROUP_ID = 9;
+
+	/**
 	 * The number of structural features of the '<em>FSM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_FEATURE_COUNT = 9;
+	int FSM_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>FSM</em>' class.
@@ -550,6 +559,17 @@ public interface FsmPackage extends EPackage {
 	EReference getFSM_OwnedGuards();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.FSM#getGroupId <em>Group Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Group Id</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#getGroupId()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EAttribute getFSM_GroupId();
+
+	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.State <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -868,6 +888,14 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FSM__OWNED_GUARDS = eINSTANCE.getFSM_OwnedGuards();
+
+		/**
+		 * The meta object literal for the '<em><b>Group Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FSM__GROUP_ID = eINSTANCE.getFSM_GroupId();
 
 		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StateImpl <em>State</em>}' class.

@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.FSM#isIsServer <em>Is Server</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedActions <em>Owned Actions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedGuards <em>Owned Guards</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#getGroupId <em>Group Id</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getFSM()
@@ -226,5 +227,31 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	EList<Guard> getOwnedGuards();
+
+	/**
+	 * Returns the value of the '<em><b>Group Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Group Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Group Id</em>' attribute.
+	 * @see #setGroupId(String)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_GroupId()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getGroupId();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.FSM#getGroupId <em>Group Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Group Id</em>' attribute.
+	 * @see #getGroupId()
+	 * @generated
+	 */
+	void setGroupId(String value);
 
 } // FSM

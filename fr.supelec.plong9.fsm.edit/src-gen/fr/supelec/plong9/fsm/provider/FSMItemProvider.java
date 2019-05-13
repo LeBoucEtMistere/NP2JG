@@ -61,6 +61,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 			addCurrentStatePropertyDescriptor(object);
 			addFinalStatePropertyDescriptor(object);
 			addIsServerPropertyDescriptor(object);
+			addGroupIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -135,6 +136,21 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 						getString("_UI_PropertyDescriptor_description", "_UI_FSM_isServer_feature", "_UI_FSM_type"),
 						FsmPackage.Literals.FSM__IS_SERVER, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Group Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGroupIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FSM_groupId_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FSM_groupId_feature", "_UI_FSM_type"),
+						FsmPackage.Literals.FSM__GROUP_ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -218,6 +234,7 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 		switch (notification.getFeatureID(FSM.class)) {
 		case FsmPackage.FSM__NAME:
 		case FsmPackage.FSM__IS_SERVER:
+		case FsmPackage.FSM__GROUP_ID:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case FsmPackage.FSM__OWNED_STATES:
