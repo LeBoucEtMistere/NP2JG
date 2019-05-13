@@ -32,7 +32,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BM9REmBwEemRkNAfnMHxxw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_BMq9MGBwEemRkNAfnMHxxw" fontName="Segoe UI" fontHeight="12" italic="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BMq9MWBwEemRkNAfnMHxxw" x="165" y="150" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BMq9MWBwEemRkNAfnMHxxw" x="164" y="152" width="30" height="30"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_KlMy0GBwEemRkNAfnMHxxw" type="2001" element="_KlE3AGBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_KlOA8GBwEemRkNAfnMHxxw" type="5002">
@@ -43,7 +43,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KlOoAmBwEemRkNAfnMHxxw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_KlMy0WBwEemRkNAfnMHxxw" fontName="Segoe UI" fontHeight="12" italic="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KlMy0mBwEemRkNAfnMHxxw" x="320" y="150" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KlMy0mBwEemRkNAfnMHxxw" x="320" y="152" width="30" height="30"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_McXIwGBwEemRkNAfnMHxxw" type="2001" element="_McQbEGBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_McY98GBwEemRkNAfnMHxxw" type="5002">
@@ -54,7 +54,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_McaMEmBwEemRkNAfnMHxxw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_McXIwWBwEemRkNAfnMHxxw" fontName="Segoe UI" fontHeight="12" italic="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_McXIwmBwEemRkNAfnMHxxw" x="475" y="150" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_McXIwmBwEemRkNAfnMHxxw" x="476" y="152" width="30" height="30"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_OJpxAGBwEemRkNAfnMHxxw" type="2001" element="_OJjDUGBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_OJq_IGBwEemRkNAfnMHxxw" type="5002">
@@ -65,7 +65,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OJrmMmBwEemRkNAfnMHxxw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_OJpxAWBwEemRkNAfnMHxxw" fontName="Segoe UI" fontHeight="12" italic="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OJpxAmBwEemRkNAfnMHxxw" x="640" y="150" width="30" height="30"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OJpxAmBwEemRkNAfnMHxxw" x="640" y="152" width="30" height="30"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_bouwIGtDEemtdMQ761oliw" type="2002" element="_6Kd-sGtEEemtdMQ761oliw">
           <children xmi:type="notation:Node" xmi:id="_bovXMGtDEemtdMQ761oliw" type="5006"/>
@@ -128,7 +128,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_6LSeEGtEEemtdMQ761oliw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_6LR3AWtEEemtdMQ761oliw" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6LR3AmtEEemtdMQ761oliw" x="87" width="103" height="133"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6LR3AmtEEemtdMQ761oliw" x="87" width="105" height="133"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_hMiFAGtFEemtdMQ761oliw" type="3009" element="_ml4IQGtFEemtdMQ761oliw">
               <children xmi:type="notation:Node" xmi:id="_hMisEGtFEemtdMQ761oliw" type="5004"/>
@@ -154,50 +154,63 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_hMisFGtFEemtdMQ761oliw"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_hMiFAWtFEemtdMQ761oliw" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hMiFAmtFEemtdMQ761oliw" x="190" width="91" height="133"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hMiFAmtFEemtdMQ761oliw" x="192" width="89" height="133"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_boxMYGtDEemtdMQ761oliw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_boxMYWtDEemtdMQ761oliw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bouwIWtDEemtdMQ761oliw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bouwImtDEemtdMQ761oliw" x="865" y="260"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bouwImtDEemtdMQ761oliw" x="67" y="280"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__mJFUHWZEemNG-nqGgFHSQ" type="2003" element="_uiwK4HWbEemKX7k60uPL2Q">
+          <children xmi:type="notation:Node" xmi:id="__mPL8HWZEemNG-nqGgFHSQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="__mPzAHWZEemNG-nqGgFHSQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_-cY9EHWbEemKX7k60uPL2Q" type="3010" element="_-ahU0HWbEemKX7k60uPL2Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_-cY9EXWbEemKX7k60uPL2Q" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_-cY9EnWbEemKX7k60uPL2Q"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="__mPzAXWZEemNG-nqGgFHSQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="__mPzAnWZEemNG-nqGgFHSQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__mJFUXWZEemNG-nqGgFHSQ" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__mJFUnWZEemNG-nqGgFHSQ" x="52" y="40" width="119" height="47"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_3NDogmBmEemRkNAfnMHxxw"/>
         <edges xmi:type="notation:Edge" xmi:id="_u-dq4GBwEemRkNAfnMHxxw" type="4001" element="_u-SEsGBwEemRkNAfnMHxxw" source="_KlMy0GBwEemRkNAfnMHxxw" target="_McXIwGBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_u-eR8GBwEemRkNAfnMHxxw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u-eR8WBwEemRkNAfnMHxxw" x="1" y="-15"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u-eR8WBwEemRkNAfnMHxxw" x="-8" y="-6"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_u-eR8mBwEemRkNAfnMHxxw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u-eR82BwEemRkNAfnMHxxw" x="-6" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u-eR82BwEemRkNAfnMHxxw" x="8" y="6"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_u-eR9GBwEemRkNAfnMHxxw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u-eR9WBwEemRkNAfnMHxxw" x="-29" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_u-eR9WBwEemRkNAfnMHxxw" x="-7" y="7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_u-dq4WBwEemRkNAfnMHxxw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_u-dq4mBwEemRkNAfnMHxxw" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_u-dq42BwEemRkNAfnMHxxw" points="[15, 0, -140, 0]$[140, 0, -15, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_u-dq42BwEemRkNAfnMHxxw" points="[14, 3, -142, 3]$[77, 81, -79, 81]$[152, 14, -4, 14]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u-e5AGBwEemRkNAfnMHxxw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_u-e5AWBwEemRkNAfnMHxxw" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_wb5SMGBwEemRkNAfnMHxxw" type="4001" element="_wbu6IGBwEemRkNAfnMHxxw" source="_McXIwGBwEemRkNAfnMHxxw" target="_KlMy0GBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_wb55QGBwEemRkNAfnMHxxw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wb55QWBwEemRkNAfnMHxxw" x="-24" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wb55QWBwEemRkNAfnMHxxw" x="9" y="9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_wb55QmBwEemRkNAfnMHxxw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wb55Q2BwEemRkNAfnMHxxw" x="-11" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wb55Q2BwEemRkNAfnMHxxw" x="-6" y="-3"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_wb6gUGBwEemRkNAfnMHxxw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wb6gUWBwEemRkNAfnMHxxw" x="11" y="7"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wb6gUWBwEemRkNAfnMHxxw" x="6" y="-6"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_wb5SMWBwEemRkNAfnMHxxw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_wb5SMmBwEemRkNAfnMHxxw" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wb5SM2BwEemRkNAfnMHxxw" points="[-10, 10, 145, 10]$[-75, 50, 80, 50]$[-144, 9, 11, 9]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wb5SM2BwEemRkNAfnMHxxw" points="[-3, -14, 153, -14]$[-11, -59, 145, -59]$[-79, -71, 77, -71]$[-152, -14, 4, -14]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wb6gUmBwEemRkNAfnMHxxw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wb6gU2BwEemRkNAfnMHxxw" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_ZDwGcGgYEemkRPuL3f57VA" type="4001" element="_ZDpYwGgYEemkRPuL3f57VA" source="_McXIwGBwEemRkNAfnMHxxw" target="_OJpxAGBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_ZDwtgGgYEemkRPuL3f57VA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZDwtgWgYEemkRPuL3f57VA" x="10" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZDwtgWgYEemkRPuL3f57VA" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_ZDwtgmgYEemkRPuL3f57VA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZDwtg2gYEemkRPuL3f57VA" x="-12" y="10"/>
@@ -207,13 +220,13 @@
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZDwGcWgYEemkRPuL3f57VA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_ZDwGcmgYEemkRPuL3f57VA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZDwGc2gYEemkRPuL3f57VA" points="[15, 0, -150, 0]$[150, 0, -15, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZDwGc2gYEemkRPuL3f57VA" points="[15, 0, -149, 0]$[149, 0, -15, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZDxUkGgYEemkRPuL3f57VA" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZDxUkWgYEemkRPuL3f57VA" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_aPIUcGgYEemkRPuL3f57VA" type="4001" element="_aPC04GgYEemkRPuL3f57VA" source="_BMqWIGBwEemRkNAfnMHxxw" target="_KlMy0GBwEemRkNAfnMHxxw">
           <children xmi:type="notation:Node" xmi:id="_aPI7gGgYEemkRPuL3f57VA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aPI7gWgYEemkRPuL3f57VA" x="3" y="-15"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aPI7gWgYEemkRPuL3f57VA" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_aPI7gmgYEemkRPuL3f57VA" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aPI7g2gYEemkRPuL3f57VA" x="29" y="10"/>
@@ -223,7 +236,7 @@
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_aPIUcWgYEemkRPuL3f57VA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_aPIUcmgYEemkRPuL3f57VA" fontName="Segoe UI" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aPIUc2gYEemkRPuL3f57VA" points="[15, 0, -140, 0]$[140, 0, -15, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aPIUc2gYEemkRPuL3f57VA" points="[15, 0, -141, 0]$[141, 0, -15, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aPJikGgYEemkRPuL3f57VA" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aPJikWgYEemkRPuL3f57VA" id="(0.5,0.5)"/>
         </edges>
@@ -319,14 +332,14 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_6KelwGtEEemtdMQ761oliw" borderSize="1" borderSizeComputationExpression="1">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_6KelwGtEEemtdMQ761oliw" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']"/>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_WJ9IYGtFEemtdMQ761oliw" name="Events">
         <target xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
         <semanticElements xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WJ9vcGtFEemtdMQ761oliw" borderSize="1" borderSizeComputationExpression="1">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WJ9vcGtFEemtdMQ761oliw" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='EventContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='EventContainer']"/>
@@ -366,7 +379,7 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_WKALsGtFEemtdMQ761oliw" name="Actions">
         <target xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
         <semanticElements xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WKALsWtFEemtdMQ761oliw" borderSize="1" borderSizeComputationExpression="1">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WKALsWtFEemtdMQ761oliw" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='ActionContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='ActionContainer']"/>
@@ -422,7 +435,7 @@
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ml4IQGtFEemtdMQ761oliw" name="Guards">
         <target xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
         <semanticElements xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_tQrzYGtFEemtdMQ761oliw" borderSize="1" borderSizeComputationExpression="1">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_tQrzYGtFEemtdMQ761oliw" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='GuardContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='GuardContainer']"/>
@@ -460,11 +473,28 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_uiwK4HWbEemKX7k60uPL2Q" name="Message Panel">
+      <target xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
+      <semanticElements xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_uiwx8HWbEemKX7k60uPL2Q" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='MessageLayer']/@containerMappings[name='MessageContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='MessageLayer']/@containerMappings[name='MessageContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-ahU0HWbEemKX7k60uPL2Q" name="Message1 -> E1">
+        <target xmi:type="fsm:Message" href="MyFsm.fsm#//@ownedMessages.0"/>
+        <semanticElements xmi:type="fsm:Message" href="MyFsm.fsm#//@ownedMessages.0"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_-auJIHWbEemKX7k60uPL2Q" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='MessageLayer']/@containerMappings[name='MessageContainer']/@subNodeMappings[name='MessageNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='MessageLayer']/@containerMappings[name='MessageContainer']/@subNodeMappings[name='MessageNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_3CfXQmBmEemRkNAfnMHxxw"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EventLayer']"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='MessageLayer']"/>
     <target xmi:type="fsm:FSM" href="MyFsm.fsm#/"/>
   </diagram:DSemanticDiagram>
   <table:DTable xmi:id="_1V344GBwEemRkNAfnMHxxw" name="new Transitions Table" uid="_1VhTkGBwEemRkNAfnMHxxw" headerColumnWidth="112">

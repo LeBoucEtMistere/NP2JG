@@ -211,6 +211,52 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link fr.supelec.plong9.fsm.Message} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MessageItemProvider messageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fr.supelec.plong9.fsm.Message}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMessageAdapter() {
+		if (messageItemProvider == null) {
+			messageItemProvider = new MessageItemProvider(this);
+		}
+
+		return messageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link java.util.Map.Entry} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringToStringMapItemProvider stringToStringMapItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link java.util.Map.Entry}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringToStringMapAdapter() {
+		if (stringToStringMapItemProvider == null) {
+			stringToStringMapItemProvider = new StringToStringMapItemProvider(this);
+		}
+
+		return stringToStringMapItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,6 +367,10 @@ public class FsmItemProviderAdapterFactory extends FsmAdapterFactory
 			actionItemProvider.dispose();
 		if (guardItemProvider != null)
 			guardItemProvider.dispose();
+		if (messageItemProvider != null)
+			messageItemProvider.dispose();
+		if (stringToStringMapItemProvider != null)
+			stringToStringMapItemProvider.dispose();
 	}
 
 }

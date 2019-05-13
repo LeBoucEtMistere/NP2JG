@@ -169,6 +169,8 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_EVENTS);
 			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_ACTIONS);
 			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_GUARDS);
+			childrenFeatures.add(FsmPackage.Literals.FSM__OWNED_MESSAGES);
+			childrenFeatures.add(FsmPackage.Literals.FSM__DATA_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -241,6 +243,8 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 		case FsmPackage.FSM__OWNED_EVENTS:
 		case FsmPackage.FSM__OWNED_ACTIONS:
 		case FsmPackage.FSM__OWNED_GUARDS:
+		case FsmPackage.FSM__OWNED_MESSAGES:
+		case FsmPackage.FSM__DATA_TYPES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -269,6 +273,12 @@ public class FSMItemProvider extends ItemProviderAdapter implements IEditingDoma
 
 		newChildDescriptors
 				.add(createChildParameter(FsmPackage.Literals.FSM__OWNED_GUARDS, FsmFactory.eINSTANCE.createGuard()));
+
+		newChildDescriptors.add(
+				createChildParameter(FsmPackage.Literals.FSM__OWNED_MESSAGES, FsmFactory.eINSTANCE.createMessage()));
+
+		newChildDescriptors.add(createChildParameter(FsmPackage.Literals.FSM__DATA_TYPES,
+				FsmFactory.eINSTANCE.create(FsmPackage.Literals.STRING_TO_STRING_MAP)));
 	}
 
 	/**

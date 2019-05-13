@@ -4,6 +4,7 @@ package fr.supelec.plong9.fsm.impl;
 
 import fr.supelec.plong9.fsm.*;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -67,6 +68,10 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 			return createAction();
 		case FsmPackage.GUARD:
 			return createGuard();
+		case FsmPackage.MESSAGE:
+			return createMessage();
+		case FsmPackage.STRING_TO_STRING_MAP:
+			return (EObject) createStringToStringMap();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -130,6 +135,26 @@ public class FsmFactoryImpl extends EFactoryImpl implements FsmFactory {
 	public Guard createGuard() {
 		GuardImpl guard = new GuardImpl();
 		return guard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Message createMessage() {
+		MessageImpl message = new MessageImpl();
+		return message;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, String> createStringToStringMap() {
+		StringToStringMapImpl stringToStringMap = new StringToStringMapImpl();
+		return stringToStringMap;
 	}
 
 	/**

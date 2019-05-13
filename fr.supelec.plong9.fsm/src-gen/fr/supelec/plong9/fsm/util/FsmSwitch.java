@@ -4,6 +4,7 @@ package fr.supelec.plong9.fsm.util;
 
 import fr.supelec.plong9.fsm.*;
 
+import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -108,6 +109,21 @@ public class FsmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FsmPackage.MESSAGE: {
+			Message message = (Message) theEObject;
+			T result = caseMessage(message);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FsmPackage.STRING_TO_STRING_MAP: {
+			@SuppressWarnings("unchecked")
+			Map.Entry<String, String> stringToStringMap = (Map.Entry<String, String>) theEObject;
+			T result = caseStringToStringMap(stringToStringMap);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -200,6 +216,36 @@ public class FsmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGuard(Guard object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Message</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Message</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMessage(Message object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To String Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To String Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToStringMap(Map.Entry<String, String> object) {
 		return null;
 	}
 

@@ -61,6 +61,7 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 			addIncomingTransitionsPropertyDescriptor(object);
 			addOnEnteredActionsPropertyDescriptor(object);
 			addOnExitedActionsPropertyDescriptor(object);
+			addExpectedMessagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -138,6 +139,21 @@ public class StateItemProvider extends ItemProviderAdapter implements IEditingDo
 						getString("_UI_PropertyDescriptor_description", "_UI_State_onExitedActions_feature",
 								"_UI_State_type"),
 						FsmPackage.Literals.STATE__ON_EXITED_ACTIONS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Expected Message feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExpectedMessagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_State_expectedMessage_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_State_expectedMessage_feature",
+								"_UI_State_type"),
+						FsmPackage.Literals.STATE__EXPECTED_MESSAGE, true, false, true, null, null, null));
 	}
 
 	/**

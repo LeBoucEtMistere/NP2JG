@@ -4,6 +4,7 @@ package fr.supelec.plong9.fsm.util;
 
 import fr.supelec.plong9.fsm.*;
 
+import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -94,6 +95,16 @@ public class FsmAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseGuard(Guard object) {
 			return createGuardAdapter();
+		}
+
+		@Override
+		public Adapter caseMessage(Message object) {
+			return createMessageAdapter();
+		}
+
+		@Override
+		public Adapter caseStringToStringMap(Map.Entry<String, String> object) {
+			return createStringToStringMapAdapter();
 		}
 
 		@Override
@@ -196,6 +207,34 @@ public class FsmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGuardAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fr.supelec.plong9.fsm.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fr.supelec.plong9.fsm.Message
+	 * @generated
+	 */
+	public Adapter createMessageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To String Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToStringMapAdapter() {
 		return null;
 	}
 

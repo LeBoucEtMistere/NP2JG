@@ -5,6 +5,7 @@ package fr.supelec.plong9.fsm.impl;
 import fr.supelec.plong9.fsm.Action;
 import fr.supelec.plong9.fsm.FSM;
 import fr.supelec.plong9.fsm.FsmPackage;
+import fr.supelec.plong9.fsm.Message;
 import fr.supelec.plong9.fsm.State;
 import fr.supelec.plong9.fsm.Transition;
 
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.StateImpl#getIncomingTransitions <em>Incoming Transitions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.StateImpl#getOnEnteredActions <em>On Entered Actions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.StateImpl#getOnExitedActions <em>On Exited Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.StateImpl#getExpectedMessage <em>Expected Message</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,6 +106,16 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * @ordered
 	 */
 	protected Action onExitedActions;
+
+	/**
+	 * The cached value of the '{@link #getExpectedMessage() <em>Expected Message</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExpectedMessage()
+	 * @generated
+	 * @ordered
+	 */
+	protected Message expectedMessage;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -301,6 +313,46 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Message getExpectedMessage() {
+		if (expectedMessage != null && expectedMessage.eIsProxy()) {
+			InternalEObject oldExpectedMessage = (InternalEObject) expectedMessage;
+			expectedMessage = (Message) eResolveProxy(oldExpectedMessage);
+			if (expectedMessage != oldExpectedMessage) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.STATE__EXPECTED_MESSAGE,
+							oldExpectedMessage, expectedMessage));
+			}
+		}
+		return expectedMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Message basicGetExpectedMessage() {
+		return expectedMessage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpectedMessage(Message newExpectedMessage) {
+		Message oldExpectedMessage = expectedMessage;
+		expectedMessage = newExpectedMessage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.STATE__EXPECTED_MESSAGE,
+					oldExpectedMessage, expectedMessage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -375,6 +427,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			if (resolve)
 				return getOnExitedActions();
 			return basicGetOnExitedActions();
+		case FsmPackage.STATE__EXPECTED_MESSAGE:
+			if (resolve)
+				return getExpectedMessage();
+			return basicGetExpectedMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -408,6 +464,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
 			setOnExitedActions((Action) newValue);
 			return;
+		case FsmPackage.STATE__EXPECTED_MESSAGE:
+			setExpectedMessage((Message) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -438,6 +497,9 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
 			setOnExitedActions((Action) null);
 			return;
+		case FsmPackage.STATE__EXPECTED_MESSAGE:
+			setExpectedMessage((Message) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -462,6 +524,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 			return onEnteredActions != null;
 		case FsmPackage.STATE__ON_EXITED_ACTIONS:
 			return onExitedActions != null;
+		case FsmPackage.STATE__EXPECTED_MESSAGE:
+			return expectedMessage != null;
 		}
 		return super.eIsSet(featureID);
 	}

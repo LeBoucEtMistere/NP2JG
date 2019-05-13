@@ -157,13 +157,31 @@ public interface FsmPackage extends EPackage {
 	int FSM__GROUP_ID = 9;
 
 	/**
+	 * The feature id for the '<em><b>Owned Messages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__OWNED_MESSAGES = 10;
+
+	/**
+	 * The feature id for the '<em><b>Data Types</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FSM__DATA_TYPES = 11;
+
+	/**
 	 * The number of structural features of the '<em>FSM</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_FEATURE_COUNT = 10;
+	int FSM_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>FSM</em>' class.
@@ -239,13 +257,22 @@ public interface FsmPackage extends EPackage {
 	int STATE__ON_EXITED_ACTIONS = 5;
 
 	/**
+	 * The feature id for the '<em><b>Expected Message</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__EXPECTED_MESSAGE = 6;
+
+	/**
 	 * The number of structural features of the '<em>State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 6;
+	int STATE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -450,6 +477,107 @@ public interface FsmPackage extends EPackage {
 	int GUARD_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link fr.supelec.plong9.fsm.impl.MessageImpl <em>Message</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.supelec.plong9.fsm.impl.MessageImpl
+	 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getMessage()
+	 * @generated
+	 */
+	int MESSAGE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Event</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__EVENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__DATA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Message</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fr.supelec.plong9.fsm.impl.StringToStringMapImpl <em>String To String Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.supelec.plong9.fsm.impl.StringToStringMapImpl
+	 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getStringToStringMap()
+	 * @generated
+	 */
+	int STRING_TO_STRING_MAP = 7;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>String To String Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>String To String Map</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TO_STRING_MAP_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.FSM <em>FSM</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -570,6 +698,28 @@ public interface FsmPackage extends EPackage {
 	EAttribute getFSM_GroupId();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fr.supelec.plong9.fsm.FSM#getOwnedMessages <em>Owned Messages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Owned Messages</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#getOwnedMessages()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EReference getFSM_OwnedMessages();
+
+	/**
+	 * Returns the meta object for the map '{@link fr.supelec.plong9.fsm.FSM#getDataTypes <em>Data Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Data Types</em>'.
+	 * @see fr.supelec.plong9.fsm.FSM#getDataTypes()
+	 * @see #getFSM()
+	 * @generated
+	 */
+	EReference getFSM_DataTypes();
+
+	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.State <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -644,6 +794,17 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getState_OnExitedActions();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.State#getExpectedMessage <em>Expected Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Expected Message</em>'.
+	 * @see fr.supelec.plong9.fsm.State#getExpectedMessage()
+	 * @see #getState()
+	 * @generated
+	 */
+	EReference getState_ExpectedMessage();
 
 	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Transition <em>Transition</em>}'.
@@ -774,6 +935,83 @@ public interface FsmPackage extends EPackage {
 	EAttribute getGuard_Name();
 
 	/**
+	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Message <em>Message</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Message</em>'.
+	 * @see fr.supelec.plong9.fsm.Message
+	 * @generated
+	 */
+	EClass getMessage();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Message#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Event</em>'.
+	 * @see fr.supelec.plong9.fsm.Message#getEvent()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Event();
+
+	/**
+	 * Returns the meta object for the map '{@link fr.supelec.plong9.fsm.Message#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Data</em>'.
+	 * @see fr.supelec.plong9.fsm.Message#getData()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_Data();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Message#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fr.supelec.plong9.fsm.Message#getName()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EAttribute getMessage_Name();
+
+	/**
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To String Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String To String Map</em>'.
+	 * @see java.util.Map.Entry
+	 * @model keyDataType="org.eclipse.emf.ecore.EString"
+	 *        valueDataType="org.eclipse.emf.ecore.EString"
+	 * @generated
+	 */
+	EClass getStringToStringMap();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToStringMap()
+	 * @generated
+	 */
+	EAttribute getStringToStringMap_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see java.util.Map.Entry
+	 * @see #getStringToStringMap()
+	 * @generated
+	 */
+	EAttribute getStringToStringMap_Value();
+
+	/**
 	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -898,6 +1136,22 @@ public interface FsmPackage extends EPackage {
 		EAttribute FSM__GROUP_ID = eINSTANCE.getFSM_GroupId();
 
 		/**
+		 * The meta object literal for the '<em><b>Owned Messages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSM__OWNED_MESSAGES = eINSTANCE.getFSM_OwnedMessages();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Types</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FSM__DATA_TYPES = eINSTANCE.getFSM_DataTypes();
+
+		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StateImpl <em>State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -954,6 +1208,14 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STATE__ON_EXITED_ACTIONS = eINSTANCE.getState_OnExitedActions();
+
+		/**
+		 * The meta object literal for the '<em><b>Expected Message</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATE__EXPECTED_MESSAGE = eINSTANCE.getState_ExpectedMessage();
 
 		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.TransitionImpl <em>Transition</em>}' class.
@@ -1058,6 +1320,66 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GUARD__NAME = eINSTANCE.getGuard_Name();
+
+		/**
+		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.MessageImpl <em>Message</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.supelec.plong9.fsm.impl.MessageImpl
+		 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getMessage()
+		 * @generated
+		 */
+		EClass MESSAGE = eINSTANCE.getMessage();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__EVENT = eINSTANCE.getMessage_Event();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__DATA = eINSTANCE.getMessage_Data();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MESSAGE__NAME = eINSTANCE.getMessage_Name();
+
+		/**
+		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StringToStringMapImpl <em>String To String Map</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.supelec.plong9.fsm.impl.StringToStringMapImpl
+		 * @see fr.supelec.plong9.fsm.impl.FsmPackageImpl#getStringToStringMap()
+		 * @generated
+		 */
+		EClass STRING_TO_STRING_MAP = eINSTANCE.getStringToStringMap();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_STRING_MAP__KEY = eINSTANCE.getStringToStringMap_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TO_STRING_MAP__VALUE = eINSTANCE.getStringToStringMap_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Event</b></em>' reference feature.

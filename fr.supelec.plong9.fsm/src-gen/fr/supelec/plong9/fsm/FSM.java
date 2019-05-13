@@ -4,6 +4,7 @@ package fr.supelec.plong9.fsm;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -25,6 +26,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedActions <em>Owned Actions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedGuards <em>Owned Guards</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getGroupId <em>Group Id</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedMessages <em>Owned Messages</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.FSM#getDataTypes <em>Data Types</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getFSM()
@@ -253,5 +256,38 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	void setGroupId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned Messages</b></em>' containment reference list.
+	 * The list contents are of type {@link fr.supelec.plong9.fsm.Message}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned Messages</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned Messages</em>' containment reference list.
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_OwnedMessages()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Message> getOwnedMessages();
+
+	/**
+	 * Returns the value of the '<em><b>Data Types</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.String},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Data Types</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Data Types</em>' map.
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_DataTypes()
+	 * @model mapType="fr.supelec.plong9.fsm.StringToStringMap&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
+	 * @generated
+	 */
+	EMap<String, String> getDataTypes();
 
 } // FSM

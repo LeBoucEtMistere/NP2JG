@@ -7,6 +7,7 @@ import fr.supelec.plong9.fsm.Event;
 import fr.supelec.plong9.fsm.FSM;
 import fr.supelec.plong9.fsm.FsmPackage;
 import fr.supelec.plong9.fsm.Guard;
+import fr.supelec.plong9.fsm.Message;
 import fr.supelec.plong9.fsm.State;
 
 import java.util.Collection;
@@ -16,7 +17,9 @@ import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -24,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -44,6 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedActions <em>Owned Actions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedGuards <em>Owned Guards</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getGroupId <em>Group Id</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedMessages <em>Owned Messages</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getDataTypes <em>Data Types</em>}</li>
  * </ul>
  *
  * @generated
@@ -178,6 +184,26 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * @ordered
 	 */
 	protected String groupId = GROUP_ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getOwnedMessages() <em>Owned Messages</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnedMessages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Message> ownedMessages;
+
+	/**
+	 * The cached value of the '{@link #getDataTypes() <em>Data Types</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataTypes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> dataTypes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -435,6 +461,31 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Message> getOwnedMessages() {
+		if (ownedMessages == null) {
+			ownedMessages = new EObjectContainmentEList<Message>(Message.class, this, FsmPackage.FSM__OWNED_MESSAGES);
+		}
+		return ownedMessages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getDataTypes() {
+		if (dataTypes == null) {
+			dataTypes = new EcoreEMap<String, String>(FsmPackage.Literals.STRING_TO_STRING_MAP,
+					StringToStringMapImpl.class, this, FsmPackage.FSM__DATA_TYPES);
+		}
+		return dataTypes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -461,6 +512,10 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return ((InternalEList<?>) getOwnedActions()).basicRemove(otherEnd, msgs);
 		case FsmPackage.FSM__OWNED_GUARDS:
 			return ((InternalEList<?>) getOwnedGuards()).basicRemove(otherEnd, msgs);
+		case FsmPackage.FSM__OWNED_MESSAGES:
+			return ((InternalEList<?>) getOwnedMessages()).basicRemove(otherEnd, msgs);
+		case FsmPackage.FSM__DATA_TYPES:
+			return ((InternalEList<?>) getDataTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -499,6 +554,13 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return getOwnedGuards();
 		case FsmPackage.FSM__GROUP_ID:
 			return getGroupId();
+		case FsmPackage.FSM__OWNED_MESSAGES:
+			return getOwnedMessages();
+		case FsmPackage.FSM__DATA_TYPES:
+			if (coreType)
+				return getDataTypes();
+			else
+				return getDataTypes().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -546,6 +608,13 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__GROUP_ID:
 			setGroupId((String) newValue);
 			return;
+		case FsmPackage.FSM__OWNED_MESSAGES:
+			getOwnedMessages().clear();
+			getOwnedMessages().addAll((Collection<? extends Message>) newValue);
+			return;
+		case FsmPackage.FSM__DATA_TYPES:
+			((EStructuralFeature.Setting) getDataTypes()).set(newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -588,6 +657,12 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__GROUP_ID:
 			setGroupId(GROUP_ID_EDEFAULT);
 			return;
+		case FsmPackage.FSM__OWNED_MESSAGES:
+			getOwnedMessages().clear();
+			return;
+		case FsmPackage.FSM__DATA_TYPES:
+			getDataTypes().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -620,6 +695,10 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return ownedGuards != null && !ownedGuards.isEmpty();
 		case FsmPackage.FSM__GROUP_ID:
 			return GROUP_ID_EDEFAULT == null ? groupId != null : !GROUP_ID_EDEFAULT.equals(groupId);
+		case FsmPackage.FSM__OWNED_MESSAGES:
+			return ownedMessages != null && !ownedMessages.isEmpty();
+		case FsmPackage.FSM__DATA_TYPES:
+			return dataTypes != null && !dataTypes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

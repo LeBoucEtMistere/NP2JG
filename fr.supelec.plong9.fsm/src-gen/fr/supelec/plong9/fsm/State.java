@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.State#getIncomingTransitions <em>Incoming Transitions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.State#getOnEnteredActions <em>On Entered Actions</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.State#getOnExitedActions <em>On Exited Actions</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.State#getExpectedMessage <em>Expected Message</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getState()
@@ -169,5 +170,31 @@ public interface State extends EObject {
 	 * @generated
 	 */
 	void setOnExitedActions(Action value);
+
+	/**
+	 * Returns the value of the '<em><b>Expected Message</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Expected Message</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Expected Message</em>' reference.
+	 * @see #setExpectedMessage(Message)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getState_ExpectedMessage()
+	 * @model
+	 * @generated
+	 */
+	Message getExpectedMessage();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.State#getExpectedMessage <em>Expected Message</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expected Message</em>' reference.
+	 * @see #getExpectedMessage()
+	 * @generated
+	 */
+	void setExpectedMessage(Message value);
 
 } // State
