@@ -758,7 +758,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zPQc4G2xEemjJLy0_4_Kjg" name="[0..1] onEnteredActions" sourceNode="_7IzxAC8REemUD62u2ND_rQ" targetNode="_HF-6EEQNEemrwoRpiiTFJA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_zPQc4G2xEemjJLy0_4_Kjg" name="[0..*] onEnteredActions" sourceNode="_7IzxAC8REemUD62u2ND_rQ" targetNode="_HF-6EEQNEemrwoRpiiTFJA">
       <target xmi:type="ecore:EReference" href="fsm.ecore#//State/onEnteredActions"/>
       <semanticElements xmi:type="ecore:EReference" href="fsm.ecore#//State/onEnteredActions"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zqOE4HWkEemLj80b9HKNdQ" routingStyle="manhattan" strokeColor="0,0,0">
@@ -768,7 +768,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_5X7rUG2xEemjJLy0_4_Kjg" name="[0..1] onExitedActions" sourceNode="_7IzxAC8REemUD62u2ND_rQ" targetNode="_HF-6EEQNEemrwoRpiiTFJA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_5X7rUG2xEemjJLy0_4_Kjg" name="[0..*] onExitedActions" sourceNode="_7IzxAC8REemUD62u2ND_rQ" targetNode="_HF-6EEQNEemrwoRpiiTFJA">
       <target xmi:type="ecore:EReference" href="fsm.ecore#//State/onExitedActions"/>
       <semanticElements xmi:type="ecore:EReference" href="fsm.ecore#//State/onExitedActions"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_zqPTAHWkEemLj80b9HKNdQ" routingStyle="manhattan" strokeColor="0,0,0">
