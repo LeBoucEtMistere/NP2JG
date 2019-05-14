@@ -10,19 +10,31 @@
  *******************************************************************************/
 package fr.supelec.plong9.acceleo.generation.main;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
 import org.eclipse.acceleo.engine.service.AbstractAcceleoGenerator;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 
 /**
  * Entry point of the 'Main' generation module.
@@ -171,7 +183,7 @@ public class Main extends AbstractAcceleoGenerator {
      *            This will be used to display progress information to the user.
      * @throws IOException
      *             This will be thrown if any of the output files cannot be saved to disk.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void doGenerate(Monitor monitor) throws IOException {
@@ -200,6 +212,39 @@ public class Main extends AbstractAcceleoGenerator {
         //}
 
         super.doGenerate(monitor);
+        
+        
+        URL fileURL = new URL("platform:/plugin/fr.supelec.plong9.acceleo.generation/resources/asn1_scripts/jasn1-compiler");
+        System.out.println(fileURL.toString());
+        File file = null;
+        try {
+            file = new File(FileLocator.resolve(fileURL).toURI());
+        } catch (URISyntaxException e1) {
+            e1.printStackTrace();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        System.out.println(file.getAbsolutePath());
+        File currentDirFile = new File(".");
+        String helper = currentDirFile.getAbsolutePath();
+        String currentDir = helper.substring(0, helper.length() - currentDirFile.getCanonicalPath().length());
+        System.out.println("project dir : " + currentDir);
+        
+        var wrkspace_path = ResourcesPlugin.getWorkspace().getRoot().getLocation();
+        String[] args = {wrkspace_path.append("exampleFSM/src-gen/MessagePing.asn1").toString(), wrkspace_path.append("exampleFSM/src-gen").toString(), "asn1"};
+
+        Process process = new ProcessBuilder(file.getAbsolutePath(), "-f", args[0], "-o", args[1], "-p", args[2]).start();
+        //System.out.println(process.exitValue());
+        InputStream is = process.getInputStream();
+        InputStreamReader isr = new InputStreamReader(is);
+        BufferedReader br = new BufferedReader(isr);
+        String line;
+
+        System.out.printf("Output of running %s is:", Arrays.toString(args));
+
+        while ((line = br.readLine()) != null) {
+          System.out.println(line);
+        }
     }
     
     /**
