@@ -32,6 +32,7 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.14.0.v20180418-0836.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.13.0.v20180319-0813.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_21.0.0.v20170206-1425.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.resources_3.13.0.v20180512-1138.jar"/>
     </path>
 
     <path id="fr.supelec.plong9.acceleo.generation.classpath">
