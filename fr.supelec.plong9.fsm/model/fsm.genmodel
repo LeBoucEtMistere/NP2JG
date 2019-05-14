@@ -54,7 +54,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//Message/event"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EReference fsm.ecore#//Message/data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//Message/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fsm.ecore#//Message/enumsDef"/>
     </genClasses>
     <genClasses ecoreClass="fsm.ecore#//StringToStringMap">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fsm.ecore#//StringToStringMap/key"/>

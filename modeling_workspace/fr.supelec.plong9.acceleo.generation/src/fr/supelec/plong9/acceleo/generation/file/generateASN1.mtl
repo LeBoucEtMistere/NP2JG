@@ -8,13 +8,17 @@
 [msg.name/] DEFINITIONS IMPLICIT TAGS::=
 BEGIN
 
-[for (d : StringToStringMap | msg.enumsDef)]
-[d.key.toUpper()/] ::= ENUMERATED {[d.value/]}
+[for (d : StringToStringMap | msg.data)]
+[if (d.value.startsWith('ENUMDEF:'))]
+[d.key.toUpper()/] ::= ENUMERATED {[d.value.substring(9)/]}
+[/if]
 [/for]
 
 [msg.name/] ::= SEQUENCE {
     [for (d : StringToStringMap | msg.data) separator(',')]
+	[if (not d.value.startsWith('ENUMDEF:'))]
 	[d.key.toLower()/] [d.value.toUpper()/]
+	[/if]
 	[/for]
 }
 

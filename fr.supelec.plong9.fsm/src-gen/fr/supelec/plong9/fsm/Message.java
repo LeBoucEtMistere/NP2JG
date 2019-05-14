@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.Message#getEvent <em>Event</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Message#getData <em>Data</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Message#getName <em>Name</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.Message#getEnumsDef <em>Enums Def</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getMessage()
@@ -94,22 +93,5 @@ public interface Message extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Enums Def</b></em>' map.
-	 * The key is of type {@link java.lang.String},
-	 * and the value is of type {@link java.lang.String},
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Enums Def</em>' map isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Enums Def</em>' map.
-	 * @see fr.supelec.plong9.fsm.FsmPackage#getMessage_EnumsDef()
-	 * @model mapType="fr.supelec.plong9.fsm.StringToStringMap&lt;org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString&gt;"
-	 * @generated
-	 */
-	EMap<String, String> getEnumsDef();
 
 } // Message

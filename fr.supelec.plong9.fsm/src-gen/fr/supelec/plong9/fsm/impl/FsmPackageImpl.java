@@ -494,15 +494,6 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMessage_EnumsDef() {
-		return (EReference) messageEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStringToStringMap() {
 		return stringToStringMapEClass;
 	}
@@ -598,7 +589,6 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEReference(messageEClass, MESSAGE__EVENT);
 		createEReference(messageEClass, MESSAGE__DATA);
 		createEAttribute(messageEClass, MESSAGE__NAME);
-		createEReference(messageEClass, MESSAGE__ENUMS_DEF);
 
 		stringToStringMapEClass = createEClass(STRING_TO_STRING_MAP);
 		createEAttribute(stringToStringMapEClass, STRING_TO_STRING_MAP__KEY);
@@ -737,9 +727,6 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMessage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Message.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMessage_EnumsDef(), this.getStringToStringMap(), null, "enumsDef", null, 0, -1, Message.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringToStringMapEClass, Map.Entry.class, "StringToStringMap", !IS_ABSTRACT, !IS_INTERFACE,
 				!IS_GENERATED_INSTANCE_CLASS);
