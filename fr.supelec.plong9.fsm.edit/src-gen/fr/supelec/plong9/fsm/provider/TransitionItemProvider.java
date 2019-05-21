@@ -59,6 +59,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 			addGuardPropertyDescriptor(object);
 			addEventPropertyDescriptor(object);
 			addTargetPropertyDescriptor(object);
+			addInverseGuardPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -155,6 +156,22 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
+	 * This adds a property descriptor for the Inverse Guard feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInverseGuardPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transition_InverseGuard_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_InverseGuard_feature",
+								"_UI_Transition_type"),
+						FsmPackage.Literals.TRANSITION__INVERSE_GUARD, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Transition.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,6 +219,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 		switch (notification.getFeatureID(Transition.class)) {
 		case FsmPackage.TRANSITION__NAME:
 		case FsmPackage.TRANSITION__EVENT:
+		case FsmPackage.TRANSITION__INVERSE_GUARD:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

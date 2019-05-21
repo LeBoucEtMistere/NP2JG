@@ -19,6 +19,7 @@ public class main {
 		fsm.LOGGER.setLevel(Level.INFO);
 
 		State state_attenteconnexion = new State("AttenteConnexion");
+		state_attenteconnexion.onEnteredAction(new TIMEOUTACTION());
 		State state_attente = new State("Attente");
 		State state_end = new State("End");
 
@@ -51,7 +52,6 @@ public class main {
 		trans_reception2.registerAction(new DisconnectClientAction());
 		
 		trans_reception2.registerGuard(new InverseGuard(new PONGGUARD()));
-		
 		
 
 		fsm.addState(state_attenteconnexion);

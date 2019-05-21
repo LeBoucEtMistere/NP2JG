@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getGuard <em>Guard</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.TransitionImpl#isInverseGuard <em>Inverse Guard</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,6 +104,26 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @ordered
 	 */
 	protected State target;
+
+	/**
+	 * The default value of the '{@link #isInverseGuard() <em>Inverse Guard</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isInverseGuard()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean INVERSE_GUARD_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isInverseGuard() <em>Inverse Guard</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isInverseGuard()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean inverseGuard = INVERSE_GUARD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -350,6 +371,28 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isInverseGuard() {
+		return inverseGuard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInverseGuard(boolean newInverseGuard) {
+		boolean oldInverseGuard = inverseGuard;
+		inverseGuard = newInverseGuard;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.TRANSITION__INVERSE_GUARD, oldInverseGuard,
+					inverseGuard));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -422,6 +465,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			if (resolve)
 				return getTarget();
 			return basicGetTarget();
+		case FsmPackage.TRANSITION__INVERSE_GUARD:
+			return isInverseGuard();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -454,6 +499,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		case FsmPackage.TRANSITION__TARGET:
 			setTarget((State) newValue);
 			return;
+		case FsmPackage.TRANSITION__INVERSE_GUARD:
+			setInverseGuard((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -484,6 +532,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		case FsmPackage.TRANSITION__TARGET:
 			setTarget((State) null);
 			return;
+		case FsmPackage.TRANSITION__INVERSE_GUARD:
+			setInverseGuard(INVERSE_GUARD_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -508,6 +559,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			return event != null;
 		case FsmPackage.TRANSITION__TARGET:
 			return target != null;
+		case FsmPackage.TRANSITION__INVERSE_GUARD:
+			return inverseGuard != INVERSE_GUARD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -525,6 +578,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", InverseGuard: ");
+		result.append(inverseGuard);
 		result.append(')');
 		return result.toString();
 	}

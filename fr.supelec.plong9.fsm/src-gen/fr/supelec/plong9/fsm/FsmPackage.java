@@ -94,22 +94,13 @@ public interface FsmPackage extends EPackage {
 	int FSM__INITIAL_STATE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Current State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FSM__CURRENT_STATE = 3;
-
-	/**
 	 * The feature id for the '<em><b>Final State</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__FINAL_STATE = 4;
+	int FSM__FINAL_STATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Owned Events</b></em>' containment reference list.
@@ -118,7 +109,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__OWNED_EVENTS = 5;
+	int FSM__OWNED_EVENTS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Is Server</b></em>' attribute.
@@ -127,7 +118,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__IS_SERVER = 6;
+	int FSM__IS_SERVER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Owned Actions</b></em>' containment reference list.
@@ -136,7 +127,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__OWNED_ACTIONS = 7;
+	int FSM__OWNED_ACTIONS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Owned Guards</b></em>' containment reference list.
@@ -145,7 +136,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__OWNED_GUARDS = 8;
+	int FSM__OWNED_GUARDS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Group Id</b></em>' attribute.
@@ -154,7 +145,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__GROUP_ID = 9;
+	int FSM__GROUP_ID = 8;
 
 	/**
 	 * The feature id for the '<em><b>Owned Messages</b></em>' containment reference list.
@@ -163,7 +154,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__OWNED_MESSAGES = 10;
+	int FSM__OWNED_MESSAGES = 9;
 
 	/**
 	 * The feature id for the '<em><b>Data Types</b></em>' map.
@@ -172,7 +163,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM__DATA_TYPES = 11;
+	int FSM__DATA_TYPES = 10;
 
 	/**
 	 * The number of structural features of the '<em>FSM</em>' class.
@@ -181,7 +172,7 @@ public interface FsmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FSM_FEATURE_COUNT = 12;
+	int FSM_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>FSM</em>' class.
@@ -348,13 +339,22 @@ public interface FsmPackage extends EPackage {
 	int TRANSITION__TARGET = 5;
 
 	/**
+	 * The feature id for the '<em><b>Inverse Guard</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__INVERSE_GUARD = 6;
+
+	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = 6;
+	int TRANSITION_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -630,17 +630,6 @@ public interface FsmPackage extends EPackage {
 	EReference getFSM_InitialState();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.FSM#getCurrentState <em>Current State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Current State</em>'.
-	 * @see fr.supelec.plong9.fsm.FSM#getCurrentState()
-	 * @see #getFSM()
-	 * @generated
-	 */
-	EReference getFSM_CurrentState();
-
-	/**
 	 * Returns the meta object for the reference '{@link fr.supelec.plong9.fsm.FSM#getFinalState <em>Final State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -892,6 +881,17 @@ public interface FsmPackage extends EPackage {
 	EReference getTransition_Target();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.supelec.plong9.fsm.Transition#isInverseGuard <em>Inverse Guard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Inverse Guard</em>'.
+	 * @see fr.supelec.plong9.fsm.Transition#isInverseGuard()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EAttribute getTransition_InverseGuard();
+
+	/**
 	 * Returns the meta object for class '{@link fr.supelec.plong9.fsm.Event <em>Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1100,14 +1100,6 @@ public interface FsmPackage extends EPackage {
 		EReference FSM__INITIAL_STATE = eINSTANCE.getFSM_InitialState();
 
 		/**
-		 * The meta object literal for the '<em><b>Current State</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FSM__CURRENT_STATE = eINSTANCE.getFSM_CurrentState();
-
-		/**
 		 * The meta object literal for the '<em><b>Final State</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1294,6 +1286,14 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSITION__TARGET = eINSTANCE.getTransition_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Inverse Guard</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRANSITION__INVERSE_GUARD = eINSTANCE.getTransition_InverseGuard();
 
 		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.EventImpl <em>Event</em>}' class.

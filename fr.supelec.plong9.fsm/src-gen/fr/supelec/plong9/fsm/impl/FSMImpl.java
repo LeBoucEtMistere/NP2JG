@@ -41,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedStates <em>Owned States</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getInitialState <em>Initial State</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getCurrentState <em>Current State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getFinalState <em>Final State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#getOwnedEvents <em>Owned Events</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.FSMImpl#isIsServer <em>Is Server</em>}</li>
@@ -94,16 +93,6 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 	 * @ordered
 	 */
 	protected State initialState;
-
-	/**
-	 * The cached value of the '{@link #getCurrentState() <em>Current State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCurrentState()
-	 * @generated
-	 * @ordered
-	 */
-	protected State currentState;
 
 	/**
 	 * The cached value of the '{@link #getFinalState() <em>Final State</em>}' reference.
@@ -296,46 +285,6 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.FSM__INITIAL_STATE, oldInitialState,
 					initialState));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State getCurrentState() {
-		if (currentState != null && currentState.eIsProxy()) {
-			InternalEObject oldCurrentState = (InternalEObject) currentState;
-			currentState = (State) eResolveProxy(oldCurrentState);
-			if (currentState != oldCurrentState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FsmPackage.FSM__CURRENT_STATE,
-							oldCurrentState, currentState));
-			}
-		}
-		return currentState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State basicGetCurrentState() {
-		return currentState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCurrentState(State newCurrentState) {
-		State oldCurrentState = currentState;
-		currentState = newCurrentState;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FsmPackage.FSM__CURRENT_STATE, oldCurrentState,
-					currentState));
 	}
 
 	/**
@@ -536,10 +485,6 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			if (resolve)
 				return getInitialState();
 			return basicGetInitialState();
-		case FsmPackage.FSM__CURRENT_STATE:
-			if (resolve)
-				return getCurrentState();
-			return basicGetCurrentState();
 		case FsmPackage.FSM__FINAL_STATE:
 			if (resolve)
 				return getFinalState();
@@ -583,9 +528,6 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return;
 		case FsmPackage.FSM__INITIAL_STATE:
 			setInitialState((State) newValue);
-			return;
-		case FsmPackage.FSM__CURRENT_STATE:
-			setCurrentState((State) newValue);
 			return;
 		case FsmPackage.FSM__FINAL_STATE:
 			setFinalState((State) newValue);
@@ -636,9 +578,6 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 		case FsmPackage.FSM__INITIAL_STATE:
 			setInitialState((State) null);
 			return;
-		case FsmPackage.FSM__CURRENT_STATE:
-			setCurrentState((State) null);
-			return;
 		case FsmPackage.FSM__FINAL_STATE:
 			setFinalState((State) null);
 			return;
@@ -681,8 +620,6 @@ public class FSMImpl extends MinimalEObjectImpl.Container implements FSM {
 			return ownedStates != null && !ownedStates.isEmpty();
 		case FsmPackage.FSM__INITIAL_STATE:
 			return initialState != null;
-		case FsmPackage.FSM__CURRENT_STATE:
-			return currentState != null;
 		case FsmPackage.FSM__FINAL_STATE:
 			return finalState != null;
 		case FsmPackage.FSM__OWNED_EVENTS:

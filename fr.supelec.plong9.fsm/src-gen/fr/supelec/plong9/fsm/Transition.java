@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getGuard <em>Guard</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getEvent <em>Event</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.Transition#getTarget <em>Target</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.Transition#isInverseGuard <em>Inverse Guard</em>}</li>
  * </ul>
  *
  * @see fr.supelec.plong9.fsm.FsmPackage#getTransition()
@@ -177,5 +178,31 @@ public interface Transition extends EObject {
 	 * @generated
 	 */
 	void setTarget(State value);
+
+	/**
+	 * Returns the value of the '<em><b>Inverse Guard</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Inverse Guard</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inverse Guard</em>' attribute.
+	 * @see #setInverseGuard(boolean)
+	 * @see fr.supelec.plong9.fsm.FsmPackage#getTransition_InverseGuard()
+	 * @model
+	 * @generated
+	 */
+	boolean isInverseGuard();
+
+	/**
+	 * Sets the value of the '{@link fr.supelec.plong9.fsm.Transition#isInverseGuard <em>Inverse Guard</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inverse Guard</em>' attribute.
+	 * @see #isInverseGuard()
+	 * @generated
+	 */
+	void setInverseGuard(boolean value);
 
 } // Transition

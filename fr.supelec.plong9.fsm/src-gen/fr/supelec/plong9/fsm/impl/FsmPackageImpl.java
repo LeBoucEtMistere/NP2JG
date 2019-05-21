@@ -188,7 +188,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFSM_CurrentState() {
+	public EReference getFSM_FinalState() {
 		return (EReference) fsmEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -197,7 +197,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFSM_FinalState() {
+	public EReference getFSM_OwnedEvents() {
 		return (EReference) fsmEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -206,17 +206,8 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFSM_OwnedEvents() {
-		return (EReference) fsmEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getFSM_IsServer() {
-		return (EAttribute) fsmEClass.getEStructuralFeatures().get(6);
+		return (EAttribute) fsmEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -225,7 +216,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * @generated
 	 */
 	public EReference getFSM_OwnedActions() {
-		return (EReference) fsmEClass.getEStructuralFeatures().get(7);
+		return (EReference) fsmEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -234,7 +225,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * @generated
 	 */
 	public EReference getFSM_OwnedGuards() {
-		return (EReference) fsmEClass.getEStructuralFeatures().get(8);
+		return (EReference) fsmEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -243,7 +234,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * @generated
 	 */
 	public EAttribute getFSM_GroupId() {
-		return (EAttribute) fsmEClass.getEStructuralFeatures().get(9);
+		return (EAttribute) fsmEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -252,7 +243,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * @generated
 	 */
 	public EReference getFSM_OwnedMessages() {
-		return (EReference) fsmEClass.getEStructuralFeatures().get(10);
+		return (EReference) fsmEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -261,7 +252,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 * @generated
 	 */
 	public EReference getFSM_DataTypes() {
-		return (EReference) fsmEClass.getEStructuralFeatures().get(11);
+		return (EReference) fsmEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -397,6 +388,15 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 	 */
 	public EReference getTransition_Target() {
 		return (EReference) transitionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTransition_InverseGuard() {
+		return (EAttribute) transitionEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -558,7 +558,6 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEAttribute(fsmEClass, FSM__NAME);
 		createEReference(fsmEClass, FSM__OWNED_STATES);
 		createEReference(fsmEClass, FSM__INITIAL_STATE);
-		createEReference(fsmEClass, FSM__CURRENT_STATE);
 		createEReference(fsmEClass, FSM__FINAL_STATE);
 		createEReference(fsmEClass, FSM__OWNED_EVENTS);
 		createEAttribute(fsmEClass, FSM__IS_SERVER);
@@ -584,6 +583,7 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		createEReference(transitionEClass, TRANSITION__GUARD);
 		createEReference(transitionEClass, TRANSITION__EVENT);
 		createEReference(transitionEClass, TRANSITION__TARGET);
+		createEAttribute(transitionEClass, TRANSITION__INVERSE_GUARD);
 
 		eventEClass = createEClass(EVENT);
 		createEAttribute(eventEClass, EVENT__NAME);
@@ -644,9 +644,6 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFSM_InitialState(), this.getState(), null, "initialState", null, 1, 1,
-				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFSM_CurrentState(), this.getState(), null, "currentState", null, 1, 1,
 				fr.supelec.plong9.fsm.FSM.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFSM_FinalState(), this.getState(), null, "finalState", null, 0, 1,
@@ -715,6 +712,9 @@ public class FsmPackageImpl extends EPackageImpl implements FsmPackage {
 		initEReference(getTransition_Target(), this.getState(), this.getState_IncomingTransitions(), "target", null, 1,
 				1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransition_InverseGuard(), ecorePackage.getEBoolean(), "InverseGuard", null, 0, 1,
+				Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEvent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Event.class, !IS_TRANSIENT,

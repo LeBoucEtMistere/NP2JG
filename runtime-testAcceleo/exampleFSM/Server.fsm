@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="PongServer" initialState="//@ownedStates.0" finalState="//@ownedStates.2" isServer="true" groupId="fr.supelec.plong9">
-  <ownedStates name="AttenteConnexion" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0 //@ownedStates.1/@outgoingTransitions.1">
+  <ownedStates name="AttenteConnexion" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0 //@ownedStates.1/@outgoingTransitions.1" onEnteredActions="//@ownedActions.0">
     <outgoingTransitions name="connexionRecue" event="//@ownedEvents.1" target="//@ownedStates.1"/>
     <outgoingTransitions name="timeout" event="//@ownedEvents.2" target="//@ownedStates.2"/>
   </ownedStates>
   <ownedStates name="Attente" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0" expectedMessage="//@ownedMessages.0">
     <outgoingTransitions name="reception1" actions="//@ownedActions.1 //@ownedActions.2" guard="//@ownedGuards.0" event="//@ownedEvents.0" target="//@ownedStates.0"/>
-    <outgoingTransitions name="reception2" actions="//@ownedActions.3 //@ownedActions.2" event="//@ownedEvents.0" target="//@ownedStates.0"/>
+    <outgoingTransitions name="reception2" actions="//@ownedActions.3 //@ownedActions.2" guard="//@ownedGuards.0" event="//@ownedEvents.0" target="//@ownedStates.0" InverseGuard="true"/>
   </ownedStates>
   <ownedStates name="End" incomingTransitions="//@ownedStates.0/@outgoingTransitions.1"/>
   <ownedEvents name="ping"/>

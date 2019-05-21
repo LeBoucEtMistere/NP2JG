@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getName <em>Name</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedStates <em>Owned States</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getInitialState <em>Initial State</em>}</li>
- *   <li>{@link fr.supelec.plong9.fsm.FSM#getCurrentState <em>Current State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getFinalState <em>Final State</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#getOwnedEvents <em>Owned Events</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.FSM#isIsServer <em>Is Server</em>}</li>
@@ -104,32 +103,6 @@ public interface FSM extends EObject {
 	 * @generated
 	 */
 	void setInitialState(State value);
-
-	/**
-	 * Returns the value of the '<em><b>Current State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Current State</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Current State</em>' reference.
-	 * @see #setCurrentState(State)
-	 * @see fr.supelec.plong9.fsm.FsmPackage#getFSM_CurrentState()
-	 * @model required="true"
-	 * @generated
-	 */
-	State getCurrentState();
-
-	/**
-	 * Sets the value of the '{@link fr.supelec.plong9.fsm.FSM#getCurrentState <em>Current State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Current State</em>' reference.
-	 * @see #getCurrentState()
-	 * @generated
-	 */
-	void setCurrentState(State value);
 
 	/**
 	 * Returns the value of the '<em><b>Final State</b></em>' reference.

@@ -79,7 +79,11 @@ public class main {
 		
 		[/for]
 		[if (not t.guard.oclIsUndefined())]
+		[if (t.InverseGuard)]
+		trans_[t.name.toLower()/].registerGuard(new InverseGuard(new [t.guard.name.toUpper()/]()));
+		[else]
 		trans_[t.name.toLower()/].registerGuard(new [t.guard.name.toUpper()/]());
+		[/if]
 		[/if]
 		
 		[/for]
