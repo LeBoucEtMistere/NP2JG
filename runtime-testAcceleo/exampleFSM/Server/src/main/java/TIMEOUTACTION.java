@@ -1,5 +1,5 @@
 
-package PongServer
+package PongServer;
 
 import java.io.IOException;
 
@@ -10,16 +10,24 @@ import fsm.Event;
 import fsm.FSM;
 import fsm.FSMServer;
 
+// Start of user code imports
+
+ // your imports
+
+// End of user code
+
 
 public class TIMEOUTACTION extends Action {
 
 	@Override
 	public void execute(FSM fsm, Event e) {
-
-		var dos = ((FSMServer)fsm).getNetworkServer().getOutputStreamByClient(e.origin);
-
+		
 		// Start of user code for TimeoutAction contents
- 		// TODO : Action contents
+
+		Event ev = new Event();
+		ev.name = "timeoutConnection";
+		fsm.launchTimer(10*1000, ev);
+
  		// End of user code
 		
 	}

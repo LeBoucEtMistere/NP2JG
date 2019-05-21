@@ -5,10 +5,10 @@
 [template public generateAction(aFSM : FSM)]
 
 [for (action : Action | aFSM.ownedActions)]
-[if not (action.name = 'DisconnectClientAction')]
-[file (aFSM.name + '/' + action.name.toUpper() + '.java', false, 'UTF-8')]
+[if not (action.name = 'DisconnectClientAction' or action.name = 'DisconnectFromServerAction')]
+[file ('src/main/java' + '/' + action.name.toUpper() + '.java', false, 'UTF-8')]
 
-package [aFSM.name/]
+package [aFSM.name/];
 
 import java.io.IOException;
 
@@ -23,20 +23,24 @@ import fsm.FSMServer;
 import fsm.FSMClient;
 [/if]
 
+// [protected ('imports')]
+
+ // your imports
+
+// [/protected]
+
 
 public class [action.name.toUpper()/] extends Action {
 
 	@Override
 	public void execute(FSM fsm, Event e) {
-
+		
+		// [protected ('for ' + action.name + ' contents')]
 		[if (aFSM.isServer)]
 		var dos = ((FSMServer)fsm).getNetworkServer().getOutputStreamByClient(e.origin);
 		[else]
 		var dos = ((FSMClient)fsm).getNetworkClient().getOutputStream();
 		[/if]
-
-		// [protected ('for ' + action.name + ' contents')]
-
  		// TODO : Action contents
 
  		// [/protected]

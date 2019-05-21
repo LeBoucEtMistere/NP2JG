@@ -5,6 +5,8 @@
 [import fr::supelec::plong9::acceleo::generation::file::generatePOM /]
 [import fr::supelec::plong9::acceleo::generation::file::generateAction /]
 [import fr::supelec::plong9::acceleo::generation::file::generateASN1 /]
+[import fr::supelec::plong9::acceleo::generation::file::generateMessageParser /]
+[import fr::supelec::plong9::acceleo::generation::file::generateGuard /]
 
 [template public Main(aFSM : FSM)]
 [comment @main/]
@@ -15,6 +17,8 @@
 [aFSM.generatePOM()/]
 [aFSM.generateMain()/]
 [aFSM.generateAction()/]
+[aFSM.generateMessageParser()/]
+[aFSM.generateGuard()/]
 
 
 [/template]

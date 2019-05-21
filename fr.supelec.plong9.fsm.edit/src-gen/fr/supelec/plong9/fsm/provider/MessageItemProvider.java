@@ -11,7 +11,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -55,6 +54,7 @@ public class MessageItemProvider extends ItemProviderAdapter implements IEditing
 			addEventPropertyDescriptor(object);
 			addDataPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addEnumsDefPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -101,6 +101,21 @@ public class MessageItemProvider extends ItemProviderAdapter implements IEditing
 						getString("_UI_PropertyDescriptor_description", "_UI_Message_name_feature", "_UI_Message_type"),
 						FsmPackage.Literals.MESSAGE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Enums Def feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEnumsDefPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Message_enumsDef_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Message_enumsDef_feature",
+								"_UI_Message_type"),
+						FsmPackage.Literals.MESSAGE__ENUMS_DEF, true, false, false, null, null, null));
 	}
 
 	/**
@@ -152,6 +167,7 @@ public class MessageItemProvider extends ItemProviderAdapter implements IEditing
 		case FsmPackage.MESSAGE__EVENT:
 		case FsmPackage.MESSAGE__DATA:
 		case FsmPackage.MESSAGE__NAME:
+		case FsmPackage.MESSAGE__ENUMS_DEF:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

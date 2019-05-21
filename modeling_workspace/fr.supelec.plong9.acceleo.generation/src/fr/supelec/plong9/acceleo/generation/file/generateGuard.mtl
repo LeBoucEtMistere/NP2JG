@@ -4,7 +4,33 @@
 
 [template public generateGuard(aFSM : FSM)]
 
-[file (aFSM.name, false, 'UTF-8')]
+[for (guard : Guard | aFSM.ownedGuards)]
+[file ('src/main/java' + '/' + guard.name.toUpper() + '.java', false, 'UTF-8')]
+package [aFSM.name/];
 
+import fsm.Event;
+import fsm.FSM;
+import fsm.Guard;
+
+// [protected ('imports')]
+
+ // your imports
+
+// [/protected]
+
+public class [guard.name.toUpper()/] extends Guard{
+
+	@Override
+	public boolean eval(FSM fsm, Event e) {
+		// [protected ('for ' + guard.name + ' contents')]
+
+ 		// TODO : Guard content
+		return true;
+
+ 		// [/protected]
+	}
+
+}
 [/file]
+[/for]
 [/template]

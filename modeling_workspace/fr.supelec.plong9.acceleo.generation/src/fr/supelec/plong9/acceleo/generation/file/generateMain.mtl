@@ -4,27 +4,25 @@
 
 [template public generateMain(aFSM : FSM)]
 
-[file (aFSM.name + '/main.java', false, 'UTF-8')]
+[file ('src/main/java' + '/main.java', false, 'UTF-8')]
 
 package [aFSM.name/];
 
 import java.util.logging.Level;
 
-[if (aFSM.isServer)]
-import fsm.FSMServer;
+import fsm.*;
 
+[if (aFSM.isServer)]
 [else]
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
-import fsm.FSMClient;
 [/if]
-import fsm.State;
-import fsm.Transition;
 
 [for (a : Action | aFSM.ownedActions)]
 [if (a.name = 'DisconnectClientAction')]
 import fsm.DisconnectClientAction;
+[elseif (a.name = 'DisconnectFromServerAction')]
+import fsm.DisconnectFromServerAction;
 [else]
 import [aFSM.name/].[a.name.toUpper()/];
 [/if]
@@ -35,7 +33,7 @@ public class main {
 	public static void main(String['['/][']'/] args) {
 
 		[if (aFSM.isServer)]
-		FSMServer fsm = new FSMServer("[aFSM.name/]", (dis, f) -> new NetworkMessageParser(dis, f), 50300, "serverpw");
+		FSMServer fsm = new FSMServer("[aFSM.name/]", (dis, f) -> new [aFSM.name/]NetworkMessageParser(dis, f), 50300, "serverpw");
 		[else]
 		InetAddress host = null;
 		try {
@@ -44,28 +42,41 @@ public class main {
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
-		var fsm = new FSMClient("[aFSM.name/]", (dis, f) -> new MyClientNetworkMessageParser(dis, f), host, 50300, "clientpw");
+		var fsm = new FSMClient("[aFSM.name/]", (dis, f) -> new [aFSM.name/]NetworkMessageParser(dis, f), host, 50300, "clientpw");
 		[/if]
 		fsm.LOGGER.setLevel(Level.INFO);
 
 		[for (s : State | aFSM.ownedStates)]
 		State state_[s.name.toLower()/] = new State("[s.name/]");
 		[for (a : Action | s.onEnteredActions)]
+		[if (a.name='DisconnectClientAction')]
+		state_[s.name.toLower()/].onEnteredAction(new [a.name/]());
+		[else]
 		state_[s.name.toLower()/].onEnteredAction(new [a.name.toUpper()/]());
+		[/if]
 		[/for]
 		[for (a : Action | s.onExitedActions)]
+		[if (a.name='DisconnectClientAction')]
+		state_[s.name.toLower()/].onExitedAction(new [a.name/]());
+		[else]
 		state_[s.name.toLower()/].onExitedAction(new [a.name.toUpper()/]());
+		[/if]
 		[/for]
 		[/for]
 
 		[for (s : State | aFSM.ownedStates)]
 		[for (t : Transition | s.outgoingTransitions)]
 		Transition trans_[t.name.toLower()/] = new Transition("[t.name/]");
-		trans_[t.name.toLower()/].setSource([t.source.name/]);
-		trans_[t.name.toLower()/].setTarget([t.target.name/]);
+		trans_[t.name.toLower()/].setSource(state_[t.source.name.toLower()/]);
+		trans_[t.name.toLower()/].setTarget(state_[t.target.name.toLower()/]);
 		trans_[t.name.toLower()/].registerEvent("[t.event.name/]");
 		[for (a : Action | t.actions)]
+		[if (a.name='DisconnectClientAction' or a.name='DisconnectFromServerAction')]
+		trans_[t.name.toLower()/].registerAction(new [a.name/]());
+		[else]
 		trans_[t.name.toLower()/].registerAction(new [a.name.toUpper()/]());
+		[/if]
+		
 		[/for]
 		[if (not t.guard.oclIsUndefined())]
 		trans_[t.name.toLower()/].registerGuard(new [t.guard.name.toUpper()/]());

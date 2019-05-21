@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.supelec.plong9.fsm.impl.MessageImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.MessageImpl#getData <em>Data</em>}</li>
  *   <li>{@link fr.supelec.plong9.fsm.impl.MessageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fr.supelec.plong9.fsm.impl.MessageImpl#getEnumsDef <em>Enums Def</em>}</li>
  * </ul>
  *
  * @generated
@@ -76,6 +77,16 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEnumsDef() <em>Enums Def</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnumsDef()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> enumsDef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,11 +185,26 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EMap<String, String> getEnumsDef() {
+		if (enumsDef == null) {
+			enumsDef = new EcoreEMap<String, String>(FsmPackage.Literals.STRING_TO_STRING_MAP,
+					StringToStringMapImpl.class, this, FsmPackage.MESSAGE__ENUMS_DEF);
+		}
+		return enumsDef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case FsmPackage.MESSAGE__DATA:
 			return ((InternalEList<?>) getData()).basicRemove(otherEnd, msgs);
+		case FsmPackage.MESSAGE__ENUMS_DEF:
+			return ((InternalEList<?>) getEnumsDef()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -202,6 +228,11 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 				return getData().map();
 		case FsmPackage.MESSAGE__NAME:
 			return getName();
+		case FsmPackage.MESSAGE__ENUMS_DEF:
+			if (coreType)
+				return getEnumsDef();
+			else
+				return getEnumsDef().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -222,6 +253,9 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 			return;
 		case FsmPackage.MESSAGE__NAME:
 			setName((String) newValue);
+			return;
+		case FsmPackage.MESSAGE__ENUMS_DEF:
+			((EStructuralFeature.Setting) getEnumsDef()).set(newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -244,6 +278,9 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 		case FsmPackage.MESSAGE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case FsmPackage.MESSAGE__ENUMS_DEF:
+			getEnumsDef().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -262,6 +299,8 @@ public class MessageImpl extends MinimalEObjectImpl.Container implements Message
 			return data != null && !data.isEmpty();
 		case FsmPackage.MESSAGE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case FsmPackage.MESSAGE__ENUMS_DEF:
+			return enumsDef != null && !enumsDef.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

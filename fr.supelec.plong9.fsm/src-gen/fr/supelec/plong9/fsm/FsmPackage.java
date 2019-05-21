@@ -514,13 +514,22 @@ public interface FsmPackage extends EPackage {
 	int MESSAGE__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Enums Def</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MESSAGE__ENUMS_DEF = 3;
+
+	/**
 	 * The number of structural features of the '<em>Message</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MESSAGE_FEATURE_COUNT = 3;
+	int MESSAGE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Message</em>' class.
@@ -989,6 +998,17 @@ public interface FsmPackage extends EPackage {
 	EAttribute getMessage_Name();
 
 	/**
+	 * Returns the meta object for the map '{@link fr.supelec.plong9.fsm.Message#getEnumsDef <em>Enums Def</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the map '<em>Enums Def</em>'.
+	 * @see fr.supelec.plong9.fsm.Message#getEnumsDef()
+	 * @see #getMessage()
+	 * @generated
+	 */
+	EReference getMessage_EnumsDef();
+
+	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To String Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1362,6 +1382,14 @@ public interface FsmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MESSAGE__NAME = eINSTANCE.getMessage_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Enums Def</b></em>' map feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MESSAGE__ENUMS_DEF = eINSTANCE.getMessage_EnumsDef();
 
 		/**
 		 * The meta object literal for the '{@link fr.supelec.plong9.fsm.impl.StringToStringMapImpl <em>String To String Map</em>}' class.

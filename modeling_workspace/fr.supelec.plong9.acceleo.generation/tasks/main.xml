@@ -33,6 +33,12 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.13.0.v20180319-0813.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_21.0.0.v20170206-1425.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.resources_3.13.0.v20180512-1138.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ui.workbench_3.111.0.v20180524-1156.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.e4.ui.workbench3_0.14.100.v20180403-0945.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.jface_3.14.0.v20180423-0714.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt_3.107.0.v20180611-0422.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.swt.cocoa.macosx.x86_64_3.107.0.v20180611-0422.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.commands_3.9.100.v20180404-1234.jar"/>
     </path>
 
     <path id="fr.supelec.plong9.acceleo.generation.classpath">

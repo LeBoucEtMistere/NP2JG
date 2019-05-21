@@ -1,10 +1,10 @@
 MessagePing DEFINITIONS IMPLICIT TAGS::=
 BEGIN
 
-MESSAGETYPE ::= ENUMERATED {ping,pong}
+MESSAGETYPE ::= ENUMERATED {ping, pong}
 
 MessagePing ::= SEQUENCE {
-,	id INTEGER
+	id INTEGER
 ,	type MESSAGETYPE
 }
 

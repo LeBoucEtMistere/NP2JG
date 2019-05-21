@@ -1,0 +1,98 @@
+[comment encoding = UTF-8 /]
+[module generateMessageParser('http://fr.supelec.plong9.fsm')]
+
+
+[template public generateMessageParser(aFSM : FSM)]
+
+[file ('src/main/java' + '/' + aFSM.name + 'NetworkMessageParser.java', false, 'UTF-8')]
+
+package [aFSM.name/];
+
+import fsm.*;
+import network.NetworkMessageParser;
+
+import javafx.util.Pair;
+import java.io.DataInputStream;
+import java.io.EOFException;
+import java.io.IOException;
+import java.util.UUID;
+
+[for (m : Message | aFSM.ownedMessages)]
+import asn1.[m.name.toLower()/].*;
+[/for]
+
+public class [aFSM.name/]NetworkMessageParser extends NetworkMessageParser {
+	
+	[if not (aFSM.isServer)]
+	boolean alreadyParsed;
+	[/if]
+
+[if (aFSM.isServer)]
+	public [aFSM.name/]NetworkMessageParser(Pair<UUID, DataInputStream> origin, FSMServer fsm) {
+		super(origin, fsm);
+		[if not (aFSM.isServer)]
+		alreadyParsed = false;
+		[/if]
+	}
+[else]
+	public [aFSM.name/]NetworkMessageParser(Pair<UUID, DataInputStream> origin, FSMClient fsm) {
+		super(origin, fsm);
+		[if not (aFSM.isServer)]
+		alreadyParsed = false;
+		[/if]
+	}
+[/if]
+
+	@Override
+	public void parse(String currentState) {
+		[if not (aFSM.isServer)]
+			if(!alreadyParsed) {
+		[/if]
+		switch (currentState) {
+[for (state : State | aFSM.ownedStates)]
+[if (not state.expectedMessage.name.oclIsInvalid())]
+		case "[state.name/]":
+			[state.expectedMessage.name/] m = new [state.expectedMessage.name/]();
+			try {
+				m.decode(input);
+
+				Event e = new Event();
+				e.name = "[state.expectedMessage.event.name/]";
+				e.origin = originId;
+				[for (d : StringToStringMap | state.expectedMessage.data)]
+					[if (d.value.toUpper()='INTEGER')]
+				e.setData("[d.key.toLower()/]", m.get[d.key.toUpperFirst()/]().intValue());
+					[elseif (d.value.toUpper()='STRING')]
+				e.setData("[d.key.toLower()/]", m.get[d.key.toUpperFirst()/]());		
+					[elseif (d.value.toUpper()='BOOL')]
+				e.setData("[d.key.toLower()/]", (boolean)m.get[d.key.toUpperFirst()/]());						
+					[/if]
+				[/for]
+				fsm.queueEvent(e);
+				[if not (aFSM.isServer)]
+				alreadyParsed = true;
+				[/if]	
+			} catch (EOFException e) {
+
+			} catch (IOException e) {
+				fsm.LOGGER.warning("Cannot read from InputStream of client " + originId);
+				running = false;
+				e.printStackTrace();
+			}
+
+			break;
+[/if]	
+[/for]	
+		default:
+			break;
+
+		}
+		[if not (aFSM.isServer)]
+			}
+		[/if]
+	}
+
+}
+
+[/file]
+[/template]

@@ -72,7 +72,7 @@ public class AcceleoGenerateFSMtoJavaAction extends ActionDelegate implements IA
 							URI modelURI = URI.createPlatformResourceURI(model.getFullPath().toString(), true);
 							IContainer targetFolder = null;
 							try {
-								IContainer target = model.getProject().getFolder("src-gen");
+								IContainer target = model.getProject().getFolder(model.getName().split("\\.")[0]);
 								targetFolder = target;
 								GenerateAll generator = new GenerateAll(modelURI, targetFolder, getArguments());
 								generator.doGenerate(monitor);
