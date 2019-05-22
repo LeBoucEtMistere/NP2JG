@@ -257,9 +257,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="1.0"
      inkscape:pageshadow="0"
-     inkscape:zoom="0.18909319"
-     inkscape:cx="1460.5645"
-     inkscape:cy="2189.3617"
+     inkscape:zoom="0.26741815"
+     inkscape:cx="1945.6275"
+     inkscape:cy="2081.8021"
      inkscape:document-units="mm"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -323,7 +323,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -802,7 +802,7 @@
            y="565.12726"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.18327904px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:justify;writing-mode:lr-tb;text-anchor:start" /></flowRegion><flowPara
          id="flowPara2987">Nous utilisons Acceleo deux fois lors de cette étape de génération :</flowPara><flowPara
-         id="flowPara2989"></flowPara><flowPara
+         id="flowPara2989" /><flowPara
          id="flowPara2991">-Une première fois l’outil sert à générer les fichiers de la grammaire pour la sérialisation/désérialisation des messages.</flowPara><flowPara
          id="flowPara2993">-Une deuxième fois pour générer les classes java associées aux clients et serveur.</flowPara></flowRoot>    <rect
        style="fill:none;fill-opacity:1;stroke:#3c327f;stroke-width:2.93309784;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -1069,11 +1069,11 @@
              width="454.40445"
              id="rect10849" /></flowRegion><flowPara
            id="flowPara3016">L’objectif du plugin est de simplifier le travail d’un développeur c’est pourquoi :</flowPara><flowPara
-           id="flowPara3018"></flowPara><flowPara
+           id="flowPara3018" /><flowPara
            id="flowPara3020">	- Le code généré par notre plugin est accessible directement par l’utilisateur les modifications sont donc possibles.</flowPara><flowPara
-           id="flowPara3022"></flowPara><flowPara
+           id="flowPara3022" /><flowPara
            id="flowPara3024">	- La bibliothèque de templates que l'on propose dans le plugin peut être agrandi afin d'augmenter la diversité dans la génération.</flowPara><flowPara
-           id="flowPara3026"></flowPara></flowRoot>    </g>
+           id="flowPara3026" /></flowRoot>    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot10909"
@@ -1145,5 +1145,15 @@
            y="4221.5059"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end" /></flowRegion><flowPara
          id="flowPara3126">Projet Long 2e Année</flowPara><flowPara
-         id="flowPara3128">2018/2019</flowPara></flowRoot>  </g>
+         id="flowPara3128">2018/2019</flowPara></flowRoot>    <image
+       sodipodi:absref="C:\Users\gdevi\eclipse-workspace\Projet_Long\Projet-Long-9\Capture interface.JPG"
+       xlink:href="Capture interface.JPG"
+       width="341.49258"
+       height="203.88068"
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeQuality"
+       id="image4285"
+       x="465.20007"
+       y="-371.71957" />
+  </g>
 </svg>

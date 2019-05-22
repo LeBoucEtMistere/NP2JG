@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="myFsm" initialState="//@ownedStates.0" currentState="//@ownedStates.0" finalState="//@ownedStates.3">
-  <ownedStates name="s1" expectedMessage="//@ownedMessages.0">
-    <outgoingTransitions name="t1" actions="//@ownedActions.2 //@ownedActions.3" guard="//@ownedGuards.2" event="//@ownedEvents.0" target="//@ownedStates.1"/>
-    <onEnteredActions name="A5"/>
-    <onEnteredActions name="A7"/>
+<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="TicTacToe Server" initialState="//@ownedStates.0" finalState="//@ownedStates.4" isServer="true">
+  <ownedStates name="Attente Nom J1">
+    <outgoingTransitions name="" actions="//@ownedActions.0" event="//@ownedEvents.0" target="//@ownedStates.1"/>
   </ownedStates>
-  <ownedStates name="s2" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0 //@ownedStates.2/@outgoingTransitions.0">
-    <outgoingTransitions name="t2" actions="//@ownedActions.0" guard="//@ownedGuards.1" event="//@ownedEvents.1" target="//@ownedStates.2"/>
+  <ownedStates name="Attente Nom J2" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0 //@ownedStates.1/@outgoingTransitions.0">
+    <outgoingTransitions actions="//@ownedActions.2" guard="//@ownedGuards.1" event="//@ownedEvents.1" target="//@ownedStates.1"/>
+    <outgoingTransitions actions="//@ownedActions.1" guard="//@ownedGuards.0" event="//@ownedEvents.1" target="//@ownedStates.2"/>
   </ownedStates>
-  <ownedStates name="s3" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0">
-    <outgoingTransitions name="t3" actions="//@ownedActions.1 //@ownedActions.3" guard="//@ownedGuards.3" event="//@ownedEvents.1" target="//@ownedStates.1"/>
-    <outgoingTransitions name="t4" guard="//@ownedGuards.0" event="//@ownedEvents.3" target="//@ownedStates.3"/>
+  <ownedStates name="Attente Jeu J1" incomingTransitions="//@ownedStates.1/@outgoingTransitions.1 //@ownedStates.2/@outgoingTransitions.0 //@ownedStates.3/@outgoingTransitions.1">
+    <outgoingTransitions actions="//@ownedActions.6" guard="//@ownedGuards.3" event="//@ownedEvents.2" target="//@ownedStates.2"/>
+    <outgoingTransitions actions="//@ownedActions.5" guard="//@ownedGuards.2" event="//@ownedEvents.2" target="//@ownedStates.3"/>
+    <outgoingTransitions actions="//@ownedActions.3" guard="//@ownedGuards.4" event="//@ownedEvents.2" target="//@ownedStates.4"/>
   </ownedStates>
-  <ownedStates name="s4" incomingTransitions="//@ownedStates.2/@outgoingTransitions.1"/>
-  <ownedEvents name="E1"/>
-  <ownedEvents name="E2"/>
-  <ownedEvents name="E3"/>
-  <ownedEvents name="E4"/>
-  <ownedEvents name="E8"/>
-  <ownedActions name="A1"/>
-  <ownedActions name="A2"/>
-  <ownedActions name="A3"/>
-  <ownedActions name="A8"/>
-  <ownedGuards name="G1"/>
-  <ownedGuards name="G2"/>
-  <ownedGuards name="G3"/>
-  <ownedGuards name="G5"/>
-  <ownedGuards name="G6"/>
-  <ownedGuards name="G4"/>
-  <ownedMessages event="//@ownedEvents.0" name="Message1">
-    <data key="mdp" value="String"/>
-    <data key="id" value="Integer"/>
-  </ownedMessages>
+  <ownedStates name="Attente Jeu J2" incomingTransitions="//@ownedStates.2/@outgoingTransitions.1 //@ownedStates.3/@outgoingTransitions.0">
+    <outgoingTransitions actions="//@ownedActions.6" guard="//@ownedGuards.3" event="//@ownedEvents.3" target="//@ownedStates.3"/>
+    <outgoingTransitions actions="//@ownedActions.5" guard="//@ownedGuards.2" event="//@ownedEvents.3" target="//@ownedStates.2"/>
+    <outgoingTransitions actions="//@ownedActions.4" guard="//@ownedGuards.4" event="//@ownedEvents.3" target="//@ownedStates.4"/>
+  </ownedStates>
+  <ownedStates name="Fin Partie" incomingTransitions="//@ownedStates.2/@outgoingTransitions.2 //@ownedStates.3/@outgoingTransitions.2"/>
+  <ownedEvents name="Message J1"/>
+  <ownedEvents name="Message J2"/>
+  <ownedEvents name="Position J1"/>
+  <ownedEvents name="Position J2"/>
+  <ownedActions name="Nom J1"/>
+  <ownedActions name="Nom J2"/>
+  <ownedActions name="Refus Nom J2"/>
+  <ownedActions name="Victoire J1"/>
+  <ownedActions name="Victoire J2"/>
+  <ownedActions name="Mise &#xe0; Jour Plateau"/>
+  <ownedActions name="Refus Coup"/>
+  <ownedGuards name="Nom J2 Valide"/>
+  <ownedGuards name="Nom J2 Invalide"/>
+  <ownedGuards name="Coup Valide"/>
+  <ownedGuards name="Coup Invalide"/>
+  <ownedGuards name="Coup Gagnant"/>
+  <ownedMessages event="//@ownedEvents.0" name="Nom J1"/>
+  <ownedMessages event="//@ownedEvents.1" name="Nom J2"/>
+  <ownedMessages event="//@ownedEvents.2" name="Position J1"/>
+  <ownedMessages event="//@ownedEvents.3" name="Position J2"/>
+  <ownedMessages event="//@ownedEvents.2" name="Instructions J1"/>
+  <ownedMessages event="//@ownedEvents.3" name="Instructions J2"/>
 </fsm:FSM>
