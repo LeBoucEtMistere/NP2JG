@@ -497,7 +497,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_jgPpUHw2EemX9_MvTRp3Nw" type="4001" element="_jf-jkHw2EemX9_MvTRp3Nw" source="_-0HVEHw0EemX9_MvTRp3Nw" target="_-0HVEHw0EemX9_MvTRp3Nw">
           <children xmi:type="notation:Node" xmi:id="_jgQQYHw2EemX9_MvTRp3Nw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jgQQYXw2EemX9_MvTRp3Nw" x="32" y="19"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jgQQYXw2EemX9_MvTRp3Nw" x="55" y="20" width="270" height="16"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_jgQQYnw2EemX9_MvTRp3Nw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jgQQY3w2EemX9_MvTRp3Nw" x="-29" y="-26"/>
@@ -998,7 +998,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_JxzKoHw1EemX9_MvTRp3Nw" name="Message J1 / Nom J1 []" sourceNode="_v7MZAHw0EemX9_MvTRp3Nw" targetNode="_-z22YHw0EemX9_MvTRp3Nw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_JxzKoHw1EemX9_MvTRp3Nw" name="Message J1 / Nom J1" sourceNode="_v7MZAHw0EemX9_MvTRp3Nw" targetNode="_-z22YHw0EemX9_MvTRp3Nw">
       <target xmi:type="fsm:Transition" href="MyFsm.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="MyFsm.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_JxzxsHw1EemX9_MvTRp3Nw" foldingStyle="SOURCE" size="2" routingStyle="manhattan">
