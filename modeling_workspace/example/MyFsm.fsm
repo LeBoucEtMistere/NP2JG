@@ -8,14 +8,14 @@
     <outgoingTransitions actions="//@ownedActions.1" guard="//@ownedGuards.0" event="//@ownedEvents.1" target="//@ownedStates.2"/>
   </ownedStates>
   <ownedStates name="Attente Jeu J1" incomingTransitions="//@ownedStates.1/@outgoingTransitions.1 //@ownedStates.2/@outgoingTransitions.0 //@ownedStates.3/@outgoingTransitions.1">
-    <outgoingTransitions actions="//@ownedActions.6" guard="//@ownedGuards.3" event="//@ownedEvents.2" target="//@ownedStates.2"/>
+    <outgoingTransitions actions="//@ownedActions.6" guard="//@ownedGuards.2" event="//@ownedEvents.2" target="//@ownedStates.2" InverseGuard="true"/>
     <outgoingTransitions actions="//@ownedActions.5" guard="//@ownedGuards.2" event="//@ownedEvents.2" target="//@ownedStates.3"/>
-    <outgoingTransitions actions="//@ownedActions.3" guard="//@ownedGuards.4" event="//@ownedEvents.2" target="//@ownedStates.4"/>
+    <outgoingTransitions actions="//@ownedActions.3" guard="//@ownedGuards.3" event="//@ownedEvents.2" target="//@ownedStates.4"/>
   </ownedStates>
   <ownedStates name="Attente Jeu J2" incomingTransitions="//@ownedStates.2/@outgoingTransitions.1 //@ownedStates.3/@outgoingTransitions.0">
-    <outgoingTransitions actions="//@ownedActions.6" guard="//@ownedGuards.3" event="//@ownedEvents.3" target="//@ownedStates.3"/>
+    <outgoingTransitions actions="//@ownedActions.6" guard="//@ownedGuards.2" event="//@ownedEvents.3" target="//@ownedStates.3" InverseGuard="true"/>
     <outgoingTransitions actions="//@ownedActions.5" guard="//@ownedGuards.2" event="//@ownedEvents.3" target="//@ownedStates.2"/>
-    <outgoingTransitions actions="//@ownedActions.4" guard="//@ownedGuards.4" event="//@ownedEvents.3" target="//@ownedStates.4"/>
+    <outgoingTransitions actions="//@ownedActions.4" guard="//@ownedGuards.3" event="//@ownedEvents.3" target="//@ownedStates.4"/>
   </ownedStates>
   <ownedStates name="Fin Partie" incomingTransitions="//@ownedStates.2/@outgoingTransitions.2 //@ownedStates.3/@outgoingTransitions.2"/>
   <ownedEvents name="Message J1"/>
@@ -32,7 +32,6 @@
   <ownedGuards name="Nom J2 Valide"/>
   <ownedGuards name="Nom J2 Invalide"/>
   <ownedGuards name="Coup Valide"/>
-  <ownedGuards name="Coup Invalide"/>
   <ownedGuards name="Coup Gagnant"/>
   <ownedMessages event="//@ownedEvents.0" name="Nom J1"/>
   <ownedMessages event="//@ownedEvents.1" name="Nom J2"/>

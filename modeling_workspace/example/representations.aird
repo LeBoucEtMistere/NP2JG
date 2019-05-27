@@ -224,10 +224,6 @@
                   <styles xmi:type="notation:FontStyle" xmi:id="_aBSbkXw2EemX9_MvTRp3Nw" fontName="Segoe UI" fontHeight="8"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_aBSbknw2EemX9_MvTRp3Nw"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_b26gcHw2EemX9_MvTRp3Nw" type="3010" element="_b2zLsHw2EemX9_MvTRp3Nw">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_b26gcXw2EemX9_MvTRp3Nw" fontName="Segoe UI" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_b26gcnw2EemX9_MvTRp3Nw"/>
-                </children>
                 <children xmi:type="notation:Node" xmi:id="_HuZoIHw4EemX9_MvTRp3Nw" type="3010" element="_HuQeMHw4EemX9_MvTRp3Nw">
                   <styles xmi:type="notation:FontStyle" xmi:id="_HuZoIXw4EemX9_MvTRp3Nw" fontName="Segoe UI" fontHeight="8"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_HuZoInw4EemX9_MvTRp3Nw"/>
@@ -243,7 +239,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_m1F6onWmEemCS9DhqsobXg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_m1EsgXWmEemCS9DhqsobXg" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m1EsgnWmEemCS9DhqsobXg" x="140" y="437"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m1EsgnWmEemCS9DhqsobXg" x="125" y="360"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_m1F6o3WmEemCS9DhqsobXg" type="2003" element="_m08w4XWmEemCS9DhqsobXg">
           <children xmi:type="notation:Node" xmi:id="_m1GhsHWmEemCS9DhqsobXg" type="5007"/>
@@ -770,17 +766,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='GuardContainer']/@subNodeMappings[name='GuardNode']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_b2zLsHw2EemX9_MvTRp3Nw" name="Coup Invalide">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_HuQeMHw4EemX9_MvTRp3Nw" name="Coup Gagnant">
           <target xmi:type="fsm:Guard" href="MyFsm.fsm#//@ownedGuards.3"/>
           <semanticElements xmi:type="fsm:Guard" href="MyFsm.fsm#//@ownedGuards.3"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_b2zLsXw2EemX9_MvTRp3Nw" labelSize="12" labelPosition="node" color="255,255,255">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='GuardContainer']/@subNodeMappings[name='GuardNode']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_2:NodeMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='GuardContainer']/@subNodeMappings[name='GuardNode']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_HuQeMHw4EemX9_MvTRp3Nw" name="Coup Gagnant">
-          <target xmi:type="fsm:Guard" href="MyFsm.fsm#//@ownedGuards.4"/>
-          <semanticElements xmi:type="fsm:Guard" href="MyFsm.fsm#//@ownedGuards.4"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_HuQeMXw4EemX9_MvTRp3Nw" labelSize="12" labelPosition="node" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@additionalLayers[name='EAGLayer']/@containerMappings[name='EAGContainer']/@subContainerMappings[name='GuardContainer']/@subNodeMappings[name='GuardNode']/@style"/>
           </ownedStyle>
@@ -1025,7 +1013,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_mHPEQHw3EemX9_MvTRp3Nw" name="Position J1 / Refus Coup [Coup Invalide]" sourceNode="_TdI8oHw3EemX9_MvTRp3Nw" targetNode="_TdI8oHw3EemX9_MvTRp3Nw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_mHPEQHw3EemX9_MvTRp3Nw" name="Position J1 / Refus Coup [ !Coup Valide]" sourceNode="_TdI8oHw3EemX9_MvTRp3Nw" targetNode="_TdI8oHw3EemX9_MvTRp3Nw">
       <target xmi:type="fsm:Transition" href="MyFsm.fsm#//@ownedStates.2/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="MyFsm.fsm#//@ownedStates.2/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_mHPrUHw3EemX9_MvTRp3Nw" foldingStyle="SOURCE" size="2" routingStyle="manhattan">
@@ -1043,7 +1031,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:EdgeMapping" href="platform:/resource/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_pDtccHw3EemX9_MvTRp3Nw" name="Position J2 / Refus Coup [Coup Invalide]" sourceNode="_dKt1MHw3EemX9_MvTRp3Nw" targetNode="_dKt1MHw3EemX9_MvTRp3Nw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_pDtccHw3EemX9_MvTRp3Nw" name="Position J2 / Refus Coup [ !Coup Valide]" sourceNode="_dKt1MHw3EemX9_MvTRp3Nw" targetNode="_dKt1MHw3EemX9_MvTRp3Nw">
       <target xmi:type="fsm:Transition" href="MyFsm.fsm#//@ownedStates.3/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="MyFsm.fsm#//@ownedStates.3/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_pDuDgHw3EemX9_MvTRp3Nw" foldingStyle="SOURCE" size="2" routingStyle="manhattan">

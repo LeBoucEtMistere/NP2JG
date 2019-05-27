@@ -14,7 +14,7 @@
         <edgeMappings name="TransitionEdge" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="fsm::Transition" useDomainElement="true">
           <style sizeComputationExpression="2" routingStyle="manhattan" foldingStyle="SOURCE">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.event.name+' / '+ self.actions.name + if self.guard &lt;> null then ' [' + if self.InverseGuard then ' ! ' else '' endif + self.guard.name + ']' else ''  endif">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.event.name + if self.actions &lt;> null then ' / '+ self.actions.name else '' endif + if self.guard &lt;> null then ' [' + if self.InverseGuard then ' !' else '' endif + self.guard.name + ']' else ''  endif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
