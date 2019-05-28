@@ -1,0 +1,8 @@
+Client/main.class
+asn1/messageping/MessagePing.class
+Client/ClientNetworkMessageParser.class
+Client/ENVOIEPING.class
+asn1/messageping/MESSAGETYPE.class
+Client/TIMEOUTACTION.class
+Client/TJRSVRAI.class
+Client/AFFICHAGEPONG.class

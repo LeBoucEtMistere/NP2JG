@@ -231,7 +231,7 @@ public class Main extends AbstractAcceleoGenerator {
         		String name = ((MessageImpl) me).getName();
         		System.out.println(name);
         		
-        		String[] args = {this.targetFolder.getAbsolutePath() + "/" + name + ".asn1", this.targetFolder.getAbsolutePath().concat("/src/main/java/"), "asn1"};
+        		String[] args = {this.targetFolder.getAbsolutePath() + "/" + name + ".asn1", this.targetFolder.getAbsolutePath().concat("/src/main/java"), "asn1"};
 
                 Process process = new ProcessBuilder(file.getAbsolutePath(), "-f", args[0], "-o", args[1], "-p", args[2]).start();
                 InputStream is = process.getInputStream();

@@ -393,7 +393,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_x5UYUHyREemp3bj3myHbRQ" name="newConnection / PingAction []" sourceNode="_xz1bYHyREemp3bj3myHbRQ" targetNode="_xz8wIHyREemp3bj3myHbRQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_x5UYUHyREemp3bj3myHbRQ" name="newConnection / PingAction" sourceNode="_xz1bYHyREemp3bj3myHbRQ" targetNode="_xz8wIHyREemp3bj3myHbRQ">
       <target xmi:type="fsm:Transition" href="Client.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="Client.fsm#//@ownedStates.0/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_x5U_YHyREemp3bj3myHbRQ" foldingStyle="SOURCE" size="2" routingStyle="manhattan">
@@ -402,7 +402,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.supelec.plong9.fsm.design/description/fsm.odesign#//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_x5YpwHyREemp3bj3myHbRQ" name="pong / PongActionDisconnectFromServerAction []" sourceNode="_xz8wIHyREemp3bj3myHbRQ" targetNode="_xz9XMHyREemp3bj3myHbRQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_x5YpwHyREemp3bj3myHbRQ" name="pong / PongActionDisconnectFromServerAction" sourceNode="_xz8wIHyREemp3bj3myHbRQ" targetNode="_xz9XMHyREemp3bj3myHbRQ">
       <target xmi:type="fsm:Transition" href="Client.fsm#//@ownedStates.1/@outgoingTransitions.0"/>
       <semanticElements xmi:type="fsm:Transition" href="Client.fsm#//@ownedStates.1/@outgoingTransitions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_x5YpwXyREemp3bj3myHbRQ" foldingStyle="SOURCE" size="2" routingStyle="manhattan">

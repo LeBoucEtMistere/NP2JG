@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsm:FSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fsm="http://fr.supelec.plong9.fsm" name="Client" initialState="//@ownedStates.0" finalState="//@ownedStates.2" groupId="fr.supelec.plong9">
+  <ownedStates name="Attente">
+    <outgoingTransitions name="connexionRecue" actions="//@ownedActions.0" event="//@ownedEvents.0" target="//@ownedStates.1"/>
+  </ownedStates>
+  <ownedStates name="AttentePong" incomingTransitions="//@ownedStates.0/@outgoingTransitions.0" expectedMessage="//@ownedMessages.0">
+    <outgoingTransitions name="pongRecu" actions="//@ownedActions.1 //@ownedActions.2" event="//@ownedEvents.1" target="//@ownedStates.2"/>
+  </ownedStates>
+  <ownedStates name="Fin" incomingTransitions="//@ownedStates.1/@outgoingTransitions.0"/>
+  <ownedEvents name="newConnection"/>
+  <ownedEvents name="pongRecu"/>
+  <ownedActions name="envoiPing"/>
+  <ownedActions name="affichagePong"/>
+  <ownedActions name="DisconnectFromServerAction"/>
+  <ownedMessages event="//@ownedEvents.1" name="MessagePing">
+    <data key="id" value="INTEGER"/>
+    <data key="type" value="MESSAGETYPE"/>
+    <enumsDef key="MESSAGETYPE" value="ping, pong"/>
+  </ownedMessages>
+</fsm:FSM>

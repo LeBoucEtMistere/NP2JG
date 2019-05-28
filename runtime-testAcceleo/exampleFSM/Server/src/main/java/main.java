@@ -19,7 +19,7 @@ public class main {
 		fsm.LOGGER.setLevel(Level.INFO);
 
 		State state_attenteconnexion = new State("AttenteConnexion");
-		state_attenteconnexion.onEnteredAction(new TIMEOUTACTION());
+		//state_attenteconnexion.onEnteredAction(new TIMEOUTACTION());
 		State state_attente = new State("Attente");
 		State state_end = new State("End");
 
