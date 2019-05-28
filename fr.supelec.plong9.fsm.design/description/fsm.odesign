@@ -20,7 +20,7 @@
           </style>
         </edgeMappings>
         <toolSections name="New">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="stateCreator" label="New State" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\State.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="stateCreator" label="New State" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" iconPath="/fr.supelec.plong9.fsm.edit/icons/full/obj16/State.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -29,7 +29,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="transitionCreator" label="New Transition" edgeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Transition.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="transitionCreator" label="New Transition" edgeMappings="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@edgeMappings[name='TransitionEdge']" iconPath="/fr.supelec.plong9.fsm.edit/icons/full/obj16/Transition.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -44,31 +44,32 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="NewEvent" label="New Event" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Event.gif">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewEvent" label="New Event" iconPath="/fr.supelec.plong9.fsm.edit/icons/full/obj16/Event.gif">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Event" referenceName="ownedEvents"/>
-              </firstModelOperations>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Event" referenceName="ownedEvents"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="NewAction" label="New Action" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Action.gif">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewAction" label="New Action" iconPath="/fr.supelec.plong9.fsm.edit/icons/full/obj16/Action.gif">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Action" referenceName="ownedActions"/>
-              </firstModelOperations>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Action" referenceName="ownedActions"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:ToolDescription" name="NewGuard" label="New Guard" forceRefresh="true" iconPath="\fr.supelec.plong9.fsm.edit\icons\full\obj16\Guard.gif">
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewGuard" label="New Guard" forceRefresh="true" iconPath="/fr.supelec.plong9.fsm.edit/icons/full/obj16/Guard.gif">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Guard" referenceName="ownedGuards"/>
-              </firstModelOperations>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Guard" referenceName="ownedGuards"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="NewMessage" label="New Message" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="fsm::Message" referenceName="ownedMessages"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
