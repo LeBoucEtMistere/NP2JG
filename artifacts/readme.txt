@@ -1,0 +1,1 @@
+To install, use the updateSIte archive as a local update site in Eclipse and unzip the fsm_lib in your .m2 repo (usually in ~/.m2). Make sure your keep only the directory named "fr" and its childs and not the unzipped "fsm_lib" in the repo.

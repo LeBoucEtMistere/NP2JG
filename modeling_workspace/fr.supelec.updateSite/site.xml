@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Update Site for Projet Long 9">
+      this is the update site for the projet Long 9 (2018/2019 Supélec Rennes)
+   </description>
+   <feature url="features/fr.supelec.NP2JG_0.0.1.jar" id="fr.supelec.NP2JG" version="0.0.1">
+      <category name="Modeling"/>
+   </feature>
+   <category-def name="Modeling" label="Modeling"/>
+</site>

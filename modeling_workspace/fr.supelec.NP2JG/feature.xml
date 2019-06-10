@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="fr.supelec.plong9.acceleo.feature"
-      label="Feature"
+      id="fr.supelec.NP2JG"
+      label="NP2JG"
       version="0.0.1">
 
    <description url="http://www.example.com/description">
-      Acceleo generator feature
+      Network Protocol to Java Generator
    </description>
 
    <copyright url="http://www.example.com/copyright">
@@ -16,17 +16,22 @@
       [Enter License Description here.]
    </license>
 
+   <includes
+         id="fr.supelec.plong9.acceleo.feature"
+         version="0.0.0"/>
+
    <requires>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.sirius"/>
+      <import plugin="org.eclipse.sirius.common.acceleo.aql"/>
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
       <import plugin="org.eclipse.ocl"/>
       <import plugin="org.eclipse.ocl.ecore"/>
-      <import plugin="org.eclipse.acceleo.model"/>
-      <import plugin="org.eclipse.acceleo.engine"/>
-      <import plugin="fr.supelec.plong9.fsm"/>
       <import plugin="org.eclipse.acceleo.common" version="3.3.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.acceleo.model" version="3.3.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.acceleo.profiler" version="3.3.0" match="greaterOrEqual"/>
@@ -35,16 +40,45 @@
       <import plugin="org.eclipse.osgi"/>
       <import plugin="org.eclipse.ui.workbench"/>
       <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.emf.edit"/>
    </requires>
 
    <plugin
-         id="fr.supelec.plong9.acceleo.generation.ui"
+         id="fr.supelec.plong9.fsm.design"
+         download-size="0"
+         install-size="0"
+         version="0.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="fr.supelec.plong9.fsm"
+         download-size="0"
+         install-size="0"
+         version="0.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="fr.supelec.plong9.fsm.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="fr.supelec.plong9.acceleo.generation"
          download-size="0"
          install-size="0"
          version="0.0.1"/>
 
    <plugin
-         id="fr.supelec.plong9.acceleo.generation"
+         id="fr.supelec.plong9.fsm.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="fr.supelec.plong9.acceleo.generation.ui"
          download-size="0"
          install-size="0"
          version="0.0.1"/>

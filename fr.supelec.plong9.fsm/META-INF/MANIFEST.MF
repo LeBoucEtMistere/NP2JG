@@ -3,11 +3,11 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.supelec.plong9.fsm;singleton:=true
 Automatic-Module-Name: fr.supelec.plong9.fsm
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 0.0.1
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-10
+Bundle-RequiredExecutionEnvironment: JavaSE-9
 Export-Package: fr.supelec.plong9.fsm;
   uses:="org.eclipse.emf.ecore,
    org.eclipse.emf.common.util",

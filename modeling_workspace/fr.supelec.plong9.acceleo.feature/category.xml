@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/fr.supelec.plong9.acceleo.feature_1.0.0.qualifier.jar" id="fr.supelec.plong9.acceleo.feature" version="1.0.0.qualifier">
+      <category name="Modeling"/>
+   </feature>
+   <category-def name="Modeling" label="Modeling"/>
+</site>

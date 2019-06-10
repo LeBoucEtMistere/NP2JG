@@ -3,12 +3,12 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: fr.supelec.plong9.fsm.edit;singleton:=true
 Automatic-Module-Name: fr.supelec.plong9.fsm.edit
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.0.1
 Bundle-ClassPath: .
 Bundle-Activator: fr.supelec.plong9.fsm.provider.FsmEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-10
+Bundle-RequiredExecutionEnvironment: JavaSE-9
 Export-Package: fr.supelec.plong9.fsm.provider
 Require-Bundle: org.eclipse.core.runtime,
  fr.supelec.plong9.fsm;visibility:=reexport,
