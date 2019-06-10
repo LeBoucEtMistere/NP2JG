@@ -5,7 +5,7 @@
       <metamodel href="../../fr.supelec.plong9.fsm/model/fsm.ecore#/"/>
       <defaultLayer name="Default">
         <nodeMappings name="StateNode" semanticCandidatesExpression="feature:ownedStates" synchronizationLock="true" domainClass="fsm::State">
-          <style xsi:type="style:BundledImageDescription" labelSize="18" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" showIcon="false" labelExpression="aql:if self == self.eContainer().initialState then 'InitState : ' else if self == self.eContainer().finalState then 'EndState : '  else '' endif endif + self.name" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
@@ -14,7 +14,7 @@
         <edgeMappings name="TransitionEdge" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='FSMViewpoint']/@ownedRepresentations[name='FSMDiagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="fsm::Transition" useDomainElement="true">
           <style sizeComputationExpression="2" routingStyle="manhattan" foldingStyle="SOURCE">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="18" showIcon="false" labelExpression="aql:self.event.name + if self.actions->notEmpty() then ' / '+ self.actions.name->sep(' &amp; ') else '' endif + if self.guard &lt;> null then ' [' + if self.InverseGuard then '!' else '' endif + self.guard.name + ']' else '' endif">
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="aql:self.event.name + if self.actions->notEmpty() then ' / '+ self.actions.name->sep(' &amp; ') else '' endif + if self.guard &lt;> null then ' [' + if self.InverseGuard then '!' else '' endif + self.guard.name + ']' else '' endif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
@@ -78,13 +78,13 @@
         <containerMappings name="EAGContainer" label="Event/Action/Guard Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="HorizontalStack">
           <subContainerMappings name="EventContainer" label="Event Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="List">
             <subNodeMappings name="eventNode" label="Event Node" domainClass="fsm::Event">
-              <style xsi:type="style:SquareDescription" labelSize="18" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="18" showIcon="false" labelExpression="Events">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Events">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -93,13 +93,13 @@
           </subContainerMappings>
           <subContainerMappings name="ActionContainer" label="Action Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="List">
             <subNodeMappings name="ActionNode" label="ActionNode" domainClass="fsm::Action">
-              <style xsi:type="style:SquareDescription" labelSize="18" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="18" showIcon="false" labelExpression="Actions">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Actions">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -108,20 +108,20 @@
           </subContainerMappings>
           <subContainerMappings name="GuardContainer" label="Guard Container" semanticCandidatesExpression="var:self" synchronizationLock="true" domainClass="fsm::FSM" childrenPresentation="List">
             <subNodeMappings name="GuardNode" label="Guard Node" domainClass="fsm::Guard">
-              <style xsi:type="style:SquareDescription" labelSize="18" labelPosition="node" resizeKind="NSEW">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="18" showIcon="false" labelExpression="Guards">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Guards">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="18" showIcon="false" labelExpression="aql:self.name">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.name">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -132,13 +132,13 @@
       <additionalLayers name="MessageLayer" label="Message Layer" activeByDefault="true">
         <containerMappings name="MessageContainer" label="Message Container" semanticCandidatesExpression="var:self" domainClass="fsm::FSM" childrenPresentation="List">
           <subNodeMappings name="MessageNode" label="Message Node" domainClass="fsm::Message">
-            <style xsi:type="style:SquareDescription" labelSize="18" labelExpression="[self.name + ' -> ' + self.event.name/]" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="[self.name + ' -> ' + self.event.name/]" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="18" showIcon="false" labelExpression="Message Panel">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Message Panel">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
