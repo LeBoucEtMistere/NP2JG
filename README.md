@@ -1,4 +1,9 @@
-# Plong9-demo
+
+# Network Protocol to Java Generator
+
+Projet réalisé dans le cadre d'un Projet Long de 2ème année à Supélec Rennes, année 2018-2019, par :
+Guilhem De Viry, Arthur Depasse, Thomas Furgé, encadré par :
+G. Piolle et F. Tronel
 
 Guide d'utilisation
 
@@ -15,6 +20,7 @@ puis cliquer sur le bouton *Add* et enfin *Archive*
 Sélectionner l'archive *UpdateSite0.0.1.zip* dans le dossier *artifacts*
 
 Ouvrir le repo Maven courant (en général ~/.m2) et y décompresser l'archive contenant la librairie *fsm_lib*
+(note : le projet de dév de cette lib peut-être trouvé à l'addresse : https://github.com/LeBoucEtMistere/FSM-lib
 
 ## Utilisation
 
